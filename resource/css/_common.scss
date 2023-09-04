@@ -289,6 +289,19 @@ input[type="text"].date_picker {
             }
         }
     }
+    &.border_st {
+        label {
+            span {
+                display: block;
+                padding: 0.6rem 1.2rem;
+                border-radius: 0.4rem;
+                border: 1px solid $border-base-light;
+            }
+        }
+        input[type="radio"]:checked ~ label span {
+            border-color: $color-primary;
+        }
+    }
 }
 .fc_primary,
 .fc_success {
@@ -377,6 +390,11 @@ button.btn {
     &.btn_text_del {
         padding-left: 3.6rem;
         background: url(../images/trash.svg) no-repeat left 1.2rem center;
+    }
+    &.btn_primary_text_add {
+        padding-left: 3.6rem;
+        color: $color-primary;
+        background: url(../images/primary_plus.svg) no-repeat left 1.2rem center;
     }
     &.sm {
         padding: 0 0.8rem;

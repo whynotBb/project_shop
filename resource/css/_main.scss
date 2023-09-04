@@ -454,7 +454,7 @@
     }
 }
 .shopping_basket_wrap {
-    width: 1444rem;
+    width: 144rem;
     padding: $space-xxl;
     margin: 0 auto;
     h2 {
@@ -462,6 +462,260 @@
         font-weight: 700;
         line-height: 5.2rem;
         margin-bottom: $space-lg;
+    }
+    .flex_row {
+        gap: $space-xxl;
+        align-items: flex-start;
+    }
+    .shopping_list_wrap {
+        width: 80rem;
+        .list {
+            padding: $space-lg 0;
+            border-bottom: 1px solid $border-base-light;
+            display: flex;
+            align-items: center;
+            gap: $space-lg;
+            font-weight: 500;
+            .thumbnail {
+                width: 8rem;
+                height: 8rem;
+                border-radius: 0.8rem;
+                background: url(../images/product_bg1.png) no-repeat;
+                background-size: cover;
+                padding: 3.2rem 0.8rem 0.8rem 0.8rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                p {
+                    font-size: 0.8889rem;
+                    font-weight: 700;
+                    line-height: 1.1556rem;
+                    color: #fff;
+                    @include ellipse-3;
+                    word-break: break-all;
+                }
+                &.type_1 {
+                    background: url(../images/product_bg1.png) no-repeat;
+                    background-size: cover;
+                }
+                &.type_2 {
+                    background: url(../images/product_bg2.png) no-repeat;
+                    background-size: cover;
+                }
+            }
+            .list_detail {
+                flex: 1;
+                .category {
+                    font-size: 1.4rem;
+                    color: $text-body-sub;
+                    line-height: 2.1rem;
+                }
+                h3 {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    line-height: 2.4rem;
+                    margin-bottom: 0.8rem;
+                }
+                .price {
+                    display: flex;
+                    align-items: center;
+                    gap: 0.8rem;
+                    .sale {
+                        font-size: 2rem;
+                        font-weight: 700;
+                        color: $color-primary;
+                        line-height: 2.6rem;
+                    }
+                    b {
+                        font-weight: 700;
+                    }
+                    .first_price {
+                        color: $text-placeholder;
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        text-decoration: line-through;
+                    }
+                }
+            }
+            .unit,
+            .number {
+                width: 5.6rem;
+                text-align: right;
+            }
+            .account {
+                width: 10.8rem;
+                text-align: right;
+            }
+            .del_x {
+                width: 2.4rem;
+                height: 2.4rem;
+                background-size: 2.4rem;
+            }
+        }
+    }
+    .sub_title {
+        padding: $space-s 0 $space-m;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-base-light;
+        margin-top: $space-xxl;
+        &:first-child {
+            margin-top: 0;
+        }
+        h3 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 3.1rem;
+            span {
+                font-size: 2rem;
+                font-weight: 500;
+            }
+        }
+    }
+    .enter_information {
+        h3 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            line-height: 3.1rem;
+            margin-top: $space-xxl;
+            padding: $space-s 0 $space-m;
+            margin-bottom: 1.6rem;
+        }
+        .contents_box {
+            padding-top: 0;
+        }
+        .radiobox {
+            margin-top: 1.6rem;
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        .delivery_information {
+            position: relative;
+            .btn_primary_text_add {
+                position: absolute;
+                top: -6.6rem;
+                right: 0;
+            }
+        }
+        .delivery_info_txt {
+            font-weight: 500;
+            line-height: 2.4rem;
+        }
+        .payment_select {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2.4rem;
+            align-items: center;
+            .radiobox {
+                width: calc(25% - 18px);
+                margin-top: 0;
+            }
+        }
+        .payment_select_step2 {
+            padding: $space-lg;
+            display: flex;
+            gap: $space-xl;
+            border-radius: 0.8rem;
+            background: $color-g1;
+            margin-top: $space-lg;
+            margin: $space-lg 0 $space-xl;
+            .selectbox_wrap {
+                flex: 1;
+                display: flex;
+                gap: 1.2rem;
+                align-items: center;
+                h4 {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    width: 8rem;
+                }
+                .selectbox {
+                    flex: 1;
+                    p {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .shopping_price_wrap {
+        width: 40rem;
+        border-radius: 2.4rem;
+        padding: $space-xl;
+        @include box-shadow-sm;
+        border: 1px solid $border-base-light;
+        gap: 1.6rem;
+        .list {
+            padding: $space-m 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+                font-weight: 600;
+                line-height: 2.4rem;
+            }
+            p {
+                font-size: 2rem;
+                font-weight: 400;
+                b {
+                    padding-right: $space-s;
+
+                    font-weight: 700;
+                }
+            }
+            &.sale_price {
+                p {
+                    b {
+                        color: $color-s2;
+                    }
+                }
+            }
+            &.total_price {
+                padding-top: $space-lg;
+                padding-bottom: 0;
+                border-top: 1px solid $border-base;
+                span {
+                    font-size: 2rem;
+                    font-weight: 700;
+                }
+                p {
+                    font-weight: 600;
+                    b {
+                        color: $color-primary;
+                    }
+                }
+            }
+        }
+        .btn {
+            margin: $space-xl 0;
+        }
+        ul {
+            li {
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                &::before {
+                    content: "•";
+                    display: inline-block;
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+        .payment_agree {
+            margin-top: $space-xl;
+            .info_txt {
+                margin-top: 0.8rem;
+                padding-left: $space-lg;
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+            }
+        }
+        .btn_wrap {
+            .btn {
+                margin-bottom: 0;
+            }
+        }
     }
 }
 .del_x {
@@ -930,9 +1184,8 @@
                         height: 1rem;
                         background: $border-base;
                         position: absolute;
-                        top: 50%;
+                        top: 1.2rem;
                         right: -1rem;
-                        transform: translateY(-50%);
                     }
                     &:last-child::before {
                         display: none;
@@ -1026,6 +1279,14 @@
                     }
                 }
             }
+        }
+    }
+    &.gray_st {
+        background: $color-g1;
+        border-radius: 2.4rem;
+        padding: $space-lg !important;
+        .content_list:first-child {
+            margin-top: 0;
         }
     }
 }

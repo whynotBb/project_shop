@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./resource/js/ui.js"></script>
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="main_container">
+                        <div class="shopping_basket_wrap">
+                            <h2>상세정보 입력</h2>
+                            <div class="flex_row">
+                                <div class="shopping_list_wrap">
+                                    <div class="sub_title">
+                                        <h3>주문원료<span>(2개)</span></h3>
+                                    </div>
+                                    <div class="list">
+                                        <div class="thumbnail type_1">
+                                            <p>
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                            </p>
+                                        </div>
+                                        <div class="list_detail">
+                                            <span class="category"
+                                                >건강기능식품</span
+                                            >
+                                            <h3>
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                            </h3>
+                                            <div class="price">
+                                                <b class="sale">30%</b>
+                                                <p>12,345 원</p>
+                                                <span class="first_price"
+                                                    >12,345 원</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <p class="unit">100g</p>
+                                        <p class="number"><b>100</b>개</p>
+                                        <p class="account"><b>100,000</b>원</p>
+                                        <span class="del_x"></span>
+                                    </div>
+                                    <div class="list">
+                                        <div class="thumbnail type_2">
+                                            <p>
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                            </p>
+                                        </div>
+                                        <div class="list_detail">
+                                            <span class="category"
+                                                >건강기능식품</span
+                                            >
+                                            <h3>
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                            </h3>
+                                            <div class="price">
+                                                <b class="sale">30%</b>
+                                                <p><b>12,345</b>원</p>
+                                                <span class="first_price"
+                                                    >12,345 원</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <p class="unit">100g</p>
+                                        <p class="number"><b>100</b>개</p>
+                                        <p class="account"><b>100,000</b>원</p>
+                                        <span class="del_x"></span>
+                                    </div>
+                                    <div class="enter_information">
+                                        <h3>주문 고객 정보</h3>
+                                        <div class="contents_box">
+                                            <div class="content_list">
+                                                <h4 class="required">이름</h4>
+                                                <div class="detail">
+                                                    <input
+                                                        type="text"
+                                                        class="w_100"
+                                                        value="김희정"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="content_list">
+                                                <h4 class="required">휴대폰</h4>
+                                                <div class="detail">
+                                                    <input
+                                                        type="text"
+                                                        class="w_100"
+                                                        value="010-1234-5678"
+                                                    />
+                                                </div>
+                                            </div>
+                                            <div class="content_list">
+                                                <h4 class="required">이메일</h4>
+                                                <div class="detail">
+                                                    <input
+                                                        type="text"
+                                                        class="w_100"
+                                                        value="bater@baterplace.com"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3>배송지 정보</h3>
+                                        <div class="delivery_information">
+                                            <button
+                                                class="btn btn_primary_text_add"
+                                            >
+                                                신규 배송지 등록
+                                            </button>
+                                            <div class="delivery_info_box">
+                                                <div class="radiobox border_st">
+                                                    <input
+                                                        type="radio"
+                                                        name="delivery"
+                                                        id="delivery01"
+                                                        checked
+                                                    />
+                                                    <label for="delivery01">
+                                                        <span
+                                                            >[기본 배송지]<br />
+                                                            김희정
+                                                            010-1234-5678<br />
+                                                            서울 구로구동
+                                                            지밸리몰 300</span
+                                                        >
+                                                    </label>
+                                                </div>
+                                                <div class="radiobox border_st">
+                                                    <input
+                                                        type="radio"
+                                                        name="delivery"
+                                                        id="delivery02"
+                                                    />
+                                                    <label for="delivery02">
+                                                        <span>
+                                                            [최근 배송지]<br />
+                                                            김희정
+                                                            010-1234-5678<br />
+                                                            서울 강남구
+                                                            드림플러스 10층
+                                                            1012호
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h3>배송안내</h3>
+                                        <div class="delivery_info_txt">
+                                            3,000원 (주문시 결제), CJ대한통운<br />
+                                            100,000원 이상 구매 시 무료 /
+                                            제주,도서지역 추가 5,000원 / 제주
+                                            50,000원<br />
+                                            도서산간 10,000원
+                                        </div>
+                                        <h3>결제방법</h3>
+                                        <div class="payment_select">
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment01"
+                                                    checked
+                                                />
+                                                <label for="payment01"
+                                                    >신용카드
+                                                </label>
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment02"
+                                                />
+                                                <label for="payment02"
+                                                    >무통장입금
+                                                </label>
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment03"
+                                                />
+                                                <label for="payment03"
+                                                    >PAYCO</label
+                                                >
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment04"
+                                                />
+                                                <label for="payment04"
+                                                    >카카오페이</label
+                                                >
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment05"
+                                                />
+                                                <label for="payment05"
+                                                    >네이버페이</label
+                                                >
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment06"
+                                                />
+                                                <label for="payment06"
+                                                    >휴대폰결제</label
+                                                >
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment07"
+                                                />
+                                                <label for="payment07"
+                                                    >계좌이체</label
+                                                >
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment08"
+                                                />
+                                                <label for="payment08"
+                                                    >도서원료권</label
+                                                >
+                                            </div>
+                                            <div class="radiobox">
+                                                <input
+                                                    type="radio"
+                                                    name="payment"
+                                                    id="payment09"
+                                                />
+                                                <label for="payment09"
+                                                    >문화원료권</label
+                                                >
+                                            </div>
+                                        </div>
+                                        <div class="payment_select_step2">
+                                            <div class="selectbox_wrap">
+                                                <h4>카드종류</h4>
+                                                <div class="selectbox">
+                                                    <p class="selected">
+                                                        카드를 선택해주세요.
+                                                    </p>
+                                                    <div class="option_group">
+                                                        <div class="inner">
+                                                            <p class="label">
+                                                                카드를
+                                                                선택해주세요.
+                                                            </p>
+                                                            <ul>
+                                                                <li>현대</li>
+                                                                <li>우리</li>
+                                                                <li>KB</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="selectbox_wrap">
+                                                <h4>할부종류</h4>
+                                                <div class="selectbox">
+                                                    <p class="selected">
+                                                        일시불
+                                                    </p>
+                                                    <div class="option_group">
+                                                        <div class="inner">
+                                                            <ul>
+                                                                <li
+                                                                    class="active"
+                                                                >
+                                                                    일시불
+                                                                </li>
+                                                                <li>2개월</li>
+                                                                <li>3개월</li>
+                                                                <li>4개월</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="shopping_price_wrap">
+                                    <div class="list first_price">
+                                        <span>총 주문금액</span>
+                                        <p><b>144,000</b>원</p>
+                                    </div>
+                                    <div class="list sale_price">
+                                        <span>총 할인 금액</span>
+                                        <p><b>-33,000</b>원</p>
+                                    </div>
+                                    <div class="list delivery_price">
+                                        <span>배송비</span>
+                                        <p><b>3,000</b>원</p>
+                                    </div>
+                                    <div class="list total_price">
+                                        <span>예상 결제 금액</span>
+                                        <p><b>113,000</b>원</p>
+                                    </div>
+                                    <div class="payment_agree">
+                                        <div class="checkbox_wrap">
+                                            <input type="checkbox" id="chk01" />
+                                            <label for="chk01"
+                                                >구매조건 및 결제진행
+                                                동의</label
+                                            >
+                                        </div>
+                                        <div class="info_txt">
+                                            주문 정보 및 결제대행 서비스
+                                            이용약관에<br />모두 동의합니다.
+                                            (전자상거래법 제8조 2항)
+                                        </div>
+                                        <div class="info_txt fc_primary">
+                                            원료정보 및 결제대행 서비스
+                                            이용약관에 동의하셔야 결제가
+                                            진행됩니다.
+                                        </div>
+                                    </div>
+                                    <button class="btn btn_primary lg w_100">
+                                        바로 구매하기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer_wrap">
+                    <p class="copyright">
+                        COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            $(".sub").on("click", function () {
+                $(this).toggleClass("expended");
+            });
+        </script>
+    </body>
+</html>
