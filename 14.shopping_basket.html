@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./resource/js/ui.js"></script>
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="main_container">
+                        <div class="shopping_basket_wrap">
+                            <h2>장바구니</h2>
+                            <div class="flex_row">
+                                <div class="shopping_list_wrap">
+                                    <div class="list">
+                                        <div class="thumbnail">
+                                            <p>
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                            </p>
+                                        </div>
+                                        <div class="list_detail">
+                                            <span class="category"
+                                                >건강기능식품</span
+                                            >
+                                            <h3>
+                                                옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                            </h3>
+                                            <div class="price">
+                                                <b class="sale">30%</b>
+                                                <p>12,345 원</p>
+                                                <span class="first_price"
+                                                    >12,345 원</span
+                                                >
+                                            </div>
+                                        </div>
+                                        <p class="unit">100g</p>
+                                        <p class="number"><b>100</b>개</p>
+                                        <p class="account"><b>100,000</b>원</p>
+                                        <span class="del_x"></span>
+                                    </div>
+                                </div>
+                                <div class="shopping_price_wrap">
+                                    <div class="list first_price">
+                                        <span>총 주문금액</span>
+                                        <p><b>144,000</b>원</p>
+                                    </div>
+                                    <div class="list sale_price">
+                                        <span>총 할인 금액</span>
+                                        <p><b>-33,000</b>원</p>
+                                    </div>
+                                    <div class="list delivery_price">
+                                        <span>배송비</span>
+                                        <p><b>3,000</b>원</p>
+                                    </div>
+                                    <div class="list total_price">
+                                        <span>예상 결제 금액</span>
+                                        <p><b>3,000</b>원</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer_wrap">
+                    <p class="copyright">
+                        COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            $(".sub").on("click", function () {
+                $(this).toggleClass("expended");
+            });
+        </script>
+    </body>
+</html>

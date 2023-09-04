@@ -716,44 +716,44 @@ button.btn {
             }
         }
     }
-    .pagination {
-        margin-top: $space-xl;
+}
+.pagination {
+    margin-top: $space-xl;
+    display: flex;
+    gap: $space-s;
+    align-items: center;
+    justify-content: center;
+    a {
+        display: block;
+        min-width: 3.3rem;
+        height: 3.3rem;
+        line-height: 3.3rem;
+        padding: 0 1.2rem;
+        text-align: center;
+        border-radius: 1.6rem;
+        &.prev {
+            display: block;
+            text-indent: -99999px;
+            background: url(../images/arrow_left.svg) no-repeat center;
+        }
+        &.next {
+            display: block;
+            text-indent: -99999px;
+            background: url(../images/arrow_right.svg) no-repeat center;
+        }
+    }
+
+    ul {
         display: flex;
         gap: $space-s;
         align-items: center;
         justify-content: center;
-        a {
-            display: block;
-            min-width: 3.3rem;
-            height: 3.3rem;
-            line-height: 3.3rem;
-            padding: 0 1.2rem;
-            text-align: center;
-            border-radius: 1.6rem;
-            &.prev {
-                display: block;
-                text-indent: -99999px;
-                background: url(../images/arrow_left.svg) no-repeat center;
-            }
-            &.next {
-                display: block;
-                text-indent: -99999px;
-                background: url(../images/arrow_right.svg) no-repeat center;
-            }
-        }
-
-        ul {
-            display: flex;
-            gap: $space-s;
-            align-items: center;
-            justify-content: center;
-        }
-        li {
-            &.on {
-                a {
-                    background: $color-primary;
-                    color: #fff;
-                }
+    }
+    li {
+        &.on {
+            a {
+                background: $color-primary;
+                color: #fff;
             }
         }
     }

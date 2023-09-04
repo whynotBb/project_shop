@@ -6,7 +6,6 @@
         <title>Barter Place</title>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="./resource/js/ui.js"></script>
         <!-- ui common css -->
         <link rel="stylesheet" href="./resource/css/style.css" />
     </head>
@@ -53,7 +52,7 @@
                                             <li class="on">
                                                 <a href="#">카테고리 1-1</a>
                                             </li>
-                                            <li>
+                                            <li class="sub">
                                                 <a href="#">카테고리 1-2</a>
                                                 <ul class="depth_3">
                                                     <li>
@@ -73,11 +72,13 @@
                                     <li>
                                         <p>카테고리 2</p>
                                         <ul class="depth_2">
-                                            <li class="on">
+                                            <li>
                                                 <a href="#">카테고리 2-1</a>
                                             </li>
-                                            <li class="sub expended">
-                                                <a href="#">카테고리 2-2</a>
+                                            <li class="sub">
+                                                <a href="javascript:void(0);"
+                                                    >카테고리 2-2</a
+                                                >
                                                 <ul class="depth_3">
                                                     <li>
                                                         <a href="#"
@@ -102,14 +103,17 @@
                                 <div class="product_card_wrap">
                                     <div class="product_card type_1 new">
                                         <div class="title">
-                                            <p>
-                                                원료명 최대 2줄 넘으면.... 처리
-                                            </p>
+                                            <p>원료명 1줄</p>
                                         </div>
                                         <div class="detail">
                                             <div class="info_txt">
                                                 원료명 최대 2줄 <br />원료명
                                                 최대 2줄
+                                            </div>
+                                            <div class="price_box">
+                                                <p class="price">
+                                                    <b>12,300</b>원
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -126,6 +130,15 @@
                                             <div class="info_txt">
                                                 원료명 최대 2줄 <br />원료명
                                                 최대 2줄
+                                            </div>
+                                            <div class="price_box">
+                                                <p class="sale">
+                                                    <b>30%</b>
+                                                    <span>16,300원</span>
+                                                </p>
+                                                <p class="price">
+                                                    <b>12,300</b>원
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -321,17 +334,42 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="pagination_wrap">
+                                <ul class="pagination">
+                                    <a href="javascript:void(0);" class="prev"
+                                        >prev</a
+                                    >
+                                    <li class="on">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);">2</a></li>
+                                    <li><a href="javascript:void(0);">3</a></li>
+                                    <li><a href="javascript:void(0);">4</a></li>
+                                    <li><a href="javascript:void(0);">5</a></li>
+                                    <li><a href="javascript:void(0);">6</a></li>
+                                    <li><a href="javascript:void(0);">7</a></li>
+                                    <li><a href="javascript:void(0);">8</a></li>
+                                    <li><a href="javascript:void(0);">9</a></li>
+                                    <li>
+                                        <a href="javascript:void(0);">10</a>
+                                    </li>
+                                    <a href="javascript:void(0);" class="next"
+                                        >next</a
+                                    >
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
             </main>
-            <footer>
-                <div class="footer_wrap">
-                    <p class="copyright">
-                        COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
-                    </p>
-                </div>
-            </footer>
         </div>
         <script>
             $(".sub").on("click", function () {
