@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+        <script>
+            //modal
+            function modalOpen(el) {
+                $(el).fadeIn();
+                $("body").addClass("modal-open");
+            }
+            function modalClose(el) {
+                $(el).fadeOut();
+                $("body").removeClass("modal-open");
+            }
+        </script>
+    </head>
+    <body class="sign_body">
+        <div class="sign_wrapper">
+            <header class="sign_header"><h1>Barter Place</h1></header>
+            <main>
+                <div class="login_container">
+                    <div class="login_box">
+                        <h2>로그인</h2>
+                        <div class="inner">
+                            <div class="label_vertical">
+                                <label for="userId">아이디</label>
+                                <input
+                                    type="text"
+                                    id="userId"
+                                    placeholder="이메일 입력"
+                                />
+                            </div>
+                            <div class="label_vertical">
+                                <label for="userPw">비밀번호</label>
+                                <input
+                                    type="password"
+                                    id="userPw"
+                                    placeholder="비밀번호 입력"
+                                />
+                            </div>
+                            <div class="login_more">
+                                <div class="checkbox_wrap">
+                                    <input type="checkbox" id="autoLogin" />
+                                    <label for="autoLogin">자동 로그인 </label>
+                                </div>
+                                <ul>
+                                    <li>아이디 찾기</li>
+                                    <li>비밀번호 찾기</li>
+                                </ul>
+                            </div>
+                            <div class="bottom_btn_wrap">
+                                <button
+                                    class="btn btn_primary bottom_btn"
+                                    onclick="modalOpen('#alert01')"
+                                >
+                                    로그인
+                                </button>
+                                <button class="btn btn_secondary bottom_btn">
+                                    로그인
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="sign_footer">
+                <p class="copyright">
+                    COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
+                </p>
+            </footer>
+        </div>
+        <!-- alert_01 -->
+        <div class="modal_wrap alert_st" id="alert01">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">
+                        아이디 또는 비밀번호가<br />
+                        일치하지 않습니다.
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#alert01')"
+                        >
+                            확인
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert_01 -->
+    </body>
+</html>

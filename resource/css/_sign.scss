@@ -1,0 +1,315 @@
+// login
+.login_wrapper {
+    background: url(../images/login_bg.png) no-repeat center;
+    background-size: 1920px auto;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.sign_wrapper {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 10rem;
+    .sign_header {
+        max-width: 1920px;
+        width: 100%;
+        height: 10rem;
+        padding: $space-lg $space-xl 0;
+        border-bottom: 1px solid $border-base-light;
+        position: fixed;
+        top: 0;
+        background: #fff;
+        z-index: 10;
+        h1 {
+            text-indent: -999999px;
+            width: 24rem;
+            height: 7.6rem;
+            font-size: 3.56rem;
+            font-weight: 400;
+            padding-left: 4rem;
+            background: url(../images/Barter_Place.svg) no-repeat left 4.8rem
+                center;
+            padding-left: 4.8rem;
+            position: relative;
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                width: 4rem;
+                height: 4rem;
+                background: url(../images/sign_header_logo.svg) no-repeat center;
+                top: 1.6rem;
+                left: 0;
+            }
+        }
+    }
+    main {
+        min-height: calc(100vh - 15.7rem);
+        h2 {
+            text-align: center;
+            color: $text-title;
+            font-size: 4rem;
+        }
+        .login_container {
+            .login_box {
+                box-shadow: none;
+                padding-top: 0;
+                padding-bottom: 0;
+                h2 {
+                    margin-bottom: $space-xl;
+                }
+            }
+        }
+    }
+    .sign_footer {
+        width: 100%;
+        height: 5.3rem;
+        line-height: 5.3rem;
+        padding: 0 $space-xl;
+        background: $color-g1;
+        .copyright {
+            text-align: center;
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: $text-body-sub;
+        }
+    }
+}
+.login_container {
+    width: 52rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+        color: #333;
+        font-size: 4.4116rem;
+        font-weight: 400;
+        text-align: center;
+        padding-left: 4.1rem;
+        background: url(../images/logo.svg) no-repeat left 9rem center;
+        margin-bottom: 4rem;
+    }
+    .login_box {
+        border-radius: 4rem;
+        width: 100%;
+        min-height: 58.4rem;
+        padding: 8rem 4rem;
+        @include box-shadow-lg;
+        h2 {
+            text-align: center;
+            color: $text-title;
+            font-size: 4rem;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="number"] {
+            font-size: 2rem;
+            height: 4.2rem;
+            padding: 0.8rem 1.6rem;
+            width: 100%;
+        }
+        label {
+            height: 3.8rem;
+            line-height: 3.8rem;
+        }
+        .inner {
+            padding: $space-xl 0;
+            .label_vertical {
+                margin-top: 3.2rem;
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+            .login_more {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: $space-xl 0;
+                ul {
+                    display: flex;
+                    gap: $space-s;
+                    li {
+                        padding: 0 0.8rem;
+                        cursor: pointer;
+                        position: relative;
+                        font-weight: 500;
+                        &:first-child::after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 1px;
+                            height: 1rem;
+                            background: $border-base;
+                            top: 4px;
+                            right: -4px;
+                        }
+                    }
+                }
+                &.bottom_st {
+                    margin-top: 0;
+                    justify-content: center;
+                }
+            }
+            .input_btn_wrap {
+                .btn {
+                    height: 4.2rem;
+                }
+            }
+            .bottom_btn {
+                width: 100%;
+                height: 5rem;
+                font-size: 2rem;
+                font-weight: 700;
+                margin: $space-xl 0;
+            }
+            .bottom_btn_wrap {
+                flex-direction: column;
+                gap: $space-lg;
+                .bottom_btn {
+                    margin: 0;
+                }
+            }
+            .id_result_box {
+                width: 100%;
+                height: 24rem;
+                border-radius: 2.4rem;
+                background: $color-g1;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: $space-xl;
+                margin-bottom: $space-xl;
+                padding: 0 8rem;
+                p {
+                    width: 100%;
+                    font-size: 2rem;
+                    text-align: center;
+                }
+                h3 {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $color-primary;
+                }
+                .list {
+                    display: flex;
+                    gap: 1.6rem;
+                    width: 100%;
+                    align-items: center;
+                    span {
+                        width: 8rem;
+                        font-size: 2rem;
+                    }
+                    h3 {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+        .valid_txt {
+            margin-top: 0.4rem;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            &.red {
+                color: $color-s2;
+            }
+        }
+        .valid_red {
+            border-color: $color-s2;
+        }
+    }
+    .copyright {
+        margin-top: 4rem;
+        font-size: 1.4rem;
+        color: $text-body-sub;
+        width: 100%;
+        text-align: center;
+    }
+}
+.sign_container {
+    padding: 8rem 0;
+    width: 80rem;
+    margin: 0 auto;
+    .sign_box {
+        .info_txt {
+            text-align: center;
+            margin-top: 1.6rem;
+        }
+        .inner {
+            width: 100%;
+            padding: 8rem 0;
+            border-bottom: 1px solid $border-base-light;
+        }
+        .selectbox {
+            .inner {
+                padding: 0.6rem 0;
+                border-bottom: 0;
+                border: 1px solid $border-base;
+            }
+        }
+        .content_list {
+            padding-left: 10.8rem;
+            margin-top: $space-xl;
+        }
+        .content_list_wrap {
+            display: flex;
+            gap: 4rem;
+            .content_list {
+                &:first-child {
+                    flex: 1;
+                }
+                &:nth-child(2) {
+                    width: 30rem;
+                    padding-left: 9.2rem;
+                }
+            }
+        }
+    }
+}
+.sign_bottom_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: $space-xl 0;
+    .agree_box {
+        display: flex;
+        align-items: center;
+        gap: $space-xl;
+        label {
+            color: $color-primary;
+            text-decoration: underline;
+            text-underline-position: under;
+            font-weight: 500;
+        }
+    }
+    .btn {
+        width: 21.8rem;
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+    }
+}
+.invalid {
+    input[type="text"],
+    input[type="password"] {
+        border-color: $color-s2;
+    }
+    .invalidMsg {
+        color: $color-s2;
+        font-size: 1.4rem;
+        position: absolute;
+        line-height: 2.1rem;
+        padding-top: 0.4rem;
+    }
+}
+.successMsg {
+    color: $color-primary;
+    font-size: 1.4rem;
+    position: absolute;
+    line-height: 2.1rem;
+    padding-top: 0.4rem;
+}

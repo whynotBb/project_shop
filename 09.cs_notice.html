@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./resource/js/ui.js"></script>
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="cs_header_wrap">
+                        <h2>고객센터</h2>
+                        <ul class="cs_lnb_wrap">
+                            <li>
+                                <a href="#">고객센터</a>
+                            </li>
+                            <li class="on"><a href="#">공지사항</a></li>
+                            <li>
+                                <a href="#">자주묻는 질문(FAQ)</a>
+                            </li>
+                            <li><a href="#">1:1문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="cs_container_2">
+                        <h3>공지사항</h3>
+                        <ul class="check_tab_menu">
+                            <li class="on">전체</li>
+                            <li>회원</li>
+                            <li>주문/입금/결제</li>
+                            <li>배송</li>
+                        </ul>
+                        <div class="main_table_wrap">
+                            <div class="table_header">
+                                <p class="counter">
+                                    총 <b>100</b>건의 내역이 있습니다.
+                                </p>
+                            </div>
+                            <div class="table_accordion">
+                                <div class="accordion_item">
+                                    <div class="accordion_header">
+                                        <span>회원</span>
+                                        <h4>회원 탈퇴는 어떻게 하나요?</h4>
+                                        <i>2023.12.12 12:12</i>
+                                    </div>
+                                    <div class="accordion_body">
+                                        <div>공지사항 내용</div>
+                                    </div>
+                                </div>
+                                <div class="accordion_item">
+                                    <div class="accordion_header">
+                                        <span>주문/입금/결제</span>
+                                        <h4>
+                                            공지사항 제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                            제목공지사항 제목공지사항
+                                        </h4>
+                                        <i>2023.12.12 12:12</i>
+                                    </div>
+                                    <div class="accordion_body">
+                                        <div>
+                                            공지사항 내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항
+                                            내용공지사항 내용공지사항 내용
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pagination_wrap">
+                                <ul class="pagination">
+                                    <a href="javascript:void(0);" class="prev"
+                                        >prev</a
+                                    >
+                                    <li class="on">
+                                        <a href="javascript:void(0);">1</a>
+                                    </li>
+                                    <li><a href="javascript:void(0);">2</a></li>
+                                    <li><a href="javascript:void(0);">3</a></li>
+                                    <li><a href="javascript:void(0);">4</a></li>
+                                    <li><a href="javascript:void(0);">5</a></li>
+                                    <li><a href="javascript:void(0);">6</a></li>
+                                    <li><a href="javascript:void(0);">7</a></li>
+                                    <li><a href="javascript:void(0);">8</a></li>
+                                    <li><a href="javascript:void(0);">9</a></li>
+                                    <li>
+                                        <a href="javascript:void(0);">10</a>
+                                    </li>
+                                    <a href="javascript:void(0);" class="next"
+                                        >next</a
+                                    >
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer_wrap">
+                    <p class="copyright">
+                        COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            //고객센터 상단 메뉴 tab 효과
+            $(".cs_lnb_wrap li").on("click", function () {
+                $(".cs_lnb_wrap li").removeClass("on");
+                $(this).addClass("on");
+            });
+            //공지사항 상단 메뉴 tab 효과
+            $(".check_tab_menu li").on("click", function () {
+                $(".check_tab_menu li").removeClass("on");
+                $(this).addClass("on");
+            });
+            //아코디언 효과
+            $(".accordion_header").on("click", function () {
+                $(this).parent(".accordion_item").toggleClass("active");
+            });
+        </script>
+    </body>
+</html>

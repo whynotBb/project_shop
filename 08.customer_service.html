@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="./resource/js/ui.js"></script>
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="cs_header_wrap">
+                        <h2>고객센터</h2>
+                        <ul class="cs_lnb_wrap">
+                            <li class="on">
+                                <a href="#">고객센터</a>
+                            </li>
+                            <li><a href="#">공지사항</a></li>
+                            <li>
+                                <a href="#">자주묻는 질문(FAQ)</a>
+                            </li>
+                            <li><a href="#">1:1문의</a></li>
+                        </ul>
+                    </div>
+                    <div class="cs_container">
+                        <div class="cs_contents">
+                            <div class="cs_info_box">
+                                <h3>
+                                    안녕하세요.<br />바터플레이스
+                                    고객센터입니다.
+                                </h3>
+                                <p>평일 : 09:00~18:00 (점심 11:30~12:30)</p>
+                                <p>휴일 : 토요일, 일요일, 공유일</p>
+                            </div>
+                            <section class="contents_box">
+                                <div class="box_title">
+                                    <h3>자주 찾는 질문 (FAQ)</h3>
+                                    <span class="view_add">더보기</span>
+                                </div>
+                                <div class="notice_list">
+                                    <ul>
+                                        <li>
+                                            <p>Q.질문1</p>
+                                            <i>2023. 06. 31</i>
+                                        </li>
+                                        <li>
+                                            <p>Q.질문2</p>
+                                            <i>2023. 06. 31</i>
+                                        </li>
+                                        <li>
+                                            <p>Q.질문3</p>
+                                            <i>2023. 06. 31</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="contents_box">
+                                <div class="box_title">
+                                    <h3>공지사항</h3>
+                                    <span class="view_add">더보기</span>
+                                </div>
+                                <div class="notice_list">
+                                    <ul>
+                                        <li>
+                                            <span>판매자</span>
+                                            <p>
+                                                [공지] 반송처리된 원료에 대한
+                                                조치 방법
+                                            </p>
+                                            <i>2023. 06. 31</i>
+                                        </li>
+                                        <li>
+                                            <span>판매자</span>
+                                            <p>
+                                                [공지] 반송처리된 원료에 대한
+                                                조치 방법[공지] 반송처리된
+                                                원료에 대한 조치 방법[공지]
+                                                반송처리된 원료에 대한 조치 방법
+                                            </p>
+                                            <i>2023. 06. 31</i>
+                                        </li>
+                                        <li>
+                                            <span>판매자</span>
+                                            <p>
+                                                [공지] 반송처리된 원료에 대한
+                                                조치 방법
+                                            </p>
+                                            <i>2023. 06. 31</i>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="cs_contents">
+                            <div class="cs_contact_box">
+                                <h3>문의하기</h3>
+                                <div class="label_vertical">
+                                    <label class="required">문의유형</label>
+                                    <div class="selectbox w_100">
+                                        <p class="selected">
+                                            문의 유형을 선택해주세요.
+                                        </p>
+                                        <div class="option_group">
+                                            <div class="inner">
+                                                <ul>
+                                                    <li>전체</li>
+                                                    <li>회원</li>
+                                                    <li>주문/입금/결제</li>
+                                                    <li>배송</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="label_vertical">
+                                    <label class="required">문의내용</label>
+                                    <div class="textarea_wrap">
+                                        <textarea></textarea>
+                                        <p class="counter">(0/500자)</p>
+                                    </div>
+                                </div>
+                                <div class="label_vertical">
+                                    <label>사진추가</label>
+                                    <div class="add_img_box">
+                                        <div class="thumbnail_box">
+                                            <img
+                                                src="./resource/images/thumnail_sample.png"
+                                                alt="thumbnail"
+                                            />
+                                        </div>
+                                        <div class="add_img"></div>
+                                    </div>
+                                    <p class="sub_txt">
+                                        파일첨부 (최대 5개) 5MB 미만 jpg, gif,
+                                        png 파일 가능
+                                    </p>
+                                </div>
+                                <div class="btn_wrap">
+                                    <button class="btn btn_secondary lg">
+                                        취소
+                                    </button>
+                                    <button class="btn btn_primary lg">
+                                        등록
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <div class="footer_wrap">
+                    <p class="copyright">
+                        COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
+                    </p>
+                </div>
+            </footer>
+        </div>
+        <script>
+            //고객센터 상단 메뉴 tab 효과
+            $(".cs_lnb_wrap li").on("click", function () {
+                $(".cs_lnb_wrap li").removeClass("on");
+                $(this).addClass("on");
+            });
+        </script>
+    </body>
+</html>
