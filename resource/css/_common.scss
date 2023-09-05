@@ -17,6 +17,7 @@ body {
     min-width: 1800px;
     margin: 0 auto;
     color: $text-body;
+    background: $color-g1;
     &.modal-open {
         overflow: hidden;
     }
@@ -46,6 +47,11 @@ h1,
 h2,
 h3 {
     color: $text-title;
+    font-weight: 700;
+}
+h2 {
+    font-size: 4rem;
+    font-weight: 700;
 }
 input[type="text"],
 input[type="password"],
@@ -429,6 +435,19 @@ button.btn {
             background-size: 2.4rem;
         }
     }
+    &.btn_search_sm {
+        width: 7.4rem;
+        background: $color-s1 url(../images/search.svg) no-repeat left 1.2rem
+            center;
+        background-size: 1.6rem 1.6rem;
+        padding-left: 3.4rem;
+        color: #fff;
+        &.btn_primary {
+            background: $color-primary url(../images/search.svg) no-repeat left
+                1.2rem center;
+            background-size: 1.6rem 1.6rem;
+        }
+    }
     &.btn_check {
         color: #fff;
         padding-left: 3.4rem;
@@ -611,6 +630,7 @@ button.btn {
         }
     }
 }
+
 .input_btn_wrap {
     display: flex;
     input {
@@ -686,12 +706,17 @@ button.btn {
                     font-size: 1.6rem;
                     font-weight: 700;
                     line-height: 2.4rem;
-                    height: 4.4rem;
+                    height: 6rem;
                     padding: 0.8rem;
                     text-align: left;
                     i {
                         font-size: 1.4rem;
                         font-weight: 500;
+                    }
+                }
+                &.align_center {
+                    th {
+                        text-align: center;
                     }
                 }
             }
@@ -729,6 +754,15 @@ button.btn {
                             text-decoration: underline;
                             text-underline-position: under;
                         }
+                    }
+                }
+            }
+        }
+        &.no_hover {
+            table {
+                tbody {
+                    tr:hover {
+                        background: none;
                     }
                 }
             }
