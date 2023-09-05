@@ -540,13 +540,12 @@ button.btn.btn_border_secondary.btn_del:hover {
   background: url(../images/trash.svg) no-repeat left 1rem center;
 }
 button.btn.btn_border_secondary.btn_list {
-  width: 11.2rem;
-  padding-left: 2.6rem;
-  background: url(../images/list.svg) no-repeat left 1.2rem center;
+  padding-left: 4.8rem;
+  background: url(../images/list.svg) no-repeat left 1.6rem center;
 }
 button.btn.btn_border_secondary.btn_list:hover {
   color: #343a40;
-  background: url(../images/list.svg) no-repeat left 1.2rem center;
+  background: url(../images/list.svg) no-repeat left 1.6rem center;
 }
 button.btn.btn_text_del {
   padding-left: 3.6rem;
@@ -564,6 +563,14 @@ button.btn.sm {
   line-height: 2.9rem;
   font-weight: 500;
   font-size: 1.4rem;
+}
+button.btn.h50 {
+  padding: 0 1.6rem;
+  border-radius: 0.8rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  font-weight: 700;
 }
 button.btn.lg {
   padding: 0 1.6rem;
@@ -630,6 +637,7 @@ button.btn.btn_download:hover {
   border-radius: 4px;
   border: 1px solid #ced4da;
   background: url(../images/select_down.svg) no-repeat center right 1.2rem;
+  background-color: #fff;
 }
 .selectbox .option_group {
   display: none;
@@ -740,6 +748,9 @@ button.btn.btn_download:hover {
 .bottom_btn_wrap .btn_check.btn_primary:hover {
   background: #0ab968 url(../images/btn_check.svg) no-repeat left 7.6rem center;
 }
+.bottom_btn_wrap .btn_secondary {
+  width: 20rem;
+}
 
 .flex_row {
   display: flex;
@@ -752,6 +763,10 @@ button.btn.btn_download:hover {
 
 .w_100 {
   width: 100%;
+}
+
+.w_30 {
+  width: 30%;
 }
 
 .input_search_wrap {
@@ -815,14 +830,18 @@ button.btn.btn_download:hover {
 }
 
 .main_table_wrap .table_header {
-  margin-bottom: 1.6rem;
+  padding: 2.4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.main_table_wrap .table_header .counter {
+  margin-left: auto;
+}
 .main_table_wrap .table_header .counter b {
   color: #0ab968;
   font-weight: 700;
+  padding: 0 1rem;
 }
 .main_table_wrap .table_header .btn_wrap {
   display: flex;
@@ -895,6 +914,39 @@ button.btn.btn_download:hover {
 }
 .main_table_wrap .table_body.no_hover table tbody tr:hover {
   background: none;
+}
+.main_table_wrap .table_body.order_tracking_table table thead th {
+  text-align: center;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td {
+  font-size: 1.6rem;
+  text-align: right;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(1) {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(1) span {
+  font-weight: 700;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(1)[rowspan] {
+  border-right: 1px solid #e9ecef;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(6) {
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(6) span {
+  font-size: 1.4rem;
+  line-height: 2.1erm;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(6) .btn {
+  margin-top: 1.6rem;
+  font-size: 1.4rem !important;
+}
+.main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(6)[rowspan] {
+  border-left: 1px solid #e9ecef;
 }
 
 .pagination {
@@ -1068,6 +1120,7 @@ button.btn.btn_download:hover {
 .modal_wrap .modal .modal_footer .btn_wrap {
   flex: 1;
   display: flex;
+  gap: 0;
 }
 .modal_wrap .modal .modal_footer .btn_wrap .btn {
   height: 5.8rem;
@@ -1653,6 +1706,7 @@ button.btn.btn_download:hover {
   width: 36rem;
   position: absolute;
   min-height: calc(100vh - 10rem);
+  transition: all 0.2s;
 }
 .main_container .snb_wrap nav .depth_1 > li {
   padding: 8px 0;
@@ -1742,6 +1796,7 @@ button.btn.btn_download:hover {
   padding: 8rem;
   width: 156rem;
   margin-left: 35rem;
+  min-height: 110rem;
 }
 .main_container .product_detail_wrap {
   width: 144rem;
@@ -2072,6 +2127,18 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .shopping_list_wrap .list .thumbnail.type_2 {
   background: url(../images/product_bg2.png) no-repeat;
+  background-size: cover;
+}
+.shopping_basket_wrap .shopping_list_wrap .list .thumbnail.type_3 {
+  background: url(../images/product_bg3.png) no-repeat;
+  background-size: cover;
+}
+.shopping_basket_wrap .shopping_list_wrap .list .thumbnail.type_4 {
+  background: url(../images/product_bg4.png) no-repeat;
+  background-size: cover;
+}
+.shopping_basket_wrap .shopping_list_wrap .list .thumbnail.type_5 {
+  background: url(../images/product_bg5.png) no-repeat;
   background-size: cover;
 }
 .shopping_basket_wrap .shopping_list_wrap .list .list_detail {
@@ -3185,7 +3252,6 @@ button.btn.btn_download:hover {
   color: #fff;
 }
 .order_tracking_wrap .search_bar_wrap {
-  padding: 2.4rem 0;
   display: flex;
   gap: 8px;
   align-items: center;
@@ -3196,38 +3262,17 @@ button.btn.btn_download:hover {
   line-height: 2.4rem;
   width: 8rem;
 }
+.order_tracking_wrap .order_tracking_table {
+  margin-bottom: 4rem;
+}
+.order_tracking_wrap h3 {
+  padding: 8px 0 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 3.1rem;
+}
 
-.order_tracking_table tbody td {
-  font-size: 1.6rem !important;
-  text-align: right !important;
-}
-.order_tracking_table tbody td:nth-child(1) {
-  text-align: center !important;
-  font-size: 1.4rem;
-}
-.order_tracking_table tbody td:nth-child(1) span {
-  font-weight: 700;
-}
-.order_tracking_table tbody td:nth-child(1)[rowspan] {
-  border-right: 1px solid #e9ecef;
-}
-.order_tracking_table tbody td:nth-child(6) {
-  text-align: center !important;
-  font-size: 1.4rem !important;
-  padding: 1rem !important;
-}
-.order_tracking_table tbody td:nth-child(6) span {
-  font-size: 1.4rem !important;
-  line-height: 2.1erm;
-}
-.order_tracking_table tbody td:nth-child(6) .btn {
-  margin-top: 1.6rem;
-  font-size: 1.4rem !important;
-}
-.order_tracking_table tbody td:nth-child(6)[rowspan] {
-  border-left: 1px solid #e9ecef;
-}
-.order_tracking_table tbody td .list {
+.order_tracking_table .list {
   text-align: left;
   padding: 1.6rem 2.4rem;
   display: flex;
@@ -3235,7 +3280,7 @@ button.btn.btn_download:hover {
   gap: 2.4rem;
   font-weight: 500;
 }
-.order_tracking_table tbody td .list .thumbnail {
+.order_tracking_table .list .thumbnail {
   width: 8rem;
   height: 8rem;
   border-radius: 0.8rem;
@@ -3246,7 +3291,7 @@ button.btn.btn_download:hover {
   flex-direction: column;
   align-items: center;
 }
-.order_tracking_table tbody td .list .thumbnail p {
+.order_tracking_table .list .thumbnail p {
   font-size: 0.8889rem;
   font-weight: 700;
   line-height: 1.1556rem;
@@ -3259,43 +3304,55 @@ button.btn.btn_download:hover {
   -webkit-box-orient: vertical;
   word-break: break-all;
 }
-.order_tracking_table tbody td .list .thumbnail.type_1 {
+.order_tracking_table .list .thumbnail.type_1 {
   background: url(../images/product_bg1.png) no-repeat;
   background-size: cover;
 }
-.order_tracking_table tbody td .list .thumbnail.type_2 {
+.order_tracking_table .list .thumbnail.type_2 {
   background: url(../images/product_bg2.png) no-repeat;
   background-size: cover;
 }
-.order_tracking_table tbody td .list .list_detail {
+.order_tracking_table .list .thumbnail.type_3 {
+  background: url(../images/product_bg3.png) no-repeat;
+  background-size: cover;
+}
+.order_tracking_table .list .thumbnail.type_4 {
+  background: url(../images/product_bg4.png) no-repeat;
+  background-size: cover;
+}
+.order_tracking_table .list .thumbnail.type_5 {
+  background: url(../images/product_bg5.png) no-repeat;
+  background-size: cover;
+}
+.order_tracking_table .list .list_detail {
   flex: 1;
 }
-.order_tracking_table tbody td .list .list_detail .category {
+.order_tracking_table .list .list_detail .category {
   font-size: 1.4rem;
   color: #6c757d;
   line-height: 2.1rem;
 }
-.order_tracking_table tbody td .list .list_detail h3 {
+.order_tracking_table .list .list_detail h3 {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
 }
-.order_tracking_table tbody td .list .list_detail .price {
+.order_tracking_table .list .list_detail .price {
   display: flex;
   align-items: center;
   gap: 0.8rem;
 }
-.order_tracking_table tbody td .list .list_detail .price .sale {
+.order_tracking_table .list .list_detail .price .sale {
   font-size: 2rem;
   font-weight: 700;
   color: #0ab968;
   line-height: 2.6rem;
 }
-.order_tracking_table tbody td .list .list_detail .price b {
+.order_tracking_table .list .list_detail .price b {
   font-weight: 700;
 }
-.order_tracking_table tbody td .list .list_detail .price .first_price {
+.order_tracking_table .list .list_detail .price .first_price {
   color: #adb5bd;
   font-size: 1.4rem;
   font-weight: 500;

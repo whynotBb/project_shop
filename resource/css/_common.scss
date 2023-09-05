@@ -384,12 +384,11 @@ button.btn {
             }
         }
         &.btn_list {
-            width: 11.2rem;
-            padding-left: 2.6rem;
-            background: url(../images/list.svg) no-repeat left 1.2rem center;
+            padding-left: 4.8rem;
+            background: url(../images/list.svg) no-repeat left 1.6rem center;
             &:hover {
                 color: $text-body;
-                background: url(../images/list.svg) no-repeat left 1.2rem center;
+                background: url(../images/list.svg) no-repeat left 1.6rem center;
             }
         }
     }
@@ -409,6 +408,14 @@ button.btn {
         line-height: 2.9rem;
         font-weight: 500;
         font-size: 1.4rem;
+    }
+    &.h50 {
+        padding: 0 1.6rem;
+        border-radius: 0.8rem;
+        height: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        font-weight: 700;
     }
     &.lg {
         padding: 0 1.6rem;
@@ -480,6 +487,7 @@ button.btn {
         border-radius: 4px;
         border: 1px solid $border-base;
         background: url(../images/select_down.svg) no-repeat center right 1.2rem;
+        background-color: #fff;
     }
     .option_group {
         display: none;
@@ -592,6 +600,9 @@ button.btn {
                 left 7.6rem center;
         }
     }
+    .btn_secondary {
+        width: 20rem;
+    }
 }
 .flex_row {
     display: flex;
@@ -602,6 +613,9 @@ button.btn {
 }
 .w_100 {
     width: 100%;
+}
+.w_30 {
+    width: 30%;
 }
 .input_search_wrap {
     display: flex;
@@ -667,14 +681,16 @@ button.btn {
 }
 .main_table_wrap {
     .table_header {
-        margin-bottom: 1.6rem;
+        padding: $space-lg 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
         .counter {
+            margin-left: auto;
             b {
                 color: $color-primary;
                 font-weight: 700;
+                padding: 0 1rem;
             }
         }
         .btn_wrap {
@@ -763,6 +779,46 @@ button.btn {
                 tbody {
                     tr:hover {
                         background: none;
+                    }
+                }
+            }
+        }
+        &.order_tracking_table {
+            table {
+                thead th {
+                    text-align: center;
+                }
+
+                tbody {
+                    td {
+                        font-size: 1.6rem;
+                        text-align: right;
+                        &:nth-child(1) {
+                            text-align: center;
+                            font-size: 1.4rem;
+                            span {
+                                font-weight: 700;
+                            }
+                            &[rowspan] {
+                                border-right: 1px solid $border-base-light;
+                            }
+                        }
+                        &:nth-child(6) {
+                            text-align: center;
+                            font-size: 1.4rem;
+                            padding: 1rem;
+                            span {
+                                font-size: 1.4rem;
+                                line-height: 2.1erm;
+                            }
+                            .btn {
+                                margin-top: $space-m;
+                                font-size: 1.4rem !important;
+                            }
+                            &[rowspan] {
+                                border-left: 1px solid $border-base-light;
+                            }
+                        }
                     }
                 }
             }
@@ -943,7 +999,7 @@ button.btn {
             .btn_wrap {
                 flex: 1;
                 display: flex;
-
+                gap: 0;
                 .btn {
                     height: 5.8rem;
                     line-height: 5.8rem;

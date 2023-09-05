@@ -16,6 +16,7 @@
             type="text/javascript"
             src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
         ></script>
+        <script src="./resource/js/ui.js"></script>
         <!-- date range picker css -->
         <link
             rel="stylesheet"
@@ -116,97 +117,7 @@
                         </div>
                         <div class="main_right_contents">
                             <div class="order_tracking_wrap">
-                                <h2>주문/배송조회</h2>
-                                <div class="info_txt">
-                                    기본적으로 최근 1개월간의 자료가 조회되며,
-                                    기간 검색 시 주문처리완료 후 3~6개월 이내의
-                                    주문내역을 조회하실 수 있습니다.<br />
-                                    주문번호를 클릭하시면 해당 주문에 대한
-                                    상세내역을 확인하실 수 있습니다.
-                                </div>
-                                <div class="order_tracking_box">
-                                    <ul>
-                                        <li class="on">
-                                            <b>0</b><span>결제완료</span>
-                                        </li>
-                                        <li><b>2</b><span>배송준비중</span></li>
-                                        <li><b>2</b><span>배송중</span></li>
-                                        <li><b>2</b><span>배송완료</span></li>
-                                    </ul>
-                                </div>
-                                <div class="search_bar_wrap">
-                                    <h5>구매기간</h5>
-                                    <div class="radiobox_wrap">
-                                        <div class="radiobox">
-                                            <input
-                                                type="radio"
-                                                name="rad-range"
-                                                id="rad-1month"
-                                            />
-                                            <label for="rad-1month"
-                                                >1개월</label
-                                            >
-                                        </div>
-                                        <div class="radiobox">
-                                            <input
-                                                type="radio"
-                                                name="rad-range"
-                                                id="rad-3month"
-                                            />
-                                            <label for="rad-3month"
-                                                >3개월</label
-                                            >
-                                        </div>
-                                        <div class="radiobox">
-                                            <input
-                                                type="radio"
-                                                name="rad-range"
-                                                id="rad-6month"
-                                            />
-                                            <label for="rad-6month"
-                                                >6개월</label
-                                            >
-                                        </div>
-                                        <div class="radiobox">
-                                            <input
-                                                type="radio"
-                                                name="rad-range"
-                                                id="rad-1year"
-                                            />
-                                            <label for="rad-1year">1년</label>
-                                        </div>
-                                        <div class="radiobox">
-                                            <input
-                                                type="radio"
-                                                name="rad-range"
-                                                id="rad-3year"
-                                            />
-                                            <label for="rad-3year">3년</label>
-                                        </div>
-                                    </div>
-                                    <div class="date_range_picker_wrap">
-                                        <div class="date_wrap">
-                                            <input
-                                                class="date_picker"
-                                                type="text"
-                                                name="singleDate"
-                                                readonly
-                                            />
-                                        </div>
-                                        <span>→</span>
-                                        <div class="date_wrap">
-                                            <input
-                                                class="date_picker"
-                                                type="text"
-                                                name="singleDate"
-                                                readonly
-                                            />
-                                        </div>
-                                    </div>
-                                    <button class="btn btn_search_sm">
-                                        검색
-                                    </button>
-                                </div>
+                                <h2>주문 취소</h2>
                                 <div class="main_table_wrap">
                                     <div
                                         class="table_body order_tracking_table no_hover"
@@ -214,20 +125,18 @@
                                         <table>
                                             <colgroup>
                                                 <col style="width: 128px" />
-                                                <col style="width: 888px" />
+                                                <col style="width: 1048px" />
                                                 <col style="width: 80px" />
                                                 <col style="width: 80px" />
                                                 <col style="width: 144px" />
-                                                <col style="width: 160px" />
                                             </colgroup>
-                                            <thead class="align_center">
+                                            <thead>
                                                 <tr>
                                                     <th>주문일자</th>
                                                     <th>원료</th>
                                                     <th>용량</th>
                                                     <th>수량</th>
                                                     <th>주문금액</th>
-                                                    <th></th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -280,19 +189,6 @@
                                                     <td>100g</td>
                                                     <td><b>10</b>개</td>
                                                     <td><b>100.000</b>원</td>
-                                                    <td rowspan="2">
-                                                        <span>결제완료</span>
-                                                        <button
-                                                            class="btn btn_border_secondary sm"
-                                                        >
-                                                            주문취소
-                                                        </button>
-                                                        <button
-                                                            class="btn btn_border_secondary sm"
-                                                        >
-                                                            증빙자료 다운로드
-                                                        </button>
-                                                    </td>
                                                 </tr>
                                                 <tr>
                                                     <td>
@@ -342,9 +238,158 @@
                                                         >원
                                                     </td>
                                                 </tr>
+                                                <tr>
+                                                    <td rowspan="2">
+                                                        <span>2023.07.03</span>
+                                                        <div class="link">
+                                                            y2307036396249
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="list">
+                                                            <div
+                                                                class="thumbnail type_3"
+                                                            >
+                                                                <p>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="list_detail"
+                                                            >
+                                                                <span
+                                                                    class="category"
+                                                                    >건강기능식품</span
+                                                                >
+                                                                <h3>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </h3>
+                                                                <div
+                                                                    class="price"
+                                                                >
+                                                                    <b
+                                                                        class="sale"
+                                                                        >30%</b
+                                                                    >
+                                                                    <p>
+                                                                        12,345
+                                                                        원
+                                                                    </p>
+                                                                    <span
+                                                                        class="first_price"
+                                                                        >12,345
+                                                                        원</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>100g</td>
+                                                    <td><b>10</b>개</td>
+                                                    <td><b>100.000</b>원</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="list">
+                                                            <div
+                                                                class="thumbnail type_4"
+                                                            >
+                                                                <p>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="list_detail"
+                                                            >
+                                                                <span
+                                                                    class="category"
+                                                                    >건강기능식품</span
+                                                                >
+                                                                <h3>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </h3>
+                                                                <div
+                                                                    class="price"
+                                                                >
+                                                                    <b
+                                                                        class="sale"
+                                                                        >30%</b
+                                                                    >
+                                                                    <p>
+                                                                        12,345
+                                                                        원
+                                                                    </p>
+                                                                    <span
+                                                                        class="first_price"
+                                                                        >12,345
+                                                                        원</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>100g</td>
+                                                    <td><b>10</b>개</td>
+                                                    <td>
+                                                        <b class="fc_primary"
+                                                            >100.000</b
+                                                        >원
+                                                    </td>
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
+                                </div>
+                                <h3>취소 정보</h3>
+                                <div class="contents_box gray_st">
+                                    <div class="content_list">
+                                        <h4>취소사유 선택</h4>
+                                        <div class="detail">
+                                            <div class="selectbox w_30">
+                                                <p class="selected">
+                                                    사유를 선택해주세요.
+                                                </p>
+                                                <div class="option_group">
+                                                    <div class="inner">
+                                                        <ul>
+                                                            <li>
+                                                                고객 단순변심
+                                                            </li>
+                                                            <li>주문오류</li>
+                                                            <li>
+                                                                원료 잘못 주문
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content_list">
+                                        <h4>취소/환불 방법</h4>
+                                        <div class="detail">
+                                            <p>신용카드</p>
+                                        </div>
+                                    </div>
+                                    <div class="content_list">
+                                        <h4>취소/환불 금액</h4>
+                                        <div class="detail">
+                                            <p>5,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom_btn_wrap">
+                                    <button
+                                        class="btn btn_border_secondary btn_list h50"
+                                    >
+                                        목록으로
+                                    </button>
+                                    <button
+                                        class="btn btn_secondary h50"
+                                        onclick="modalOpen('#alert01')"
+                                    >
+                                        주문취소 신청
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -360,6 +405,26 @@
                 </footer>
             </main>
         </div>
+        <!-- alert01 -->
+        <div class="modal_wrap alert_st" id="alert01">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">주문취소하시겠습니까?</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#alert01')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">주문취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert01 -->
         <script>
             //스크롤에 따라 헤더 배경 색 변경
             $(window).scroll(function () {

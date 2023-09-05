@@ -118,6 +118,7 @@
         width: 36rem;
         position: absolute;
         min-height: calc(100vh - 10rem);
+        transition: all 0.2s;
         nav {
             .depth_1 {
                 & > li {
@@ -224,6 +225,7 @@
         padding: $space-xxl;
         width: 156rem;
         margin-left: 35rem;
+        min-height: 110rem;
     }
     .product_detail_wrap {
         width: 144rem;
@@ -546,6 +548,18 @@
                 }
                 &.type_2 {
                     background: url(../images/product_bg2.png) no-repeat;
+                    background-size: cover;
+                }
+                &.type_3 {
+                    background: url(../images/product_bg3.png) no-repeat;
+                    background-size: cover;
+                }
+                &.type_4 {
+                    background: url(../images/product_bg4.png) no-repeat;
+                    background-size: cover;
+                }
+                &.type_5 {
+                    background: url(../images/product_bg5.png) no-repeat;
                     background-size: cover;
                 }
             }
@@ -1689,7 +1703,6 @@
         }
     }
     .search_bar_wrap {
-        padding: $space-lg 0;
         display: flex;
         gap: $space-s;
         align-items: center;
@@ -1700,105 +1713,94 @@
             width: 8rem;
         }
     }
+    .order_tracking_table {
+        margin-bottom: $space-xl;
+    }
+    h3 {
+        padding: $space-s 0 $space-m;
+        font-size: 2.4rem;
+        font-weight: 800;
+        line-height: 3.1rem;
+    }
 }
 .order_tracking_table {
-    tbody {
-        td {
-            font-size: 1.6rem !important;
-            text-align: right !important;
-            &:nth-child(1) {
-                text-align: center !important;
+    .list {
+        text-align: left;
+        padding: $space-m $space-lg;
+        display: flex;
+        align-items: center;
+        gap: $space-lg;
+        font-weight: 500;
+        .thumbnail {
+            width: 8rem;
+            height: 8rem;
+            border-radius: 0.8rem;
+            background: url(../images/product_bg1.png) no-repeat;
+            background-size: cover;
+            padding: 3.2rem 0.8rem 0.8rem 0.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                font-size: 0.8889rem;
+                font-weight: 700;
+                line-height: 1.1556rem;
+                color: #fff;
+                @include ellipse-3;
+                word-break: break-all;
+            }
+            &.type_1 {
+                background: url(../images/product_bg1.png) no-repeat;
+                background-size: cover;
+            }
+            &.type_2 {
+                background: url(../images/product_bg2.png) no-repeat;
+                background-size: cover;
+            }
+            &.type_3 {
+                background: url(../images/product_bg3.png) no-repeat;
+                background-size: cover;
+            }
+            &.type_4 {
+                background: url(../images/product_bg4.png) no-repeat;
+                background-size: cover;
+            }
+            &.type_5 {
+                background: url(../images/product_bg5.png) no-repeat;
+                background-size: cover;
+            }
+        }
+        .list_detail {
+            flex: 1;
+            .category {
                 font-size: 1.4rem;
-                span {
-                    font-weight: 700;
-                }
-                &[rowspan] {
-                    border-right: 1px solid $border-base-light;
-                }
+                color: $text-body-sub;
+                line-height: 2.1rem;
             }
-            &:nth-child(6) {
-                text-align: center !important;
-                font-size: 1.4rem !important;
-                padding: 1rem !important;
-                span {
-                    font-size: 1.4rem !important;
-                    line-height: 2.1erm;
-                }
-                .btn {
-                    margin-top: $space-m;
-                    font-size: 1.4rem !important;
-                }
-                &[rowspan] {
-                    border-left: 1px solid $border-base-light;
-                }
+            h3 {
+                font-size: 1.6rem;
+                font-weight: 700;
+                line-height: 2.4rem;
+                margin-bottom: 0.8rem;
             }
-            .list {
-                text-align: left;
-                padding: $space-m $space-lg;
+            .price {
                 display: flex;
                 align-items: center;
-                gap: $space-lg;
-                font-weight: 500;
-                .thumbnail {
-                    width: 8rem;
-                    height: 8rem;
-                    border-radius: 0.8rem;
-                    background: url(../images/product_bg1.png) no-repeat;
-                    background-size: cover;
-                    padding: 3.2rem 0.8rem 0.8rem 0.8rem;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    p {
-                        font-size: 0.8889rem;
-                        font-weight: 700;
-                        line-height: 1.1556rem;
-                        color: #fff;
-                        @include ellipse-3;
-                        word-break: break-all;
-                    }
-                    &.type_1 {
-                        background: url(../images/product_bg1.png) no-repeat;
-                        background-size: cover;
-                    }
-                    &.type_2 {
-                        background: url(../images/product_bg2.png) no-repeat;
-                        background-size: cover;
-                    }
+                gap: 0.8rem;
+                .sale {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    color: $color-primary;
+                    line-height: 2.6rem;
                 }
-                .list_detail {
-                    flex: 1;
-                    .category {
-                        font-size: 1.4rem;
-                        color: $text-body-sub;
-                        line-height: 2.1rem;
-                    }
-                    h3 {
-                        font-size: 1.6rem;
-                        font-weight: 700;
-                        line-height: 2.4rem;
-                        margin-bottom: 0.8rem;
-                    }
-                    .price {
-                        display: flex;
-                        align-items: center;
-                        gap: 0.8rem;
-                        .sale {
-                            font-size: 2rem;
-                            font-weight: 700;
-                            color: $color-primary;
-                            line-height: 2.6rem;
-                        }
-                        b {
-                            font-weight: 700;
-                        }
-                        .first_price {
-                            color: $text-placeholder;
-                            font-size: 1.4rem;
-                            font-weight: 500;
-                            text-decoration: line-through;
-                        }
-                    }
+                b {
+                    font-weight: 700;
+                }
+                .first_price {
+                    color: $text-placeholder;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    text-decoration: line-through;
                 }
             }
         }

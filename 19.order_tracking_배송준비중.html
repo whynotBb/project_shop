@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- date range picker -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+        ></script>
+        <script
+            defer
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+        ></script>
+        <!-- date range picker css -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+        />
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li class="on">
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="order_tracking_wrap">
+                                <h2>주문/배송조회</h2>
+                                <div class="info_txt">
+                                    기본적으로 최근 1개월간의 자료가 조회되며,
+                                    기간 검색 시 주문처리완료 후 3~6개월 이내의
+                                    주문내역을 조회하실 수 있습니다.<br />
+                                    주문번호를 클릭하시면 해당 주문에 대한
+                                    상세내역을 확인하실 수 있습니다.
+                                </div>
+                                <div class="order_tracking_box">
+                                    <ul>
+                                        <li><b>0</b><span>결제완료</span></li>
+                                        <li class="on">
+                                            <b>2</b><span>배송준비중</span>
+                                        </li>
+                                        <li><b>2</b><span>배송중</span></li>
+                                        <li><b>2</b><span>배송완료</span></li>
+                                    </ul>
+                                </div>
+
+                                <div class="main_table_wrap">
+                                    <div class="table_header">
+                                        <div class="search_bar_wrap">
+                                            <h5>구매기간</h5>
+                                            <div class="radiobox_wrap">
+                                                <div class="radiobox">
+                                                    <input
+                                                        type="radio"
+                                                        name="rad-range"
+                                                        id="rad-1month"
+                                                    />
+                                                    <label for="rad-1month"
+                                                        >1개월</label
+                                                    >
+                                                </div>
+                                                <div class="radiobox">
+                                                    <input
+                                                        type="radio"
+                                                        name="rad-range"
+                                                        id="rad-3month"
+                                                    />
+                                                    <label for="rad-3month"
+                                                        >3개월</label
+                                                    >
+                                                </div>
+                                                <div class="radiobox">
+                                                    <input
+                                                        type="radio"
+                                                        name="rad-range"
+                                                        id="rad-6month"
+                                                    />
+                                                    <label for="rad-6month"
+                                                        >6개월</label
+                                                    >
+                                                </div>
+                                                <div class="radiobox">
+                                                    <input
+                                                        type="radio"
+                                                        name="rad-range"
+                                                        id="rad-1year"
+                                                    />
+                                                    <label for="rad-1year"
+                                                        >1년</label
+                                                    >
+                                                </div>
+                                                <div class="radiobox">
+                                                    <input
+                                                        type="radio"
+                                                        name="rad-range"
+                                                        id="rad-3year"
+                                                    />
+                                                    <label for="rad-3year"
+                                                        >3년</label
+                                                    >
+                                                </div>
+                                            </div>
+                                            <div class="date_range_picker_wrap">
+                                                <div class="date_wrap">
+                                                    <input
+                                                        class="date_picker"
+                                                        type="text"
+                                                        name="singleDate"
+                                                        readonly
+                                                    />
+                                                </div>
+                                                <span>→</span>
+                                                <div class="date_wrap">
+                                                    <input
+                                                        class="date_picker"
+                                                        type="text"
+                                                        name="singleDate"
+                                                        readonly
+                                                    />
+                                                </div>
+                                            </div>
+                                            <button class="btn btn_search_sm">
+                                                검색
+                                            </button>
+                                        </div>
+                                        <p class="counter">총<b>100</b>건</p>
+                                    </div>
+                                    <div
+                                        class="table_body order_tracking_table no_hover"
+                                    >
+                                        <table>
+                                            <colgroup>
+                                                <col style="width: 128px" />
+                                                <col style="width: 888px" />
+                                                <col style="width: 80px" />
+                                                <col style="width: 80px" />
+                                                <col style="width: 144px" />
+                                                <col style="width: 160px" />
+                                            </colgroup>
+                                            <thead class="align_center">
+                                                <tr>
+                                                    <th>주문일자</th>
+                                                    <th>원료</th>
+                                                    <th>용량</th>
+                                                    <th>수량</th>
+                                                    <th>주문금액</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td rowspan="2">
+                                                        <span>2023.07.03</span>
+                                                        <div class="link">
+                                                            y2307036396249
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="list">
+                                                            <div
+                                                                class="thumbnail type_1"
+                                                            >
+                                                                <p>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="list_detail"
+                                                            >
+                                                                <span
+                                                                    class="category"
+                                                                    >건강기능식품</span
+                                                                >
+                                                                <h3>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </h3>
+                                                                <div
+                                                                    class="price"
+                                                                >
+                                                                    <b
+                                                                        class="sale"
+                                                                        >30%</b
+                                                                    >
+                                                                    <p>
+                                                                        12,345
+                                                                        원
+                                                                    </p>
+                                                                    <span
+                                                                        class="first_price"
+                                                                        >12,345
+                                                                        원</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>100g</td>
+                                                    <td><b>10</b>개</td>
+                                                    <td><b>100.000</b>원</td>
+                                                    <td rowspan="2">
+                                                        <span>배송준비중</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="list">
+                                                            <div
+                                                                class="thumbnail type_2"
+                                                            >
+                                                                <p>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="list_detail"
+                                                            >
+                                                                <span
+                                                                    class="category"
+                                                                    >건강기능식품</span
+                                                                >
+                                                                <h3>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </h3>
+                                                                <div
+                                                                    class="price"
+                                                                >
+                                                                    <b
+                                                                        class="sale"
+                                                                        >30%</b
+                                                                    >
+                                                                    <p>
+                                                                        12,345
+                                                                        원
+                                                                    </p>
+                                                                    <span
+                                                                        class="first_price"
+                                                                        >12,345
+                                                                        원</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>100g</td>
+                                                    <td><b>10</b>개</td>
+                                                    <td>
+                                                        <b class="fc_primary"
+                                                            >100.000</b
+                                                        >원
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td rowspan="2">
+                                                        <span>2023.07.03</span>
+                                                        <div class="link">
+                                                            y2307036396249
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="list">
+                                                            <div
+                                                                class="thumbnail type_3"
+                                                            >
+                                                                <p>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="list_detail"
+                                                            >
+                                                                <span
+                                                                    class="category"
+                                                                    >건강기능식품</span
+                                                                >
+                                                                <h3>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </h3>
+                                                                <div
+                                                                    class="price"
+                                                                >
+                                                                    <b
+                                                                        class="sale"
+                                                                        >30%</b
+                                                                    >
+                                                                    <p>
+                                                                        12,345
+                                                                        원
+                                                                    </p>
+                                                                    <span
+                                                                        class="first_price"
+                                                                        >12,345
+                                                                        원</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>100g</td>
+                                                    <td><b>10</b>개</td>
+                                                    <td><b>100.000</b>원</td>
+                                                    <td rowspan="2">
+                                                        <span>배송준비중</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="list">
+                                                            <div
+                                                                class="thumbnail type_4"
+                                                            >
+                                                                <p>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </p>
+                                                            </div>
+                                                            <div
+                                                                class="list_detail"
+                                                            >
+                                                                <span
+                                                                    class="category"
+                                                                    >건강기능식품</span
+                                                                >
+                                                                <h3>
+                                                                    옥수수수염·레몬밤추출복합물(CL-5MoA)
+                                                                </h3>
+                                                                <div
+                                                                    class="price"
+                                                                >
+                                                                    <b
+                                                                        class="sale"
+                                                                        >30%</b
+                                                                    >
+                                                                    <p>
+                                                                        12,345
+                                                                        원
+                                                                    </p>
+                                                                    <span
+                                                                        class="first_price"
+                                                                        >12,345
+                                                                        원</span
+                                                                    >
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                    <td>100g</td>
+                                                    <td><b>10</b>개</td>
+                                                    <td>
+                                                        <b class="fc_primary"
+                                                            >100.000</b
+                                                        >원
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <script>
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding", "18rem 8rem 8rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding", "8rem");
+                }
+            });
+            $(document).ready(function () {
+                // date range picker
+                const datepickerOption = {
+                    format: "YYYY-MM-DD",
+                    separator: " → ",
+                    applyLabel: "확인",
+                    cancelLabel: "취소",
+                    fromLabel: "From",
+                    toLabel: "To",
+                    customRangeLabel: "Custom",
+                    weekLabel: "주",
+                    daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+                    monthNames: [
+                        "1월",
+                        "2월",
+                        "3월",
+                        "4월",
+                        "5월",
+                        "6월",
+                        "7월",
+                        "8월",
+                        "9월",
+                        "10월",
+                        "11월",
+                        "12월",
+                    ],
+                    firstDay: 1,
+                };
+                $('input[name="singleDate"]').daterangepicker({
+                    opens: "left",
+                    autoApply: true,
+                    locale: datepickerOption,
+                    singleDatePicker: true,
+                });
+            });
+        </script>
+    </body>
+</html>
