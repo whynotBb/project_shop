@@ -262,6 +262,12 @@ input[type=number]::-webkit-outer-spin-button {
   color: #6c757d;
   background: rgba(255, 255, 255, 0.8);
 }
+.textarea_wrap.sm textarea {
+  min-height: 12rem;
+}
+.textarea_wrap.sm .counter {
+  bottom: 2rem;
+}
 
 textarea {
   width: 100%;
@@ -531,6 +537,7 @@ button.btn.btn_danger:hover {
 }
 button.btn.btn_border_secondary {
   border: 1px solid #343a40;
+  background: #fff;
 }
 button.btn.btn_border_secondary:hover {
   background: #343a40;
@@ -548,10 +555,12 @@ button.btn.btn_border_secondary.btn_del:hover {
 button.btn.btn_border_secondary.btn_list {
   padding-left: 4.6rem;
   background: url(../images/list.svg) no-repeat left 1.7rem center;
+  background-size: 2.4rem auto;
 }
 button.btn.btn_border_secondary.btn_list:hover {
   color: #343a40;
-  background: url(../images/list.svg) no-repeat left 1.6rem center;
+  background: url(../images/list.svg) no-repeat left 1.7rem center;
+  background-size: 2.4rem auto;
 }
 button.btn.btn_text_del {
   padding-left: 3.6rem;
@@ -773,6 +782,10 @@ button.btn.btn_download:hover {
 
 .w_30 {
   width: 30%;
+}
+
+.align_right {
+  text-align: right;
 }
 
 .input_search_wrap {
@@ -1171,6 +1184,12 @@ button.btn.btn_download:hover {
   text-align: center;
   line-height: 2.6rem;
   margin-bottom: 1.6rem;
+}
+.modal_wrap.md_st .modal .modal_body .content_list h4 {
+  font-size: 1.6rem;
+  line-height: 3.6rem;
+  margin-bottom: 0;
+  text-align: left;
 }
 .modal_wrap.md_st .modal .modal_body .sub_txt {
   font-weight: 500;
@@ -2978,6 +2997,9 @@ button.btn.btn_download:hover {
   display: flex;
   gap: 4rem;
 }
+.contents_box_flex_row .col_1 {
+  flex: 1;
+}
 
 .address_wrap .input_search_wrap {
   margin-bottom: 1.6rem;
@@ -3338,6 +3360,12 @@ button.btn.btn_download:hover {
   font-size: 2.4rem;
   font-weight: 800;
   line-height: 3.1rem;
+}
+.order_tracking_wrap .contents_box.gray_st {
+  margin-bottom: 4rem;
+}
+.order_tracking_wrap .contents_box.gray_st .btn {
+  margin-left: auto;
 }
 
 .order_tracking_table td span {

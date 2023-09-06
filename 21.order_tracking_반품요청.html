@@ -301,11 +301,14 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                            <button
-                                                class="btn btn_border_secondary"
-                                            >
-                                                반품 수령지 변경
-                                            </button>
+                                            <div class="align_right">
+                                                <button
+                                                    class="btn btn_border_secondary"
+                                                    onclick="modalOpen('#modal01')"
+                                                >
+                                                    반품 수령지 변경
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col_1">
@@ -348,7 +351,7 @@
                                         class="btn btn_secondary h50"
                                         onclick="modalOpen('#alert01')"
                                     >
-                                        주문취소 신청
+                                        반품 신청
                                     </button>
                                 </div>
                             </div>
@@ -365,11 +368,86 @@
                 </footer>
             </main>
         </div>
+        <!-- modal01 -->
+        <div class="modal_wrap md_st" id="modal01">
+            <div class="modal">
+                <div class="modal_header">
+                    <h3>반품 수령지 변경</h3>
+                </div>
+                <div class="modal_body">
+                    <div class="contents_box">
+                        <div class="content_list">
+                            <h4 class="required">받는분</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    value="김희정"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4 class="required">휴대폰번호</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    value="010-1234-5667"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>주소</h4>
+                            <div class="detail">
+                                <div class="input_search_wrap">
+                                    <input
+                                        type="text"
+                                        class="flex_1"
+                                        value="서울특별시 구로구 디지털로 300 "
+                                    />
+                                    <button class="btn btn_secondary">
+                                        주소 검색
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <div class="detail">
+                                <input type="text" class="w_100" value="10층" />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4 class="required">요청사항</h4>
+                            <div class="detail">
+                                <div class="textarea_wrap sm">
+                                    <textarea
+                                        placeholder="요청사항을 입력해주세요."
+                                    ></textarea>
+                                    <p class="counter">(0/500자)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#modal01')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">확인</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal01 -->
         <!-- alert01 -->
         <div class="modal_wrap alert_st" id="alert01">
             <div class="modal">
                 <div class="modal_body">
-                    <div class="alert_msg">주문취소하시겠습니까?</div>
+                    <div class="alert_msg">반품신청 하시겠습니까?</div>
                 </div>
                 <div class="modal_footer">
                     <div class="btn_wrap">
@@ -379,7 +457,7 @@
                         >
                             취소
                         </button>
-                        <button class="btn btn_primary">주문취소</button>
+                        <button class="btn btn_primary">확인</button>
                     </div>
                 </div>
             </div>

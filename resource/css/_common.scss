@@ -91,6 +91,14 @@ input[type="number"]::-webkit-outer-spin-button {
         color: $text-disabled;
         background: rgba(255, 255, 255, 0.8);
     }
+    &.sm {
+        textarea {
+            min-height: 12rem;
+        }
+        .counter {
+            bottom: 2rem;
+        }
+    }
 }
 textarea {
     width: 100%;
@@ -374,6 +382,7 @@ button.btn {
     }
     &.btn_border_secondary {
         border: 1px solid $color-s1;
+        background: #fff;
         &:hover {
             background: $color-s1;
             color: #fff;
@@ -391,9 +400,11 @@ button.btn {
         &.btn_list {
             padding-left: 4.6rem;
             background: url(../images/list.svg) no-repeat left 1.7rem center;
+            background-size: 2.4rem auto;
             &:hover {
                 color: $text-body;
-                background: url(../images/list.svg) no-repeat left 1.6rem center;
+                background: url(../images/list.svg) no-repeat left 1.7rem center;
+                background-size: 2.4rem auto;
             }
         }
     }
@@ -621,6 +632,9 @@ button.btn {
 }
 .w_30 {
     width: 30%;
+}
+.align_right {
+    text-align: right;
 }
 .input_search_wrap {
     display: flex;
@@ -1051,6 +1065,14 @@ button.btn {
                     text-align: center;
                     line-height: 2.6rem;
                     margin-bottom: $space-m;
+                }
+                .content_list {
+                    h4 {
+                        font-size: 1.6rem;
+                        line-height: 3.6rem;
+                        margin-bottom: 0;
+                        text-align: left;
+                    }
                 }
                 .sub_txt {
                     font-weight: 500;
