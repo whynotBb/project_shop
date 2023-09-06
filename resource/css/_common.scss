@@ -216,6 +216,11 @@ input[type="text"].date_picker {
         right: 1.2rem;
     }
 }
+.link_primary {
+    color: $color-primary;
+    text-decoration: underline;
+    text-underline-position: under;
+}
 .checkbox_wrap {
     label {
         min-width: 1.6rem;
@@ -384,8 +389,8 @@ button.btn {
             }
         }
         &.btn_list {
-            padding-left: 4.8rem;
-            background: url(../images/list.svg) no-repeat left 1.6rem center;
+            padding-left: 4.6rem;
+            background: url(../images/list.svg) no-repeat left 1.7rem center;
             &:hover {
                 color: $text-body;
                 background: url(../images/list.svg) no-repeat left 1.6rem center;
@@ -1010,6 +1015,7 @@ button.btn {
                     }
                     &.btn_secondary {
                         width: 15rem;
+                        flex: initial;
                     }
                 }
             }
@@ -1027,7 +1033,8 @@ button.btn {
     &.md_st {
         .modal {
             width: 50rem;
-            height: 52rem;
+            min-height: 52rem;
+            max-height: 60rem;
             .modal_header {
                 background: #fff;
                 padding-bottom: 0.8rem;

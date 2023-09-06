@@ -6,22 +6,7 @@
         <title>Barter Place</title>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- date range picker -->
-        <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
-        ></script>
-        <script
-            defer
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
-        ></script>
-        <!-- date range picker css -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
-        />
+
         <!-- ui common css -->
         <link rel="stylesheet" href="./resource/css/style.css" />
     </head>
@@ -116,106 +101,8 @@
                         </div>
                         <div class="main_right_contents">
                             <div class="order_tracking_wrap">
-                                <h2>주문/배송조회</h2>
-                                <div class="info_txt">
-                                    기본적으로 최근 1개월간의 자료가 조회되며,
-                                    기간 검색 시 주문처리완료 후 3~6개월 이내의
-                                    주문내역을 조회하실 수 있습니다.<br />
-                                    주문번호를 클릭하시면 해당 주문에 대한
-                                    상세내역을 확인하실 수 있습니다.
-                                </div>
-                                <div class="order_tracking_box">
-                                    <ul>
-                                        <li><b>0</b><span>결제완료</span></li>
-                                        <li><b>2</b><span>배송준비중</span></li>
-                                        <li class="on">
-                                            <b>2</b><span>배송중</span>
-                                        </li>
-                                        <li><b>2</b><span>배송완료</span></li>
-                                    </ul>
-                                </div>
-
+                                <h2>주문 취소 완료</h2>
                                 <div class="main_table_wrap">
-                                    <div class="table_header">
-                                        <div class="search_bar_wrap">
-                                            <h5>구매기간</h5>
-                                            <div class="radiobox_wrap">
-                                                <div class="radiobox">
-                                                    <input
-                                                        type="radio"
-                                                        name="rad-range"
-                                                        id="rad-1month"
-                                                    />
-                                                    <label for="rad-1month"
-                                                        >1개월</label
-                                                    >
-                                                </div>
-                                                <div class="radiobox">
-                                                    <input
-                                                        type="radio"
-                                                        name="rad-range"
-                                                        id="rad-3month"
-                                                    />
-                                                    <label for="rad-3month"
-                                                        >3개월</label
-                                                    >
-                                                </div>
-                                                <div class="radiobox">
-                                                    <input
-                                                        type="radio"
-                                                        name="rad-range"
-                                                        id="rad-6month"
-                                                    />
-                                                    <label for="rad-6month"
-                                                        >6개월</label
-                                                    >
-                                                </div>
-                                                <div class="radiobox">
-                                                    <input
-                                                        type="radio"
-                                                        name="rad-range"
-                                                        id="rad-1year"
-                                                    />
-                                                    <label for="rad-1year"
-                                                        >1년</label
-                                                    >
-                                                </div>
-                                                <div class="radiobox">
-                                                    <input
-                                                        type="radio"
-                                                        name="rad-range"
-                                                        id="rad-3year"
-                                                    />
-                                                    <label for="rad-3year"
-                                                        >3년</label
-                                                    >
-                                                </div>
-                                            </div>
-                                            <div class="date_range_picker_wrap">
-                                                <div class="date_wrap">
-                                                    <input
-                                                        class="date_picker"
-                                                        type="text"
-                                                        name="singleDate"
-                                                        readonly
-                                                    />
-                                                </div>
-                                                <span>→</span>
-                                                <div class="date_wrap">
-                                                    <input
-                                                        class="date_picker"
-                                                        type="text"
-                                                        name="singleDate"
-                                                        readonly
-                                                    />
-                                                </div>
-                                            </div>
-                                            <button class="btn btn_search_sm">
-                                                검색
-                                            </button>
-                                        </div>
-                                        <p class="counter">총<b>100</b>건</p>
-                                    </div>
                                     <div
                                         class="table_body order_tracking_table no_hover"
                                     >
@@ -228,7 +115,7 @@
                                                 <col style="width: 144px" />
                                                 <col style="width: 160px" />
                                             </colgroup>
-                                            <thead class="align_center">
+                                            <thead>
                                                 <tr>
                                                     <th>주문일자</th>
                                                     <th>원료</th>
@@ -289,13 +176,8 @@
                                                     <td><b>10</b>개</td>
                                                     <td><b>100.000</b>원</td>
                                                     <td rowspan="2">
-                                                        <span>배송중</span>
-                                                        <button
-                                                            class="btn btn_border_secondary sm"
-                                                            onclick="modalOpen('#modal01')"
-                                                        >
-                                                            배송조회
-                                                        </button>
+                                                        <span>2023.07.03</span>
+                                                        <span>취소완료</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -396,13 +278,8 @@
                                                     <td><b>10</b>개</td>
                                                     <td><b>100.000</b>원</td>
                                                     <td rowspan="2">
-                                                        <span>배송중</span>
-                                                        <button
-                                                            class="btn btn_border_secondary sm"
-                                                            onclick="modalOpen('#modal01')"
-                                                        >
-                                                            배송조회
-                                                        </button>
+                                                        <span>2023.07.03</span>
+                                                        <span>취소완료</span>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -457,6 +334,34 @@
                                         </table>
                                     </div>
                                 </div>
+                                <h3>취소 정보</h3>
+                                <div class="contents_box gray_st">
+                                    <div class="content_list">
+                                        <h4>취소사유 선택</h4>
+                                        <div class="detail">
+                                            <p>고객 단순변심</p>
+                                        </div>
+                                    </div>
+                                    <div class="content_list">
+                                        <h4>취소/환불 방법</h4>
+                                        <div class="detail">
+                                            <p>신용카드</p>
+                                        </div>
+                                    </div>
+                                    <div class="content_list">
+                                        <h4>취소/환불 금액</h4>
+                                        <div class="detail">
+                                            <p>5,000원</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bottom_btn_wrap">
+                                    <button
+                                        class="btn btn_border_secondary btn_list h50"
+                                    >
+                                        목록으로
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -471,131 +376,26 @@
                 </footer>
             </main>
         </div>
-        <!-- modal01 -->
-        <div class="modal_wrap" id="modal01">
+        <!-- alert01 -->
+        <div class="modal_wrap alert_st" id="alert01">
             <div class="modal">
-                <div class="modal_header">
-                    <h3>배송 상세 현황</h3>
-                    <a
-                        href="javascript:void(0);"
-                        class="modal_close"
-                        onclick="modalClose('#modal01')"
-                        >x</a
-                    >
-                </div>
                 <div class="modal_body">
-                    <div class="inner">
-                        <section class="contents_box">
-                            <h3>조회결과</h3>
-                            <div class="gray_box col_2">
-                                <div class="content_list">
-                                    <h4>발송인</h4>
-                                    <div class="detail">
-                                        <p>바터플레이스</p>
-                                    </div>
-                                </div>
-                                <div class="content_list">
-                                    <h4>수취인</h4>
-                                    <div class="detail">
-                                        <p>김희정</p>
-                                    </div>
-                                </div>
-                                <div class="content_list">
-                                    <h4>우편물 종류</h4>
-                                    <div class="detail">
-                                        <p>소포</p>
-                                    </div>
-                                </div>
-                                <div class="content_list">
-                                    <h4>배달날짜</h4>
-                                    <div class="detail">
-                                        <p>-</p>
-                                    </div>
-                                </div>
-                                <div class="content_list">
-                                    <h4>등기번호</h4>
-                                    <div class="detail">
-                                        <p>99999999922</p>
-                                    </div>
-                                </div>
-                                <div class="content_list">
-                                    <h4>수령인</h4>
-                                    <div class="detail">
-                                        <p>-</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        <section class="contents_box">
-                            <h3>배송상태</h3>
-                            <div class="main_table_wrap">
-                                <div class="table_body">
-                                    <table>
-                                        <colgroup>
-                                            <col style="width: 119px" />
-                                            <col style="width: 223px" />
-                                            <col style="width: 80px" />
-                                            <col style="width: 307px" />
-                                        </colgroup>
-                                        <thead>
-                                            <tr>
-                                                <th>처리일시</th>
-                                                <th>현위치</th>
-                                                <th>처리현황</th>
-                                                <th>상세설명</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>2022.12.12 12:12</td>
-                                                <td>평택우체국</td>
-                                                <td>집하완료</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2022.12.12 12:12</td>
-                                                <td>평택우체국</td>
-                                                <td>집수</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2022.12.12 12:12</td>
-                                                <td>서울구로우체국</td>
-                                                <td>발송</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2022.12.12 12:12</td>
-                                                <td>서울구로우체국</td>
-                                                <td>배달준비</td>
-                                                <td>-</td>
-                                            </tr>
-                                            <tr>
-                                                <td>2022.12.12 12:12</td>
-                                                <td>서울구로우체국</td>
-                                                <td class="fc_primary">
-                                                    배달완료
-                                                </td>
-                                                <td>배달</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div class="empty_data sm">
-                                        <p>내역이 없습니다.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                    <div class="alert_msg">주문취소하시겠습니까?</div>
                 </div>
                 <div class="modal_footer">
                     <div class="btn_wrap">
-                        <button class="btn btn_primary">확인</button>
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#alert01')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">주문취소</button>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- //modal01 -->
+        <!-- //alert01 -->
         <script>
             //스크롤에 따라 헤더 배경 색 변경
             $(window).scroll(function () {
@@ -608,50 +408,6 @@
                     $(".snb_wrap").css("position", "absolute").css("top", "0");
                     $(".main_right_contents").css("padding", "8rem");
                 }
-            });
-            //modal
-            function modalOpen(el) {
-                $(el).fadeIn();
-                $("body").addClass("modal-open");
-            }
-            function modalClose(el) {
-                $(el).fadeOut();
-                $("body").removeClass("modal-open");
-            }
-            $(document).ready(function () {
-                // date range picker
-                const datepickerOption = {
-                    format: "YYYY-MM-DD",
-                    separator: " → ",
-                    applyLabel: "확인",
-                    cancelLabel: "취소",
-                    fromLabel: "From",
-                    toLabel: "To",
-                    customRangeLabel: "Custom",
-                    weekLabel: "주",
-                    daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
-                    monthNames: [
-                        "1월",
-                        "2월",
-                        "3월",
-                        "4월",
-                        "5월",
-                        "6월",
-                        "7월",
-                        "8월",
-                        "9월",
-                        "10월",
-                        "11월",
-                        "12월",
-                    ],
-                    firstDay: 1,
-                };
-                $('input[name="singleDate"]').daterangepicker({
-                    opens: "left",
-                    autoApply: true,
-                    locale: datepickerOption,
-                    singleDatePicker: true,
-                });
             });
         </script>
     </body>

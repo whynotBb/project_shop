@@ -393,6 +393,12 @@ input[type=text].date_picker:disabled {
   right: 1.2rem;
 }
 
+.link_primary {
+  color: #0ab968;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+
 .checkbox_wrap label {
   min-width: 1.6rem;
   height: 2.4rem;
@@ -540,8 +546,8 @@ button.btn.btn_border_secondary.btn_del:hover {
   background: url(../images/trash.svg) no-repeat left 1rem center;
 }
 button.btn.btn_border_secondary.btn_list {
-  padding-left: 4.8rem;
-  background: url(../images/list.svg) no-repeat left 1.6rem center;
+  padding-left: 4.6rem;
+  background: url(../images/list.svg) no-repeat left 1.7rem center;
 }
 button.btn.btn_border_secondary.btn_list:hover {
   color: #343a40;
@@ -1132,6 +1138,7 @@ button.btn.btn_download:hover {
 }
 .modal_wrap .modal .modal_footer .btn_wrap .btn.btn_secondary {
   width: 15rem;
+  flex: initial;
 }
 .modal_wrap .modal .modal_footer .link_wrap {
   flex: 1;
@@ -1144,7 +1151,8 @@ button.btn.btn_download:hover {
 }
 .modal_wrap.md_st .modal {
   width: 50rem;
-  height: 52rem;
+  min-height: 52rem;
+  max-height: 60rem;
 }
 .modal_wrap.md_st .modal .modal_header {
   background: #fff;
@@ -1327,6 +1335,7 @@ button.btn.btn_download:hover {
 }
 .sign_wrapper main {
   min-height: calc(100vh - 15.7rem);
+  background: #fff;
 }
 .sign_wrapper main h2 {
   text-align: center;
@@ -1837,10 +1846,10 @@ button.btn.btn_download:hover {
 
 .empty_data {
   width: 100%;
-  height: 59rem !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+  height: 59rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .empty_data p {
   padding-top: 12.9rem;
@@ -1849,6 +1858,9 @@ button.btn.btn_download:hover {
   font-weight: 500;
   line-height: 2.4rem;
   background: url(../images/empty-img-gray.svg) no-repeat center top;
+}
+.empty_data.sm {
+  height: 30rem;
 }
 
 .product_detail_wrap .product_information {
@@ -2601,9 +2613,34 @@ button.btn.btn_download:hover {
   background: #f8f9fa;
   line-height: 2.4rem;
 }
+.gray_info_wrap .info {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-left: 2.4rem;
+  text-align: left;
+  background: url(../images/exclamation-octagon-fill.svg) no-repeat left center;
+  line-height: 2.4rem;
+  margin-bottom: 0.2rem;
+}
+.gray_info_wrap ul li {
+  position: relative;
+  padding-left: 2.4rem;
+}
 .gray_info_wrap ul li::before {
   content: "•";
   padding: 0 0.4rem;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.download_reference .gray_info_wrap {
+  margin-top: 2.4rem;
+}
+.download_reference .reference_list li {
+  margin-top: 2.4rem;
+  line-height: 2.4rem;
 }
 
 .add_img_box {
@@ -2909,6 +2946,37 @@ button.btn.btn_download:hover {
 }
 .contents_box.gray_st .content_list:first-child {
   margin-top: 0;
+}
+.contents_box .gray_box {
+  padding: 1.6rem 4rem;
+  background: #f8f9fa;
+}
+.contents_box .gray_box.col_2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 8rem;
+  position: relative;
+}
+.contents_box .gray_box.col_2 .content_list {
+  width: calc(50% - 4rem);
+  margin-top: 0;
+}
+.contents_box .gray_box.col_2::before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: calc(100% - 53px);
+  border-left: 1px dashed #ced4da;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.contents_box_flex_row {
+  display: flex;
+  gap: 4rem;
 }
 
 .address_wrap .input_search_wrap {
@@ -3272,6 +3340,9 @@ button.btn.btn_download:hover {
   line-height: 3.1rem;
 }
 
+.order_tracking_table td span {
+  display: block;
+}
 .order_tracking_table .list {
   text-align: left;
   padding: 1.6rem 2.4rem;

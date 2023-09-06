@@ -127,7 +127,7 @@
                                 <div class="order_tracking_box">
                                     <ul>
                                         <li class="on">
-                                            <b>0</b><span>결제완료</span>
+                                            <b>2</b><span>결제완료</span>
                                         </li>
                                         <li><b>2</b><span>배송준비중</span></li>
                                         <li><b>2</b><span>배송중</span></li>
@@ -297,6 +297,7 @@
                                                         </button>
                                                         <button
                                                             class="btn btn_border_secondary sm"
+                                                            onclick="modalOpen('#modal01')"
                                                         >
                                                             증빙자료 다운로드
                                                         </button>
@@ -479,6 +480,53 @@
                 </footer>
             </main>
         </div>
+        <!-- modal01 -->
+        <div class="modal_wrap md_st" id="modal01">
+            <div class="modal">
+                <div class="modal_header"><h3>다운로드</h3></div>
+                <div class="modal_body">
+                    <div class="download_reference">
+                        <div class="checkbox_wrap">
+                            <input type="checkbox" id="chk01" />
+                            <label for="chk01" class="link_primary"
+                                >파일 다운로드 이용동의</label
+                            >
+                        </div>
+                        <div class="gray_info_wrap">
+                            <p class="info">다운로드 유의사항</p>
+                            <ul>
+                                <li>
+                                    증빙자료를 다운로드 하시면, 구매확정으로
+                                    변경됩니다.
+                                </li>
+                                <li>
+                                    구매확정 이후에는 반품이 불가하므로 반드시
+                                    확인 후 진행해주세요.
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="reference_list">
+                            <li>증빙자료1.xlxs</li>
+                            <li>증빙자료2.xlxs</li>
+                            <li>증빙자료3.xlxs</li>
+                            <li>증빙자료4.xlxs</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#modal01')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">다운로드</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal01 -->
         <script>
             //스크롤에 따라 헤더 배경 색 변경
             $(window).scroll(function () {
@@ -492,6 +540,15 @@
                     $(".main_right_contents").css("padding", "8rem");
                 }
             });
+            //modal
+            function modalOpen(el) {
+                $(el).fadeIn();
+                $("body").addClass("modal-open");
+            }
+            function modalClose(el) {
+                $(el).fadeOut();
+                $("body").removeClass("modal-open");
+            }
             $(document).ready(function () {
                 // date range picker
                 const datepickerOption = {

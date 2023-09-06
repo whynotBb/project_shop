@@ -46,6 +46,7 @@
     }
     main {
         min-height: calc(100vh - 15.7rem);
+        background: #fff;
         h2 {
             text-align: center;
             color: $text-title;
@@ -68,6 +69,7 @@
         line-height: 5.3rem;
         padding: 0 $space-xl;
         background: $color-g1;
+
         .copyright {
             text-align: center;
             font-size: 1.4rem;
