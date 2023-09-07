@@ -228,6 +228,7 @@ input[type="text"].date_picker {
     color: $color-primary;
     text-decoration: underline;
     text-underline-position: under;
+    cursor: pointer;
 }
 .checkbox_wrap {
     label {
@@ -322,6 +323,38 @@ input[type="text"].date_picker {
         }
     }
 }
+.box_tab {
+    width: 100%;
+    display: flex;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    li {
+        width: 50%;
+        text-align: center;
+        cursor: pointer;
+        border: 1px solid $border-base-light;
+        font-weight: 600;
+        height: 4rem;
+        line-height: 4rem;
+        color: $text-body-sub;
+        &:first-child {
+            border-right: 0;
+        }
+        input[type="radio"] {
+            display: none;
+        }
+        label {
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        input[type="radio"]:checked + label {
+            background: $color-primary;
+            color: #fff;
+        }
+    }
+}
 .fc_primary,
 .fc_success {
     color: $color-primary;
@@ -344,6 +377,19 @@ button.btn {
         background: $color-primary;
         &:hover {
             background: $color-primary-dark;
+        }
+        &.btn_add {
+            min-width: 11.2rem;
+            padding-left: 5.9rem;
+            padding-right: 2.7rem;
+            background: $color-primary url(../images/plus.svg) no-repeat left
+                2.7rem center;
+            background-size: 2.4rem;
+            &:hover {
+                background: $color-primary url(../images/plus.svg) no-repeat
+                    left 2.7rem center;
+                background-size: 2.4rem;
+            }
         }
     }
     &.btn_secondary {
@@ -434,6 +480,7 @@ button.btn {
         font-weight: 700;
     }
     &.lg {
+        font-size: 2rem;
         padding: 0 1.6rem;
         border-radius: 0.8rem;
         height: 5.2rem;
@@ -629,6 +676,9 @@ button.btn {
 }
 .w_100 {
     width: 100%;
+}
+.w_50 {
+    width: 50% !important;
 }
 .w_30 {
     width: 30%;
@@ -838,6 +888,21 @@ button.btn {
                                 border-left: 1px solid $border-base-light;
                             }
                         }
+                    }
+                }
+            }
+        }
+        &.reception_manage_table {
+            tr {
+                th,
+                td {
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(7) {
+                        text-align: right;
+                    }
+                    &:nth-child(13) {
+                        padding-right: 3rem;
                     }
                 }
             }

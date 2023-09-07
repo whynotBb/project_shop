@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li class="on">
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="dash_board_wrap">
+                                <h2>대시보드</h2>
+                                <div class="contents_box_flex_row">
+                                    <div class="col_1">
+                                        <div class="contents_box shadow_st">
+                                            <div class="box_title">
+                                                <h3>판매현황</h3>
+                                                <span>최근 1개월</span>
+                                            </div>
+                                            <div class="flex_row">
+                                                <div class="col_1">
+                                                    <div class="content_list">
+                                                        <h4>결제완료</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>원료 준비중</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>배송 준비중</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col_1">
+                                                    <div class="content_list">
+                                                        <h4>배송중</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>배송완료</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>구매확정</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col_1">
+                                        <div class="contents_box shadow_st">
+                                            <h3>취소/반품 현황</h3>
+                                            <div class="flex_row">
+                                                <div class="col_1">
+                                                    <div class="content_list">
+                                                        <h4>취소신청</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>환불처리</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>교환신청</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col_1">
+                                                    <div class="content_list">
+                                                        <h4>취소처리</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>환불신청</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="content_list">
+                                                        <h4>교환처리</h4>
+                                                        <div class="detail">
+                                                            <p class="num">
+                                                                <b
+                                                                    class="fc_primary"
+                                                                    >1,234</b
+                                                                >건
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="contents_box shadow_st w_100">
+                                        <div class="box_title">
+                                            <h3>공지사항</h3>
+                                        </div>
+                                        <div class="notice_list">
+                                            <ul>
+                                                <li>
+                                                    <p>
+                                                        [공지] 반송처리된 원료에
+                                                        대한 조치 방법
+                                                    </p>
+                                                    <span>2023. 06. 31</span>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        Lorem Ipsum is simply
+                                                        dummy text of the
+                                                        printing and typesetting
+                                                        industry. Lorem Ipsum
+                                                        has been the industry's
+                                                        standard dummy text ever
+                                                        since the 1500s, when an
+                                                        unknown
+                                                    </p>
+                                                    <span>2023. 06. 31</span>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        [공지] 반송처리된 원료에
+                                                        대한 조치 방법
+                                                    </p>
+                                                    <span>2023. 06. 31</span>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        [공지] 반송처리된 원료에
+                                                        대한 조치 방법
+                                                    </p>
+                                                    <span>2023. 06. 31</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="contents_box shadow_st w_100">
+                                        <div class="box_title">
+                                            <h3>판매통계</h3>
+                                        </div>
+
+                                        <div class="flex_row">
+                                            <div class="chart_box">
+                                                <img
+                                                    src="./resource/images/sample_chart.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="chart_box">
+                                                <img
+                                                    src="./resource/images/sample_chart.png"
+                                                    alt=""
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <script>
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
+            });
+        </script>
+    </body>
+</html>

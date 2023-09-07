@@ -403,6 +403,7 @@ input[type=text].date_picker:disabled {
   color: #0ab968;
   text-decoration: underline;
   text-underline-position: under;
+  cursor: pointer;
 }
 
 .checkbox_wrap label {
@@ -478,6 +479,39 @@ input[type=text].date_picker:disabled {
   border-color: #0ab968;
 }
 
+.box_tab {
+  width: 100%;
+  display: flex;
+  border-radius: 0.2rem;
+  overflow: hidden;
+}
+.box_tab li {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #e9ecef;
+  font-weight: 600;
+  height: 4rem;
+  line-height: 4rem;
+  color: #6c757d;
+}
+.box_tab li:first-child {
+  border-right: 0;
+}
+.box_tab li input[type=radio] {
+  display: none;
+}
+.box_tab li label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.box_tab li input[type=radio]:checked + label {
+  background: #0ab968;
+  color: #fff;
+}
+
 .fc_primary,
 .fc_success {
   color: #0ab968;
@@ -504,6 +538,17 @@ button.btn.btn_primary {
 }
 button.btn.btn_primary:hover {
   background: #19a078;
+}
+button.btn.btn_primary.btn_add {
+  min-width: 11.2rem;
+  padding-left: 5.9rem;
+  padding-right: 2.7rem;
+  background: #0ab968 url(../images/plus.svg) no-repeat left 2.7rem center;
+  background-size: 2.4rem;
+}
+button.btn.btn_primary.btn_add:hover {
+  background: #0ab968 url(../images/plus.svg) no-repeat left 2.7rem center;
+  background-size: 2.4rem;
 }
 button.btn.btn_secondary {
   color: #fff;
@@ -588,6 +633,7 @@ button.btn.h50 {
   font-weight: 700;
 }
 button.btn.lg {
+  font-size: 2rem;
   padding: 0 1.6rem;
   border-radius: 0.8rem;
   height: 5.2rem;
@@ -780,6 +826,10 @@ button.btn.btn_download:hover {
   width: 100%;
 }
 
+.w_50 {
+  width: 50% !important;
+}
+
 .w_30 {
   width: 30%;
 }
@@ -966,6 +1016,16 @@ button.btn.btn_download:hover {
 }
 .main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(6)[rowspan] {
   border-left: 1px solid #e9ecef;
+}
+.main_table_wrap .table_body.reception_manage_table tr th:nth-child(5), .main_table_wrap .table_body.reception_manage_table tr th:nth-child(6), .main_table_wrap .table_body.reception_manage_table tr th:nth-child(7),
+.main_table_wrap .table_body.reception_manage_table tr td:nth-child(5),
+.main_table_wrap .table_body.reception_manage_table tr td:nth-child(6),
+.main_table_wrap .table_body.reception_manage_table tr td:nth-child(7) {
+  text-align: right;
+}
+.main_table_wrap .table_body.reception_manage_table tr th:nth-child(13),
+.main_table_wrap .table_body.reception_manage_table tr td:nth-child(13) {
+  padding-right: 3rem;
 }
 
 .pagination {
@@ -1729,12 +1789,14 @@ button.btn.btn_download:hover {
   position: relative;
 }
 .main_container .snb_wrap {
-  padding: 8rem 4rem;
+  padding: 4rem;
   border-right: 1px solid #e9ecef;
   width: 36rem;
   position: absolute;
   min-height: calc(100vh - 10rem);
   transition: all 0.2s;
+  z-index: 9;
+  background: #fff;
 }
 .main_container .snb_wrap nav .depth_1 > li {
   padding: 8px 0;
@@ -1821,7 +1883,7 @@ button.btn.btn_download:hover {
   background: #343a40;
 }
 .main_container .main_right_contents {
-  padding: 8rem;
+  padding: 4rem;
   width: 156rem;
   margin-left: 35rem;
   min-height: 110rem;
@@ -1829,6 +1891,12 @@ button.btn.btn_download:hover {
 .main_container .product_detail_wrap {
   width: 144rem;
   margin: 0 auto;
+  padding: 8rem;
+}
+.main_container.visual_st .snb_wrap {
+  padding: 8rem 4rem;
+}
+.main_container.visual_st .main_right_contents {
   padding: 8rem;
 }
 
@@ -2743,10 +2811,12 @@ button.btn.btn_download:hover {
   border: 1px solid #e9ecef;
   border-radius: 4rem;
   padding: 4rem;
-  margin-bottom: 4rem;
 }
-.contents_box.shadow_st .content_list {
-  margin-top: 2.4rem;
+.contents_box.shadow_st h3 {
+  line-height: 3.6rem;
+}
+.contents_box.shadow_st .flex_row {
+  gap: 8rem;
 }
 .contents_box h3 {
   color: #0ab968;
@@ -2813,7 +2883,7 @@ button.btn.btn_download:hover {
   width: 9rem;
 }
 .contents_box .notice_list ul li span {
-  width: 8rem;
+  width: 11rem;
 }
 .contents_box .notice_list ul li p {
   flex: 1;
@@ -2852,6 +2922,12 @@ button.btn.btn_download:hover {
   line-height: 3.6rem;
   min-height: 3.6rem;
   position: relative;
+}
+.contents_box .content_list .detail .num {
+  text-align: right;
+}
+.contents_box .content_list .detail .num b {
+  padding-right: 8px;
 }
 .contents_box .content_list .detail .list_st {
   display: flex;
@@ -2991,6 +3067,17 @@ button.btn.btn_download:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
+}
+.contents_box.reception_contents_box .content_list {
+  padding-left: 14rem;
+}
+.contents_box.reception_contents_box .content_list h4 {
+  width: 14rem;
+}
+.contents_box.reception_contents_box .info_txt {
+  color: #0ab968;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
 }
 
 .contents_box_flex_row {
@@ -3341,17 +3428,6 @@ button.btn.btn_download:hover {
   background: #0ab968;
   color: #fff;
 }
-.order_tracking_wrap .search_bar_wrap {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-}
-.order_tracking_wrap .search_bar_wrap h5 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 2.4rem;
-  width: 8rem;
-}
 .order_tracking_wrap .order_tracking_table {
   margin-bottom: 4rem;
 }
@@ -3366,6 +3442,18 @@ button.btn.btn_download:hover {
 }
 .order_tracking_wrap .contents_box.gray_st .btn {
   margin-left: auto;
+}
+
+.search_bar_wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.search_bar_wrap h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  width: 8rem;
 }
 
 .order_tracking_table td span {
@@ -3456,4 +3544,48 @@ button.btn.btn_download:hover {
   font-size: 1.4rem;
   font-weight: 500;
   text-decoration: line-through;
+}
+
+.dash_board_wrap h2 {
+  margin-bottom: 4rem;
+}
+.dash_board_wrap .contents_box_flex_row {
+  gap: 2.4rem;
+  flex-wrap: wrap;
+}
+.dash_board_wrap .chart_box {
+  height: 24rem;
+}
+.dash_board_wrap .chart_box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.notice_wrap .notice_title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.qr_box_wrap {
+  text-align: center;
+}
+.qr_box_wrap .qr_box {
+  text-align: center;
+}
+
+.tag_input {
+  cursor: pointer;
+  width: 100%;
+  height: 3.6rem;
+  color: #adb5bd;
+  border: 1px solid #ced4da;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }

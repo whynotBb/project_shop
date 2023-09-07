@@ -6,23 +6,9 @@
         <title>Barter Place</title>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- date range picker -->
-        <script
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
-        ></script>
-        <script
-            defer
-            type="text/javascript"
-            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
-        ></script>
+
         <script src="./resource/js/ui.js"></script>
-        <!-- date range picker css -->
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
-        />
+
         <!-- ui common css -->
         <link rel="stylesheet" href="./resource/css/style.css" />
     </head>
@@ -117,7 +103,7 @@
                         </div>
                         <div class="main_right_contents">
                             <div class="order_tracking_wrap">
-                                <h2>주문 취소 완료</h2>
+                                <h2>반품 내역</h2>
                                 <div class="main_table_wrap">
                                     <div
                                         class="table_body order_tracking_table no_hover"
@@ -417,7 +403,7 @@
                             </div>
                         </div>
                         <div class="content_list">
-                            <h4 class="required">요청사항</h4>
+                            <h4>요청사항</h4>
                             <div class="detail">
                                 <div class="textarea_wrap sm">
                                     <textarea
@@ -469,47 +455,12 @@
                 if ($(this).scrollTop() > 312) {
                     $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
                     $(".snb_wrap").css("position", "fixed").css("top", "10rem");
-                    $(".main_right_contents").css("padding", "18rem 8rem 8rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
                 } else {
                     $("header").css("box-shadow", "none");
                     $(".snb_wrap").css("position", "absolute").css("top", "0");
-                    $(".main_right_contents").css("padding", "8rem");
+                    $(".main_right_contents").css("padding-top", "4rem");
                 }
-            });
-            $(document).ready(function () {
-                // date range picker
-                const datepickerOption = {
-                    format: "YYYY-MM-DD",
-                    separator: " → ",
-                    applyLabel: "확인",
-                    cancelLabel: "취소",
-                    fromLabel: "From",
-                    toLabel: "To",
-                    customRangeLabel: "Custom",
-                    weekLabel: "주",
-                    daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
-                    monthNames: [
-                        "1월",
-                        "2월",
-                        "3월",
-                        "4월",
-                        "5월",
-                        "6월",
-                        "7월",
-                        "8월",
-                        "9월",
-                        "10월",
-                        "11월",
-                        "12월",
-                    ],
-                    firstDay: 1,
-                };
-                $('input[name="singleDate"]').daterangepicker({
-                    opens: "left",
-                    autoApply: true,
-                    locale: datepickerOption,
-                    singleDatePicker: true,
-                });
             });
         </script>
     </body>
