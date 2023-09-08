@@ -312,6 +312,7 @@ input[type=text].date_picker:disabled {
 
 .filebox {
   display: flex;
+  position: relative;
 }
 .filebox .upload-name {
   flex: 1;
@@ -319,7 +320,7 @@ input[type=text].date_picker:disabled {
   line-height: 3.6rem;
   border: 1px solid #ced4da;
   border-radius: 0 0.4rem 0.4rem 0;
-  padding: 0 1.2rem;
+  padding: 0 3.6rem 0 1.2rem;
 }
 .filebox .upload-name::-moz-placeholder {
   color: #adb5bd;
@@ -334,7 +335,7 @@ input[type=text].date_picker:disabled {
   line-height: 3.6rem;
   padding: 0 1.2rem 0 3.4rem;
   color: #fff;
-  background: #343a40 url(../images/Rpaperclip.svg) no-repeat left 1.2rem center;
+  background: #343a40 url(../images/file.svg) no-repeat left 1.2rem center;
   border-radius: 0.4rem 0 0 0.4rem;
 }
 .filebox input[type=file] {
@@ -344,6 +345,37 @@ input[type=text].date_picker:disabled {
   padding: 0;
   overflow: hidden;
   border: 0;
+}
+.filebox .del_x {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 1.2rem;
+  cursor: pointer;
+  background: url(../images/x-circle-fill_gray.svg) no-repeat center;
+}
+.filebox.on .del_x {
+  display: block;
+}
+.filebox.valid_red .upload-name {
+  border-color: #dc3545;
+}
+.filebox.valid_red ~ .valid_txt {
+  margin-left: 10.2rem;
+}
+
+.valid_red {
+  border-color: #dc3545;
+}
+
+.valid_txt {
+  font-size: 1.4rem;
+  color: #0ab968;
+  line-height: 2.1rem;
+}
+.valid_txt.red {
+  color: #dc3545;
 }
 
 .daterangepicker {
@@ -823,7 +855,7 @@ button.btn.btn_download:hover {
 }
 
 .w_100 {
-  width: 100%;
+  width: 100% !important;
 }
 
 .w_50 {
@@ -1027,6 +1059,17 @@ button.btn.btn_download:hover {
 .main_table_wrap .table_body.reception_manage_table tr td:nth-child(13) {
   padding-right: 3rem;
 }
+.main_table_wrap .table_body.sales_manage_table tr th:nth-child(5), .main_table_wrap .table_body.sales_manage_table tr th:nth-child(6), .main_table_wrap .table_body.sales_manage_table tr th:nth-child(9),
+.main_table_wrap .table_body.sales_manage_table tr td:nth-child(5),
+.main_table_wrap .table_body.sales_manage_table tr td:nth-child(6),
+.main_table_wrap .table_body.sales_manage_table tr td:nth-child(9) {
+  text-align: right;
+}
+.main_table_wrap .table_body.sales_manage_table .original_price {
+  font-size: 1.4rem;
+  color: #adb5bd;
+  text-decoration: line-through;
+}
 
 .pagination {
   margin-top: 4rem;
@@ -1214,7 +1257,7 @@ button.btn.btn_download:hover {
   flex: initial;
 }
 .modal_wrap .modal .modal_footer .link_wrap {
-  flex: 1;
+  width: 46rem;
   background: #fff;
   border-top: 1px solid #e9ecef;
   padding: 0 4rem;
@@ -2864,7 +2907,7 @@ button.btn.btn_download:hover {
   padding-bottom: 0;
 }
 .contents_box .box_title span {
-  width: 7rem;
+  width: auto;
   color: #6c757d;
 }
 .contents_box .box_title span.view_add {
@@ -2979,6 +3022,9 @@ button.btn.btn_download:hover {
 .contents_box .content_list .detail .input_multi_wrap:first-child {
   margin-top: 0;
 }
+.contents_box .content_list .detail .input_multi_wrap input {
+  width: 19rem;
+}
 .contents_box .state_list h4 {
   font-size: 1.6rem;
   font-weight: 700;
@@ -3078,6 +3124,9 @@ button.btn.btn_download:hover {
   color: #0ab968;
   font-size: 1.4rem;
   line-height: 2.1rem;
+}
+.contents_box.reception_contents_box .isImport {
+  display: none;
 }
 
 .contents_box_flex_row {
@@ -3347,6 +3396,10 @@ button.btn.btn_download:hover {
   border-bottom: 3px solid #343a40;
 }
 
+.tab_con {
+  display: none;
+}
+
 .check_tab_menu {
   display: flex;
   gap: 1.6rem;
@@ -3588,4 +3641,30 @@ button.btn.btn_download:hover {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+.tag_input .tag {
+  height: 2.4rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  font-size: 1.4rem;
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #343a40;
+}
+
+.allergic_check_box .row:first-child {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 2.4rem;
+}
+.allergic_check_box .row:nth-child(2) {
+  padding-top: 2.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+}
+.allergic_check_box .row:nth-child(2) .checkbox_wrap {
+  width: calc(25% - 1.8rem);
 }

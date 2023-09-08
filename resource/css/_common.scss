@@ -138,13 +138,14 @@ input[type="text"].date_picker {
 // input file custom
 .filebox {
     display: flex;
+    position: relative;
     .upload-name {
         flex: 1;
         height: 3.6rem;
         line-height: 3.6rem;
         border: 1px solid $border-base;
         border-radius: 0 0.4rem 0.4rem 0;
-        padding: 0 1.2rem;
+        padding: 0 3.6rem 0 1.2rem;
         &::placeholder {
             color: $text-placeholder;
         }
@@ -156,8 +157,8 @@ input[type="text"].date_picker {
         line-height: 3.6rem;
         padding: 0 1.2rem 0 3.4rem;
         color: #fff;
-        background: $color-s1 url(../images/Rpaperclip.svg) no-repeat left
-            1.2rem center;
+        background: $color-s1 url(../images/file.svg) no-repeat left 1.2rem
+            center;
         border-radius: 0.4rem 0 0 0.4rem;
     }
     input[type="file"] {
@@ -168,8 +169,40 @@ input[type="text"].date_picker {
         overflow: hidden;
         border: 0;
     }
+    .del_x {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1.2rem;
+        cursor: pointer;
+        background: url(../images/x-circle-fill_gray.svg) no-repeat center;
+    }
+    &.on {
+        .del_x {
+            display: block;
+        }
+    }
+    &.valid_red {
+        .upload-name {
+            border-color: $color-s2;
+        }
+        & ~ .valid_txt {
+            margin-left: 10.2rem;
+        }
+    }
 }
-
+.valid_red {
+    border-color: $color-s2;
+}
+.valid_txt {
+    font-size: 1.4rem;
+    color: $color-primary;
+    line-height: 2.1rem;
+    &.red {
+        color: $color-s2;
+    }
+}
 .daterangepicker {
     font-family: "Pretendard Variable", Pretendard, -apple-system,
         BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI",
@@ -675,7 +708,7 @@ button.btn {
     flex: 1;
 }
 .w_100 {
-    width: 100%;
+    width: 100% !important;
 }
 .w_50 {
     width: 50% !important;
@@ -907,6 +940,23 @@ button.btn {
                 }
             }
         }
+        &.sales_manage_table {
+            tr {
+                th,
+                td {
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(9) {
+                        text-align: right;
+                    }
+                }
+            }
+            .original_price {
+                font-size: 1.4rem;
+                color: $text-placeholder;
+                text-decoration: line-through;
+            }
+        }
     }
 }
 .pagination {
@@ -1099,7 +1149,7 @@ button.btn {
                 }
             }
             .link_wrap {
-                flex: 1;
+                width: 46rem;
                 background: #fff;
                 border-top: 1px solid $border-base-light;
                 padding: 0 $space-xl;

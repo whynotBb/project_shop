@@ -172,16 +172,16 @@
                                         <div class="checkbox_wrap">
                                             <input
                                                 type="checkbox"
-                                                id="chk_01"
+                                                id="chk-01"
                                             />
-                                            <label for="chk_01">답변대기</label>
+                                            <label for="chk-01">답변대기</label>
                                         </div>
                                         <div class="checkbox_wrap">
                                             <input
                                                 type="checkbox"
-                                                id="chk_02"
+                                                id="chk-02"
                                             />
-                                            <label for="chk_02">답변완료</label>
+                                            <label for="chk-02">답변완료</label>
                                         </div>
                                     </div>
                                 </div>
@@ -206,6 +206,25 @@
                         <div class="search_btn">
                             <button class="btn btn_search">검색</button>
                         </div>
+                    </div>
+                    <hr />
+                    <ul class="table_tab_menu">
+                        <li class="on" onclick="contentsView('#tab_con_01')">
+                            상세 정산 내역
+                        </li>
+                        <li onclick="contentsView('#tab_con_02')">
+                            정산 예정 원료 목록
+                        </li>
+                    </ul>
+                    <hr />
+                    <div class="filebox">
+                        <label for="file">파일찾기</label>
+                        <input type="file" id="file" />
+                        <input
+                            class="upload-name"
+                            placeholder="파일을 등록하세요."
+                            readonly=""
+                        />
                     </div>
                     <hr />
                     <h4>table</h4>

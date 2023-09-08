@@ -28,6 +28,13 @@ function contentsView(el) {
     $(".tab_con").hide();
     $(el).show();
 }
+// 파일박스
+function handleFileChange(inputId) {
+    $(inputId).on("change", function () {
+        var fileName = $(this).val();
+        $(".upload-name").val(fileName);
+    });
+}
 $(document).ready(function () {
     // text editor
     $("#summernote").summernote({
@@ -128,11 +135,5 @@ $(document).ready(function () {
     $(".pagination li").on("click", function () {
         $(".pagination li").removeClass("on");
         $(this).addClass("on");
-    });
-
-    //input file custom
-    $("#file").on("change", function () {
-        var fileName = $("#file").val();
-        $(".upload-name").val(fileName);
     });
 });

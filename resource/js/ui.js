@@ -28,7 +28,22 @@ function contentsView(el) {
     $(".tab_con").hide();
     $(el).show();
 }
+// 파일박스
+function handleFileChange(inputId) {
+    $(inputId).on("change", function () {
+        var fileName = $(this).val();
+        $(this).siblings(".upload-name").val(fileName);
+        $(this).parent(".filebox").addClass("on");
+    });
+}
+
 $(document).ready(function () {
+    // 파일박스 리셋
+    $(".filebox .del_x").on("click", function () {
+        $(this).siblings("input[type='file']").val("");
+        $(this).siblings(".upload-name").val("");
+        $(this).parent(".filebox").removeClass("on");
+    });
     // select box
     // select box 여닫기
     $(".selected").click(function () {

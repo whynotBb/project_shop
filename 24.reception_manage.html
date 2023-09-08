@@ -121,16 +121,6 @@
                                 <div class="notice_title">
                                     <h2>접수관리</h2>
                                     <button
-                                        style="
-                                            margin-left: auto;
-                                            margin-right: 1rem;
-                                        "
-                                        class="btn btn_border_secondary sm"
-                                        onclick="modalOpen('#modal03')"
-                                    >
-                                        (수입)
-                                    </button>
-                                    <button
                                         class="btn btn_primary btn_add h50"
                                         onclick="modalOpen('#modal02')"
                                     >
@@ -522,6 +512,26 @@
                                     />
                                 </div>
                             </div>
+                            <div class="content_list isImport">
+                                <h4 class="required">수입 업체명</h4>
+                                <div class="detail">
+                                    <input
+                                        class="w_100"
+                                        type="text"
+                                        placeholder="수입 업체명을 입력해 주세요."
+                                    />
+                                </div>
+                            </div>
+                            <div class="content_list isImport">
+                                <h4 class="required">수입업체 소재지</h4>
+                                <div class="detail">
+                                    <input
+                                        class="w_100"
+                                        type="text"
+                                        placeholder="수입업체 소재지를 입력해 주세요."
+                                    />
+                                </div>
+                            </div>
                             <div class="content_list">
                                 <h4 class="required">제조사</h4>
                                 <div class="detail">
@@ -579,14 +589,90 @@
                             <div class="content_list">
                                 <h4 class="required">알레르기 유발물질</h4>
                                 <div class="detail">
-                                    <div class="tag_input">
-                                        내용을 선택해주세요.
+                                    <div
+                                        class="tag_input"
+                                        onclick="modalOpen('#modal03')"
+                                    >
+                                        <!-- 내용을 선택해주세요. -->
+                                        <p class="tag">
+                                            밀<span class="del_x"></span>
+                                        </p>
+                                        <p class="tag">
+                                            토마토<span class="del_x"></span>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                             <div class="content_list">
-                                <h4 class="required">내용량(수량)</h4>
-                                <div class="detail fc_danger">수정예정</div>
+                                <h4 class="required">원료수량</h4>
+                                <div class="detail">
+                                    <div class="input_multi_wrap">
+                                        <input
+                                            type="number"
+                                            placeholder="수량"
+                                        />
+                                        <div class="selectbox flex_1">
+                                            <p class="selected">단위</p>
+                                            <div class="option_group">
+                                                <div class="inner">
+                                                    <p class="label">단위</p>
+                                                    <ul>
+                                                        <li>g</li>
+                                                        <li>kg</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="label_float flex_1">
+                                            <input
+                                                class="w_100"
+                                                type="number"
+                                                placeholder="개수"
+                                            />
+                                            <label>개</label>
+                                        </div>
+                                        <button
+                                            class="btn btn_secondary btn_add"
+                                        >
+                                            추가
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_list">
+                                <div class="detail">
+                                    <div class="input_multi_wrap">
+                                        <input
+                                            type="number"
+                                            placeholder="수량"
+                                        />
+                                        <div class="selectbox flex_1">
+                                            <p class="selected">단위</p>
+                                            <div class="option_group">
+                                                <div class="inner">
+                                                    <p class="label">단위</p>
+                                                    <ul>
+                                                        <li>g</li>
+                                                        <li>kg</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="label_float flex_1">
+                                            <input
+                                                class="w_100"
+                                                type="number"
+                                                placeholder="개수"
+                                            />
+                                            <label>개</label>
+                                        </div>
+                                        <button
+                                            class="btn btn_border_secondary btn_del"
+                                        >
+                                            삭제
+                                        </button>
+                                    </div>
+                                </div>
                             </div>
                             <div class="content_list">
                                 <h4 class="required">희망판매가격</h4>
@@ -605,78 +691,252 @@
                                 </div>
                             </div>
                         </section>
-                        <section class="contents_box">
-                            <h3>판매자 정보</h3>
+                        <section class="contents_box reception_contents_box">
+                            <div class="box_title">
+                                <h3>증빙자료</h3>
+                                <span
+                                    >*첨부파일 : 각 항목에 5MB 이하, 1개의
+                                    이미지 파일 (jpg, png, tif, pdf)만 등록
+                                    가능합니다.
+                                </span>
+                            </div>
                             <div class="content_list">
-                                <h4>규격(성적서)</h4>
+                                <h4 class="required">성적서</h4>
                                 <div class="detail">
-                                    <a
-                                        class="link_st"
-                                        href="javascript:void(0);"
-                                        >image_sample.pdf</a
+                                    <div
+                                        class="filebox"
+                                        onclick="handleFileChange('#file01')"
                                     >
+                                        <label for="file01">파일찾기</label>
+                                        <input type="file" id="file01" />
+                                        <input
+                                            class="upload-name"
+                                            placeholder="양식에 맞게 작성된 파일을 등록해주세요."
+                                            readonly=""
+                                        />
+                                        <span class="del_x"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="content_list">
-                                <h4>제조원</h4>
+                                <h4 class="required">한글라벨</h4>
                                 <div class="detail">
-                                    <a
-                                        class="link_st"
-                                        href="javascript:void(0);"
-                                        >image_sample.pdf</a
+                                    <div
+                                        class="filebox"
+                                        onclick="handleFileChange('#file02')"
                                     >
+                                        <label for="file02">파일찾기</label>
+                                        <input type="file" id="file02" />
+                                        <input
+                                            class="upload-name"
+                                            placeholder="양식에 맞게 작성된 파일을 등록해주세요."
+                                            readonly=""
+                                        />
+                                        <span class="del_x"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="content_list">
-                                <h4>구입처</h4>
+                                <h4 class="required">품목제조보고서</h4>
                                 <div class="detail">
-                                    <ul class="list_st">
-                                        <li>수입</li>
-                                        <li>미국123</li>
-                                    </ul>
+                                    <div
+                                        class="filebox valid_red"
+                                        onclick="handleFileChange('#file03')"
+                                    >
+                                        <label for="file03">파일찾기</label>
+                                        <input type="file" id="file03" />
+                                        <input
+                                            class="upload-name"
+                                            placeholder="양식에 맞게 작성된 파일을 등록해주세요."
+                                            readonly=""
+                                        />
+                                        <span class="del_x"></span>
+                                    </div>
+                                    <p class="valid_txt red">
+                                        첨부파일은 최대 5MB까지만 가능합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="content_list isImport">
+                                <h4 class="required">수입신고확인증</h4>
+                                <div class="detail">
+                                    <div
+                                        class="filebox"
+                                        onclick="handleFileChange('#file04')"
+                                    >
+                                        <label for="file04">파일찾기</label>
+                                        <input type="file" id="file04" />
+                                        <input
+                                            class="upload-name"
+                                            placeholder="양식에 맞게 작성된 파일을 등록해주세요."
+                                            readonly=""
+                                        />
+                                        <span class="del_x"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content_list isImport">
+                                <h4 class="required">수입신고필증</h4>
+                                <div class="detail">
+                                    <div
+                                        class="filebox"
+                                        onclick="handleFileChange('#file05')"
+                                    >
+                                        <label for="file04">파일찾기</label>
+                                        <input type="file" id="file05" />
+                                        <input
+                                            class="upload-name"
+                                            placeholder="양식에 맞게 작성된 파일을 등록해주세요."
+                                            readonly=""
+                                        />
+                                        <span class="del_x"></span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="content_list">
-                                <h4>국내 증빙자료</h4>
+                                <h4>기타 증빙자료</h4>
                                 <div class="detail">
-                                    <a
-                                        class="link_st"
-                                        href="javascript:void(0);"
-                                        >image_sample.pdf</a
+                                    <div
+                                        class="filebox"
+                                        onclick="handleFileChange('#file06')"
                                     >
-                                </div>
-                            </div>
-                            <div class="content_list">
-                                <h4>수입 증빙자료</h4>
-                                <div class="detail">
-                                    <a
-                                        class="link_st"
-                                        href="javascript:void(0);"
-                                        >image_sample.pdf</a
-                                    >
-                                </div>
-                            </div>
-                            <div class="content_list">
-                                <h4>기타 증빙</h4>
-                                <div class="detail">
-                                    <a
-                                        class="link_st"
-                                        href="javascript:void(0);"
-                                        >image_sample.pdf</a
-                                    >
+                                        <label for="file04">파일찾기</label>
+                                        <input type="file" id="file06" />
+                                        <input
+                                            class="upload-name"
+                                            placeholder="양식에 맞게 작성된 파일을 등록해주세요."
+                                            readonly=""
+                                        />
+                                        <span class="del_x"></span>
+                                    </div>
                                 </div>
                             </div>
                         </section>
                     </div>
                 </div>
                 <div class="modal_footer">
+                    <div class="link_wrap"></div>
                     <div class="btn_wrap">
-                        <button class="btn btn_primary">확인</button>
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#modal02')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">접수신청</button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- //modal02 -->
+        <!-- modal03 -->
+        <div class="modal_wrap md_st" id="modal03">
+            <div class="modal">
+                <div class="modal_header">
+                    <h3>알레르기 유발물질</h3>
+                </div>
+                <div class="modal_body">
+                    <div class="allergic_check_box">
+                        <div class="row">
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-01" />
+                                <label for="chk-01">없음</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-02" />
+                                <label for="chk-02">알류</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-03" />
+                                <label for="chk-03">우유</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-04" />
+                                <label for="chk-04">메밀</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-05" />
+                                <label for="chk-05">땅콩</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-06" />
+                                <label for="chk-06">대두</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-07" />
+                                <label for="chk-07">밀</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-08" />
+                                <label for="chk-08">고등어</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-09" />
+                                <label for="chk-09">게</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-10" />
+                                <label for="chk-10">새우</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-11" />
+                                <label for="chk-11">돼지고기</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-12" />
+                                <label for="chk-12">복숭아</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-13" />
+                                <label for="chk-13">토마토</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-14" />
+                                <label for="chk-14">아황산류</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-15" />
+                                <label for="chk-15">호두</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-16" />
+                                <label for="chk-16">닭고기</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-17" />
+                                <label for="chk-17">쇠고기</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-18" />
+                                <label for="chk-18">오징어</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-19" />
+                                <label for="chk-19">조개류</label>
+                            </div>
+                            <div class="checkbox_wrap">
+                                <input type="checkbox" id="chk-20" />
+                                <label for="chk-20">잣</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalCloseSingle('#modal03')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">선택완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal03 -->
         <script>
             //스크롤에 따라 헤더 배경 색 변경
             $(window).scroll(function () {
@@ -699,7 +959,16 @@
                 $(el).fadeOut();
                 $("body").removeClass("modal-open");
             }
+
             $(document).ready(function () {
+                $('input[name="origin"]').change(function () {
+                    if ($(this).attr("id") === "import") {
+                        $(".isImport").show();
+                    } else {
+                        $(".isImport").hide();
+                        $(".isImport").find("input").val("");
+                    }
+                });
                 // date range picker
                 const datepickerOption = {
                     format: "YYYY-MM-DD",

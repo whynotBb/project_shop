@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- date range picker -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+        ></script>
+
+        <script
+            defer
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+        ></script>
+        <script src="./resource/js/ui.js"></script>
+        <!-- date range picker css -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+        />
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li class="on">
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="notice_wrap">
+                                <div class="notice_title">
+                                    <h2>판매관리</h2>
+                                </div>
+                                <ul class="table_tab_menu">
+                                    <li
+                                        class="on"
+                                        onclick="contentsView('#tab-con-01')"
+                                    >
+                                        판매현황<span>(1,234)</span>
+                                    </li>
+                                    <li onclick="contentsView('#tab-con-02')">
+                                        임박 원료<span>(1,234)</span>
+                                    </li>
+                                    <li onclick="contentsView('#tab-con-03')">
+                                        중단/폐기<span>(1,234)</span>
+                                    </li>
+                                </ul>
+                                <div
+                                    class="tab_con"
+                                    id="tab-con-01"
+                                    style="display: block"
+                                >
+                                    <div class="main_table_wrap">
+                                        <div class="table_header">
+                                            <div class="search_bar_wrap">
+                                                <h5>판매기간</h5>
+                                                <div class="radiobox_wrap">
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-1month"
+                                                        />
+                                                        <label for="rad-1month"
+                                                            >1개월</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-3month"
+                                                        />
+                                                        <label for="rad-3month"
+                                                            >3개월</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-6month"
+                                                        />
+                                                        <label for="rad-6month"
+                                                            >6개월</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-1year"
+                                                        />
+                                                        <label for="rad-1year"
+                                                            >1년</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-3year"
+                                                        />
+                                                        <label for="rad-3year"
+                                                            >3년</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="date_range_picker_wrap"
+                                                >
+                                                    <div class="date_wrap">
+                                                        <input
+                                                            class="date_picker"
+                                                            type="text"
+                                                            name="singleDate"
+                                                            readonly
+                                                        />
+                                                    </div>
+                                                    <span>→</span>
+                                                    <div class="date_wrap">
+                                                        <input
+                                                            class="date_picker"
+                                                            type="text"
+                                                            name="singleDate"
+                                                            readonly
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    class="btn btn_search_sm"
+                                                >
+                                                    검색
+                                                </button>
+                                            </div>
+                                            <p class="counter">
+                                                총<b>100</b>건
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="table_body sales_manage_table"
+                                        >
+                                            <table>
+                                                <colgroup>
+                                                    <!-- col - 9 -->
+                                                    <col style="width: 70px" />
+                                                    <col style="width: 106px" />
+                                                    <col style="width: 128px" />
+                                                    <col style="width: 609px" />
+                                                    <col style="width: 120px" />
+                                                    <col style="width: 100px" />
+                                                    <col style="width: 96px" />
+                                                    <col style="width: 159px" />
+                                                    <col style="width: 90px" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>카테고리</th>
+                                                        <th>원료코드</th>
+                                                        <th>원료명</th>
+                                                        <th>
+                                                            판매가격<i>(원)</i>
+                                                        </th>
+                                                        <th>
+                                                            잔여중량<i>(g)</i>
+                                                        </th>
+                                                        <th>등록일</th>
+                                                        <th>유통기간</th>
+                                                        <th>잔여기간</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>건강식품</td>
+                                                        <td>
+                                                            <span class="link"
+                                                                >1234567890</span
+                                                            >
+                                                        </td>
+                                                        <td>
+                                                            <div
+                                                                class="ellipsis"
+                                                            >
+                                                                옥수수 수염
+                                                                레몬밤옥수수
+                                                                수염
+                                                                레몬밤옥수수
+                                                                수염
+                                                                레몬밤옥수수
+                                                                수염
+                                                                레몬밤옥수수
+                                                            </div>
+                                                        </td>
+                                                        <td>1,234,567</td>
+                                                        <td>1,234,567</td>
+                                                        <td>2022.12.12</td>
+                                                        <td>
+                                                            2022.12.12~2022.12.12
+                                                        </td>
+                                                        <td>1,234,567</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="pagination_wrap">
+                                                <ul class="pagination">
+                                                    <a
+                                                        href="javascript:void(0);"
+                                                        class="prev"
+                                                        >prev</a
+                                                    >
+                                                    <li class="on">
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >1</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >2</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >3</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >4</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >5</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >6</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >7</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >8</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >9</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >10</a
+                                                        >
+                                                    </li>
+                                                    <a
+                                                        href="javascript:void(0);"
+                                                        class="next"
+                                                        >next</a
+                                                    >
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_con" id="tab-con-02">
+                                    <div class="main_table_wrap">
+                                        <div class="table_header">
+                                            <div class="search_bar_wrap">
+                                                <h5>판매기간</h5>
+                                                <div class="radiobox_wrap">
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-1month"
+                                                        />
+                                                        <label for="rad-1month"
+                                                            >1개월</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-3month"
+                                                        />
+                                                        <label for="rad-3month"
+                                                            >3개월</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-6month"
+                                                        />
+                                                        <label for="rad-6month"
+                                                            >6개월</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-1year"
+                                                        />
+                                                        <label for="rad-1year"
+                                                            >1년</label
+                                                        >
+                                                    </div>
+                                                    <div class="radiobox">
+                                                        <input
+                                                            type="radio"
+                                                            name="rad-range"
+                                                            id="rad-3year"
+                                                        />
+                                                        <label for="rad-3year"
+                                                            >3년</label
+                                                        >
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    class="date_range_picker_wrap"
+                                                >
+                                                    <div class="date_wrap">
+                                                        <input
+                                                            class="date_picker"
+                                                            type="text"
+                                                            name="singleDate"
+                                                            readonly
+                                                        />
+                                                    </div>
+                                                    <span>→</span>
+                                                    <div class="date_wrap">
+                                                        <input
+                                                            class="date_picker"
+                                                            type="text"
+                                                            name="singleDate"
+                                                            readonly
+                                                        />
+                                                    </div>
+                                                </div>
+                                                <button
+                                                    class="btn btn_search_sm"
+                                                >
+                                                    검색
+                                                </button>
+                                            </div>
+                                            <p class="counter">
+                                                총<b>100</b>건
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="table_body sales_manage_table tab_2"
+                                        >
+                                            <table>
+                                                <colgroup>
+                                                    <!-- col - 11 -->
+                                                    <col style="width: 70px" />
+                                                    <col style="width: 106px" />
+                                                    <col style="width: 128px" />
+                                                    <col style="width: 377px" />
+                                                    <col style="width: 120px" />
+                                                    <col style="width: 120px" />
+                                                    <col style="width: 100px" />
+                                                    <col style="width: 96px" />
+                                                    <col style="width: 159px" />
+                                                    <col style="width: 90px" />
+                                                    <col style="width: 112px" />
+                                                </colgroup>
+                                                <thead>
+                                                    <tr>
+                                                        <th>#</th>
+                                                        <th>카테고리</th>
+                                                        <th>원료코드</th>
+                                                        <th>원료명</th>
+                                                        <th>
+                                                            특가비율<i>(%)</i>
+                                                        </th>
+                                                        <th>
+                                                            판매가격<i>(원)</i>
+                                                        </th>
+                                                        <th>
+                                                            잔여중량<i>(g)</i>
+                                                        </th>
+                                                        <th>등록일</th>
+                                                        <th>유통기간</th>
+                                                        <th>잔여기간</th>
+                                                        <th>특가판매 신청</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>건강식품</td>
+                                                        <td>
+                                                            <span class="link"
+                                                                >1234567890</span
+                                                            >
+                                                        </td>
+                                                        <td>
+                                                            <div
+                                                                class="ellipsis"
+                                                            >
+                                                                옥수수 수염
+                                                                레몬밤옥수수
+                                                                수염
+                                                                레몬밤옥수수
+                                                                수염
+                                                                레몬밤옥수수
+                                                                수염
+                                                                레몬밤옥수수
+                                                            </div>
+                                                        </td>
+                                                        <td>30%</td>
+                                                        <td>
+                                                            <p
+                                                                class="original_price"
+                                                            >
+                                                                1,234,567
+                                                            </p>
+                                                            <p>1,234,567</p>
+                                                        </td>
+                                                        <td>1,234,567</td>
+                                                        <td>2022.12.12</td>
+                                                        <td>
+                                                            2022.12.12~2022.12.12
+                                                        </td>
+                                                        <td>1,234,567</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="pagination_wrap">
+                                                <ul class="pagination">
+                                                    <a
+                                                        href="javascript:void(0);"
+                                                        class="prev"
+                                                        >prev</a
+                                                    >
+                                                    <li class="on">
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >1</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >2</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >3</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >4</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >5</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >6</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >7</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >8</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >9</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="javascript:void(0);"
+                                                            >10</a
+                                                        >
+                                                    </li>
+                                                    <a
+                                                        href="javascript:void(0);"
+                                                        class="next"
+                                                        >next</a
+                                                    >
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab_con" id="tab-con-03">3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <script>
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
+            });
+            // - tab_contents
+            function contentsView(el) {
+                $(".tab_con").hide();
+                $(el).show();
+            }
+            $(document).ready(function () {
+                // - tab_menu
+                $(".table_tab_menu li").on("click", function () {
+                    $(".table_tab_menu li").removeClass("on");
+                    $(this).addClass("on");
+                });
+                // date range picker
+                const datepickerOption = {
+                    format: "YYYY-MM-DD",
+                    separator: " → ",
+                    applyLabel: "확인",
+                    cancelLabel: "취소",
+                    fromLabel: "From",
+                    toLabel: "To",
+                    customRangeLabel: "Custom",
+                    weekLabel: "주",
+                    daysOfWeek: ["일", "월", "화", "수", "목", "금", "토"],
+                    monthNames: [
+                        "1월",
+                        "2월",
+                        "3월",
+                        "4월",
+                        "5월",
+                        "6월",
+                        "7월",
+                        "8월",
+                        "9월",
+                        "10월",
+                        "11월",
+                        "12월",
+                    ],
+                    firstDay: 1,
+                };
+                $('input[name="singleDate"]').daterangepicker({
+                    opens: "left",
+                    autoApply: true,
+                    locale: datepickerOption,
+                    singleDatePicker: true,
+                });
+            });
+        </script>
+    </body>
+</html>
