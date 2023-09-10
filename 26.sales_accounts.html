@@ -83,10 +83,10 @@
                                             <li>
                                                 <a href="#">접수관리</a>
                                             </li>
-                                            <li class="on">
+                                            <li>
                                                 <a href="#">판매관리</a>
                                             </li>
-                                            <li>
+                                            <li class="on">
                                                 <a href="#">정산내역</a>
                                             </li>
                                         </ul>
@@ -119,20 +119,20 @@
                         <div class="main_right_contents">
                             <div class="notice_wrap">
                                 <div class="notice_title">
-                                    <h2>판매관리</h2>
+                                    <h2>정산내역</h2>
+                                    <p class="desc">
+                                        최대 1개월 이내에서 조회할 수 있습니다.
+                                    </p>
                                 </div>
                                 <ul class="table_tab_menu">
                                     <li
                                         class="on"
                                         onclick="contentsView('#tab-con-01')"
                                     >
-                                        판매현황<span>(1,234)</span>
+                                        일별 정산내역
                                     </li>
                                     <li onclick="contentsView('#tab-con-02')">
-                                        임박 원료<span>(1,234)</span>
-                                    </li>
-                                    <li onclick="contentsView('#tab-con-03')">
-                                        중단/폐기<span>(1,234)</span>
+                                        건별 정산내역
                                     </li>
                                 </ul>
                                 <div
@@ -144,58 +144,7 @@
                                         <div class="table_header">
                                             <div class="search_bar_wrap">
                                                 <h5>판매기간</h5>
-                                                <div class="radiobox_wrap">
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range"
-                                                            id="rad-1month"
-                                                        />
-                                                        <label for="rad-1month"
-                                                            >1개월</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range"
-                                                            id="rad-3month"
-                                                        />
-                                                        <label for="rad-3month"
-                                                            >3개월</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range"
-                                                            id="rad-6month"
-                                                        />
-                                                        <label for="rad-6month"
-                                                            >6개월</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range"
-                                                            id="rad-1year"
-                                                        />
-                                                        <label for="rad-1year"
-                                                            >1년</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range"
-                                                            id="rad-3year"
-                                                        />
-                                                        <label for="rad-3year"
-                                                            >3년</label
-                                                        >
-                                                    </div>
-                                                </div>
+
                                                 <div
                                                     class="date_range_picker_wrap"
                                                 >
@@ -218,78 +167,86 @@
                                                     </div>
                                                 </div>
                                                 <button
-                                                    class="btn btn_search_sm"
+                                                    class="btn btn_search_sm wide"
                                                 >
                                                     검색
+                                                </button>
+                                                <button class="btn btn_refresh">
+                                                    초기화
                                                 </button>
                                             </div>
                                             <p class="counter">
                                                 총<b>100</b>건
                                             </p>
                                         </div>
+                                        <div class="sales_account_bar">
+                                            <div class="list">
+                                                <h5>정산예정일</h5>
+                                                <p>2023. 12. 30</p>
+                                            </div>
+                                            <div class="list">
+                                                <h5>정산기준일</h5>
+                                                <p>2023. 12. 30</p>
+                                            </div>
+                                            <div class="list">
+                                                <h5>정산금액</h5>
+                                                <p>
+                                                    <span>123,456,789</span>
+                                                    <i>원</i>
+                                                </p>
+                                            </div>
+                                        </div>
                                         <div
-                                            class="table_body sales_manage_table"
+                                            class="table_body sales_accounts_table"
                                         >
                                             <table>
                                                 <colgroup>
-                                                    <!-- col - 9 -->
+                                                    <!-- col - 7 -->
                                                     <col style="width: 70px" />
-                                                    <col style="width: 106px" />
-                                                    <col style="width: 128px" />
-                                                    <col style="width: 609px" />
-                                                    <col style="width: 120px" />
-                                                    <col style="width: 100px" />
-                                                    <col style="width: 96px" />
-                                                    <col style="width: 159px" />
-                                                    <col style="width: 90px" />
+                                                    <col style="width: 250px" />
+                                                    <col style="width: 250px" />
+                                                    <col style="width: 250px" />
+                                                    <col style="width: 250px" />
+                                                    <col style="width: 250px" />
+                                                    <col style="width: 155px" />
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>카테고리</th>
-                                                        <th>원료코드</th>
-                                                        <th>원료명</th>
+                                                        <th>정산예정일</th>
+                                                        <th>정산완료일</th>
                                                         <th>
-                                                            판매가격<i>(원)</i>
+                                                            정산금액<i>(원)</i>
                                                         </th>
                                                         <th>
-                                                            잔여중량<i>(g)</i>
+                                                            수수료합계<i
+                                                                >(원)</i
+                                                            >
                                                         </th>
-                                                        <th>등록일</th>
-                                                        <th>유통기간</th>
-                                                        <th>잔여기간</th>
+                                                        <th>
+                                                            결제금액<i>(원)</i>
+                                                        </th>
+                                                        <th>정산방식</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>건강식품</td>
-                                                        <td>
-                                                            <span class="link"
-                                                                >1234567890</span
-                                                            >
-                                                        </td>
-                                                        <td>
-                                                            <div
-                                                                class="ellipsis"
-                                                            >
-                                                                옥수수 수염
-                                                                레몬밤옥수수
-                                                                수염
-                                                                레몬밤옥수수
-                                                                수염
-                                                                레몬밤옥수수
-                                                                수염
-                                                                레몬밤옥수수
-                                                            </div>
-                                                        </td>
-                                                        <td>1,234,567</td>
-                                                        <td>1,234,567</td>
                                                         <td>2022.12.12</td>
-                                                        <td>
-                                                            2022.12.12~2022.12.12
-                                                        </td>
+                                                        <td>2022.12.12</td>
                                                         <td>1,234,567</td>
+                                                        <td>1,234,567</td>
+                                                        <td>1,234,567</td>
+                                                        <td>계좌이체</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>2022.12.12</td>
+                                                        <td>2022.12.12</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
+                                                        <td>계좌이체</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -367,6 +324,9 @@
                                                     >
                                                 </ul>
                                             </div>
+                                            <div class="empty_data sm">
+                                                <p>목록이 없습니다.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -374,57 +334,23 @@
                                     <div class="main_table_wrap">
                                         <div class="table_header">
                                             <div class="search_bar_wrap">
-                                                <h5>판매기간</h5>
-                                                <div class="radiobox_wrap">
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range2"
-                                                            id="rad-1month2"
-                                                        />
-                                                        <label for="rad-1month2"
-                                                            >1개월</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range2"
-                                                            id="rad-3month2"
-                                                        />
-                                                        <label for="rad-3month2"
-                                                            >3개월</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range2"
-                                                            id="rad-6month2"
-                                                        />
-                                                        <label for="rad-6month2"
-                                                            >6개월</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range2"
-                                                            id="rad-1year2"
-                                                        />
-                                                        <label for="rad-1year2"
-                                                            >1년</label
-                                                        >
-                                                    </div>
-                                                    <div class="radiobox">
-                                                        <input
-                                                            type="radio"
-                                                            name="rad-range2"
-                                                            id="rad-3year2"
-                                                        />
-                                                        <label for="rad-3year2"
-                                                            >3년</label
-                                                        >
+                                                <h5>조회기간</h5>
+                                                <div class="selectbox">
+                                                    <p class="selected">전체</p>
+                                                    <div class="option_group">
+                                                        <div class="inner">
+                                                            <ul>
+                                                                <li
+                                                                    class="active"
+                                                                >
+                                                                    전체
+                                                                </li>
+                                                                <li>
+                                                                    상품주문
+                                                                </li>
+                                                                <li>배송비</li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div
@@ -449,9 +375,12 @@
                                                     </div>
                                                 </div>
                                                 <button
-                                                    class="btn btn_search_sm"
+                                                    class="btn btn_search_sm wide"
                                                 >
                                                     검색
+                                                </button>
+                                                <button class="btn btn_refresh">
+                                                    초기화
                                                 </button>
                                             </div>
                                             <p class="counter">
@@ -459,48 +388,39 @@
                                             </p>
                                         </div>
                                         <div
-                                            class="table_body sales_manage_table2"
+                                            class="table_body sales_accounts_table2"
                                         >
                                             <table>
                                                 <colgroup>
-                                                    <!-- col - 11 -->
+                                                    <!-- col - 10 -->
                                                     <col style="width: 70px" />
-                                                    <col style="width: 106px" />
                                                     <col style="width: 128px" />
-                                                    <col style="width: 377px" />
+                                                    <col style="width: 550px" />
+                                                    <col style="width: 104px" />
+                                                    <col style="width: 104px" />
                                                     <col style="width: 120px" />
                                                     <col style="width: 120px" />
                                                     <col style="width: 100px" />
-                                                    <col style="width: 96px" />
-                                                    <col style="width: 159px" />
-                                                    <col style="width: 90px" />
-                                                    <col style="width: 112px" />
+                                                    <col style="width: 100px" />
+                                                    <col style="width: 100px" />
                                                 </colgroup>
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>카테고리</th>
-                                                        <th>원료코드</th>
+                                                        <th>주문번호</th>
                                                         <th>원료명</th>
-                                                        <th>
-                                                            특가비율<i>(%)</i>
-                                                        </th>
-                                                        <th>
-                                                            판매가격<i>(원)</i>
-                                                        </th>
-                                                        <th>
-                                                            재고량<i>(개)</i>
-                                                        </th>
-                                                        <th>등록일</th>
-                                                        <th>유통기간</th>
-                                                        <th>잔여기간</th>
-                                                        <th>특가판매 신청</th>
+                                                        <th>구분</th>
+                                                        <th>회원명</th>
+                                                        <th>결제금액(원)</th>
+                                                        <th>수수료(원)</th>
+                                                        <th>결제일</th>
+                                                        <th>정산예정일</th>
+                                                        <th>정산완료일</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr>
                                                         <td>1</td>
-                                                        <td>건강식품</td>
                                                         <td>
                                                             <span class="link"
                                                                 >1234567890</span
@@ -517,31 +437,21 @@
                                                                 수염
                                                                 레몬밤옥수수
                                                                 수염
+                                                                레몬밤옥수수레몬밤옥수수
+                                                                수염
                                                                 레몬밤옥수수
                                                             </div>
                                                         </td>
-                                                        <td>-</td>
-                                                        <td>
-                                                            <p>1,234,567</p>
-                                                        </td>
+                                                        <td>특가</td>
+                                                        <td>홍길동</td>
+                                                        <td>1,234,567</td>
                                                         <td>1,234,567</td>
                                                         <td>2022.12.12</td>
-                                                        <td>
-                                                            2022.12.12~2022.12.12
-                                                        </td>
-                                                        <td>1,234,567</td>
-                                                        <td>
-                                                            <button
-                                                                onclick="modalOpen('#modal01')"
-                                                                class="btn btn_border_primary"
-                                                            >
-                                                                신청
-                                                            </button>
-                                                        </td>
+                                                        <td>2022.12.12</td>
+                                                        <td>2022.12.12</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>1</td>
-                                                        <td>건강식품</td>
+                                                        <td>2</td>
                                                         <td>
                                                             <span class="link"
                                                                 >1234567890</span
@@ -555,28 +465,13 @@
                                                                 레몬밤
                                                             </div>
                                                         </td>
-                                                        <td>30%</td>
-                                                        <td>
-                                                            <p
-                                                                class="original_price"
-                                                            >
-                                                                1,234,567
-                                                            </p>
-                                                            <p>1,234,567</p>
-                                                        </td>
-                                                        <td>1,234,567</td>
+                                                        <td>특가</td>
+                                                        <td>홍길동</td>
+                                                        <td>-</td>
+                                                        <td>-</td>
                                                         <td>2022.12.12</td>
-                                                        <td>
-                                                            2022.12.12~2022.12.12
-                                                        </td>
-                                                        <td>1,234,567</td>
-                                                        <td>
-                                                            <button
-                                                                class="btn btn_primary"
-                                                            >
-                                                                판매중
-                                                            </button>
-                                                        </td>
+                                                        <td>2022.12.12</td>
+                                                        <td>2022.12.12</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -941,117 +836,7 @@
                 </footer>
             </main>
         </div>
-        <!-- modal01 -->
-        <div class="modal_wrap md_st" id="modal01">
-            <div class="modal">
-                <div class="modal_header">
-                    <h3>특가 신청 접수</h3>
-                </div>
-                <div class="modal_body">
-                    <h5>특가 할인 선택</h5>
-                    <div class="radio_multi_wrap">
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-01"
-                                name="discount-rate"
-                            />
-                            <label for="rad-01">10%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-02"
-                                name="discount-rate"
-                            />
-                            <label for="rad-02">20%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-03"
-                                name="discount-rate"
-                            />
-                            <label for="rad-03">30%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-04"
-                                name="discount-rate"
-                            />
-                            <label for="rad-04">40%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-05"
-                                name="discount-rate"
-                            />
-                            <label for="rad-05">50%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-06"
-                                name="discount-rate"
-                            />
-                            <label for="rad-06">60%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-07"
-                                name="discount-rate"
-                            />
-                            <label for="rad-07">70%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-08"
-                                name="discount-rate"
-                            />
-                            <label for="rad-08">80%</label>
-                        </div>
-                        <div class="radiobox">
-                            <input
-                                type="radio"
-                                id="rad-09"
-                                name="discount-rate"
-                            />
-                            <label for="rad-09">90%</label>
-                        </div>
-                    </div>
-                    <div class="special_discount_box">
-                        <div class="list special_price">
-                            <h6>특가 할인가(-0%)</h6>
-                            <p><span>1,000,000</span>원</p>
-                        </div>
-                        <div class="list first_price">
-                            <h6>최초 희망가</h6>
-                            <p><span>1,000,000</span>원</p>
-                        </div>
-                        <div class="list">
-                            <h6>신청 적용일</h6>
-                            <p>2023.12.12</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal_footer">
-                    <div class="btn_wrap">
-                        <button
-                            class="btn btn_secondary"
-                            onclick="modalCloseSingle('#modal01')"
-                        >
-                            취소
-                        </button>
-                        <button class="btn btn_primary">선택완료</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //modal01 -->
+
         <script>
             //스크롤에 따라 헤더 배경 색 변경
             $(window).scroll(function () {
@@ -1065,27 +850,7 @@
                     $(".main_right_contents").css("padding-top", "4rem");
                 }
             });
-            // - tab_contents
-            function contentsView(el) {
-                $(".tab_con").hide();
-                $(el).show();
-            }
-            //modal
-            function modalOpen(el) {
-                $(el).fadeIn();
-                $("body").addClass("modal-open");
-            }
-            function modalClose(el) {
-                $(el).fadeOut();
-                $("body").removeClass("modal-open");
-            }
             $(document).ready(function () {
-                // - tab_menu
-                $(".table_tab_menu li").on("click", function () {
-                    $(".table_tab_menu li").removeClass("on");
-                    $(this).addClass("on");
-                });
-
                 // date range picker
                 const datepickerOption = {
                     format: "YYYY-MM-DD",

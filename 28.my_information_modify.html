@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li class="on">
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="notice_wrap">
+                                <div class="notice_title">
+                                    <h2>회원 정보 수정</h2>
+                                </div>
+                                <div class="my_info_wrap">
+                                    <div class="contents_box shadow_st">
+                                        <h3>비밀번호 변경</h3>
+                                        <div class="content_list">
+                                            <h4>현재 비밀번호</h4>
+                                            <div class="detail">
+                                                <input
+                                                    class="w_100 valid_red"
+                                                    type="text"
+                                                    placeholder="영문/숫자/특수문자 2가지 이상 조합, 8-12자"
+                                                />
+                                                <p class="valid_txt red">
+                                                    기존 비밀번호와 일치하지
+                                                    않습니다.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="content_list">
+                                            <h4>새 비밀번호</h4>
+                                            <div class="detail">
+                                                <input
+                                                    class="w_100"
+                                                    type="text"
+                                                    placeholder="영문/숫자/특수문자 2가지 이상 조합, 8-12자"
+                                                />
+                                                <!-- <p class="valid_txt red">
+                                                    영문, 숫자, 특수문자를
+                                                    포함하여 8-12자를
+                                                    입력하세요.
+                                                </p> -->
+                                            </div>
+                                        </div>
+                                        <div class="content_list">
+                                            <h4>새 비밀번호 확인</h4>
+                                            <div class="detail">
+                                                <input
+                                                    class="w_100"
+                                                    type="text"
+                                                    placeholder="비밀번호를 한번 더 입력해주세요."
+                                                />
+                                                <!-- <p class="valid_txt red">
+                                                    신규 비밀번호가 일치하지
+                                                    않습니다.
+                                                </p> -->
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="btn btn_primary h50"
+                                            onclick="modalOpen('#alert01')"
+                                        >
+                                            비밀번호 변경
+                                        </button>
+                                    </div>
+                                    <div class="contents_box shadow_st">
+                                        <h3>개인정보 수정</h3>
+                                        <div class="content_list">
+                                            <h4>아이디</h4>
+                                            <div class="detail">
+                                                <p>dkfjdk@naver.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="content_list">
+                                            <h4>대표자명</h4>
+                                            <div class="detail">
+                                                <input
+                                                    class="w_100"
+                                                    type="text"
+                                                    value="홍길동"
+                                                />
+                                            </div>
+                                        </div>
+                                        <div class="content_list">
+                                            <h4>회사명</h4>
+                                            <div class="detail">
+                                                <input
+                                                    class="w_100"
+                                                    type="text"
+                                                    value="바터플레이스"
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div class="content_list">
+                                            <h4>사업자번호</h4>
+                                            <div class="detail">
+                                                <div class="biz_num_wrap">
+                                                    <input
+                                                        type="number"
+                                                        value="1234"
+                                                    />
+                                                    <input
+                                                        type="number"
+                                                        value="5678"
+                                                    />
+                                                    <input
+                                                        type="number"
+                                                        value="90"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content_list">
+                                            <h4>주소</h4>
+                                            <div class="detail">
+                                                <div class="address_wrap">
+                                                    <div
+                                                        class="input_search_wrap"
+                                                    >
+                                                        <input
+                                                            type="text"
+                                                            class="flex_1"
+                                                            placeholder="주소를 입력해 주세요."
+                                                        />
+                                                        <button
+                                                            class="btn btn_secondary"
+                                                        >
+                                                            주소 검색
+                                                        </button>
+                                                    </div>
+                                                    <input
+                                                        type="text"
+                                                        class="w_100"
+                                                    />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button
+                                            class="btn btn_primary h50"
+                                            onclick="modalOpen('#alert02')"
+                                        >
+                                            개인정보 수정
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <!-- alert01 -->
+        <div class="modal_wrap alert_st" id="alert01">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">비밀번호를 변경하시겠습니까?</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#alert01')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#alert01');modalOpen('#alert01-2')"
+                        >
+                            변경
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert01 -->
+        <!-- alert01-2 -->
+        <div class="modal_wrap alert_st" id="alert01-2">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">비밀번호가 변경되었습니다.</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#alert01-2')"
+                        >
+                            확인
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert01-2  -->
+        <!-- alert02 -->
+        <div class="modal_wrap alert_st" id="alert02">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">회원정보를 변경하시겠습니까?</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#alert02')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#alert02');modalOpen('#alert02-2')"
+                        >
+                            변경
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert02 -->
+        <!-- alert02-2 -->
+        <div class="modal_wrap alert_st" id="alert02-2">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">회원정보가 변경되었습니다.</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#alert02-2')"
+                        >
+                            확인
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert02-2  -->
+        <script>
+            //modal
+            function modalOpen(el) {
+                $(el).fadeIn();
+                $("body").addClass("modal-open");
+            }
+            function modalClose(el) {
+                $(el).fadeOut();
+                $("body").removeClass("modal-open");
+            }
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
+            });
+        </script>
+    </body>
+</html>

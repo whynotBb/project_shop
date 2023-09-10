@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li class="on">
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="notice_wrap">
+                                <div class="notice_title">
+                                    <h2>배송지 관리</h2>
+                                    <div class="info_txt_wrap">
+                                        <p>
+                                            배송지는
+                                            <b class="fc_primary">최대 5개</b
+                                            >까지 등록 가능합니다.
+                                        </p>
+                                        <p>
+                                            배송 주소록은 최대 5개까지 등록할 수
+                                            있으며, 별도로 등록하지 않을 경우
+                                            최근 배송지 주소록 기준으로 자동
+                                            업데이트 됩니다.
+                                        </p>
+                                        <p>
+                                            자동 업데이트를 원하지 않을 경우
+                                            주소록 고정 선택을 하시면 선택된
+                                            주소록은 업데이트 대상에서
+                                            제외됩니다.
+                                        </p>
+                                        <button
+                                            onclick="modalOpen('#modal01')"
+                                            class="btn btn_primary btn_add h50"
+                                        >
+                                            배송지 등록
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="main_table_wrap">
+                                    <div
+                                        class="table_body delivery_address_table"
+                                    >
+                                        <table>
+                                            <colgroup>
+                                                <col style="width: 70px" />
+                                                <col style="width: 133px" />
+                                                <col style="width: 104px" />
+                                                <col style="width: 104px" />
+                                                <col style="width: 667px" />
+                                                <col style="width: 200px" />
+                                                <col style="width: 80px" />
+                                                <col style="width: 110px" />
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>기본 배송지 설정</th>
+                                                    <th>배송지명</th>
+                                                    <th>받는사람</th>
+                                                    <th>주소</th>
+                                                    <th>연락처</th>
+                                                    <th>관리</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>
+                                                        <div class="radiobox">
+                                                            <input
+                                                                type="radio"
+                                                                name="default-address"
+                                                                id="address-01"
+                                                                checked
+                                                            />
+                                                            <label
+                                                                for="address-01"
+                                                            ></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>홍길동</td>
+                                                    <td>
+                                                        (123456)<br />
+                                                        서울특별시 구로구
+                                                        디지털로 300
+                                                    </td>
+                                                    <td>010-****-5678</td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#modal02')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            수정
+                                                        </button>
+                                                    </td>
+                                                    <td></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>
+                                                        <div class="radiobox">
+                                                            <input
+                                                                type="radio"
+                                                                name="default-address"
+                                                                id="address-02"
+                                                            />
+                                                            <label
+                                                                for="address-02"
+                                                            ></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>홍길동</td>
+                                                    <td>
+                                                        (123456)<br />
+                                                        서울특별시 구로구
+                                                        디지털로 300
+                                                    </td>
+                                                    <td>010-****-5678</td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#modal02')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            수정
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#alert01')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>
+                                                        <div class="radiobox">
+                                                            <input
+                                                                type="radio"
+                                                                name="default-address"
+                                                                id="address-03"
+                                                            />
+                                                            <label
+                                                                for="address-03"
+                                                            ></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>홍길동</td>
+                                                    <td>
+                                                        (123456)<br />
+                                                        서울특별시 구로구
+                                                        디지털로 300
+                                                    </td>
+                                                    <td>010-****-5678</td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#modal02')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            수정
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#alert01')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>
+                                                        <div class="radiobox">
+                                                            <input
+                                                                type="radio"
+                                                                name="default-address"
+                                                                id="address-04"
+                                                            />
+                                                            <label
+                                                                for="address-04"
+                                                            ></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>홍길동</td>
+                                                    <td>
+                                                        (123456)<br />
+                                                        서울특별시 구로구
+                                                        디지털로 300
+                                                    </td>
+                                                    <td>010-****-5678</td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#modal02')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            수정
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#alert01')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>
+                                                        <div class="radiobox">
+                                                            <input
+                                                                type="radio"
+                                                                name="default-address"
+                                                                id="address-05"
+                                                            />
+                                                            <label
+                                                                for="address-05"
+                                                            ></label>
+                                                        </div>
+                                                    </td>
+                                                    <td>홍길동</td>
+                                                    <td>홍길동</td>
+                                                    <td>
+                                                        (123456)<br />
+                                                        서울특별시 구로구
+                                                        디지털로 300
+                                                    </td>
+                                                    <td>010-****-5678</td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#modal02')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            수정
+                                                        </button>
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            onclick="modalOpen('#alert01')"
+                                                            class="btn btn_border_secondary sm"
+                                                        >
+                                                            삭제
+                                                        </button>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+        <!-- modal01 -->
+        <div class="modal_wrap md_st" id="modal01">
+            <div class="modal">
+                <div class="modal_header">
+                    <h3>배송지 등록</h3>
+                </div>
+                <div class="modal_body">
+                    <div class="title_checkbox">
+                        <div class="checkbox_wrap">
+                            <input type="checkbox" id="my-info" />
+                            <label for="my-info">내 정보 불러오기</label>
+                        </div>
+                    </div>
+                    <div class="contents_box register_address_box">
+                        <div class="content_list">
+                            <h4>배송지명</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    placeholder="배송지명을 입력하세요"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>받는분</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    placeholder="받는분을 입력하세요"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>휴대폰번호</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    placeholder="휴대폰번호를 입력하세요"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>주소</h4>
+                            <div class="detail">
+                                <div class="address_wrap">
+                                    <div class="input_search_wrap">
+                                        <input
+                                            type="text"
+                                            class="flex_1"
+                                            placeholder="기본주소를 입력해주세요."
+                                        />
+                                        <button class="btn btn_secondary">
+                                            주소 검색
+                                        </button>
+                                    </div>
+                                    <input
+                                        type="text"
+                                        class="w_100"
+                                        placeholder="상세주소를 입력해주세요."
+                                    />
+                                </div>
+                                <div class="checkbox_wrap">
+                                    <input
+                                        type="checkbox"
+                                        id="default-address-chk"
+                                    />
+                                    <label for="default-address-chk"
+                                        >기본 주소지로 등록</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#modal01')"
+                        >
+                            취소
+                        </button>
+                        <button class="btn btn_primary">등록</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal01 -->
+        <!-- modal02 -->
+        <div class="modal_wrap md_st" id="modal02">
+            <div class="modal">
+                <div class="modal_header">
+                    <h3>배송지 수정</h3>
+                </div>
+                <div class="modal_body">
+                    <div class="title_checkbox">
+                        <div class="checkbox_wrap">
+                            <input type="checkbox" id="my-info2" checked />
+                            <label for="my-info2">내 정보 불러오기</label>
+                        </div>
+                    </div>
+                    <div class="contents_box register_address_box">
+                        <div class="content_list">
+                            <h4>배송지명</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    placeholder="배송지명을 입력하세요"
+                                    value="강남점"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>받는분</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    placeholder="받는분을 입력하세요"
+                                    value="홍길동"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>휴대폰번호</h4>
+                            <div class="detail">
+                                <input
+                                    type="text"
+                                    class="w_100"
+                                    placeholder="휴대폰번호를 입력하세요"
+                                    value="010-1234-5678"
+                                />
+                            </div>
+                        </div>
+                        <div class="content_list">
+                            <h4>주소</h4>
+                            <div class="detail">
+                                <div class="address_wrap">
+                                    <div class="input_search_wrap">
+                                        <input
+                                            type="text"
+                                            class="flex_1"
+                                            placeholder="기본주소를 입력해주세요."
+                                            value="서울특별시 구로구 디지털로 300 "
+                                        />
+                                        <button class="btn btn_secondary">
+                                            주소 검색
+                                        </button>
+                                    </div>
+                                    <input
+                                        type="text"
+                                        class="w_100"
+                                        placeholder="상세주소를 입력해주세요."
+                                        value="10층"
+                                    />
+                                </div>
+                                <div class="checkbox_wrap">
+                                    <input
+                                        type="checkbox"
+                                        id="default-address-chk2"
+                                        checked
+                                    />
+                                    <label for="default-address-chk2"
+                                        >기본 주소지로 등록</label
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#modal02')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#modal02');toastOpen('#toast01')"
+                        >
+                            수정
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal02 -->
+        <!-- toast01 -->
+        <div class="toast_wrap" id="toast01">
+            <div class="toast primary">
+                <p>수정되었습니다.</p>
+                <span class="toast_close" onclick="toastClose()">x</span>
+            </div>
+        </div>
+        <!-- //toast01 -->
+        <!-- alert01 -->
+        <div class="modal_wrap alert_st" id="alert01">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">배송지를 삭제하시겠습니까?</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_secondary"
+                            onclick="modalClose('#alert01')"
+                        >
+                            취소
+                        </button>
+                        <button
+                            class="btn btn_danger"
+                            onclick="modalClose('#alert01');toastOpen('#toast02')"
+                        >
+                            삭제
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert01 -->
+        <!-- toast02 -->
+        <div class="toast_wrap" id="toast02">
+            <div class="toast danger">
+                <p>삭제되었습니다.</p>
+                <span class="toast_close" onclick="toastClose()">x</span>
+            </div>
+        </div>
+        <!-- //toast02 -->
+        <script>
+            //modal
+            function modalOpen(el) {
+                $(el).fadeIn();
+                $("body").addClass("modal-open");
+            }
+            function modalClose(el) {
+                $(el).fadeOut();
+                $("body").removeClass("modal-open");
+            }
+            //toast
+            function toastOpen(el) {
+                $(el).fadeIn();
+                setTimeout(function () {
+                    $(el).fadeOut();
+                }, 3000);
+            }
+            function toastClose() {
+                $(".toast_wrap").fadeOut();
+            }
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
+            });
+        </script>
+    </body>
+</html>

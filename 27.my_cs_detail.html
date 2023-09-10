@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- date range picker -->
+        <script
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+        ></script>
+
+        <script
+            defer
+            type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+        ></script>
+        <script src="./resource/js/ui.js"></script>
+        <!-- date range picker css -->
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+        />
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li class="on">
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="notice_wrap">
+                                <div class="notice_title">
+                                    <h2>문의내역 상세</h2>
+                                </div>
+                                <div class="contents_detail_wrap">
+                                    <div class="detail_title">
+                                        <span class="category">원료문의</span>
+                                        <h3>반품신청 요청드립니다</h3>
+                                        <ul class="title_info">
+                                            <li>2023.12.12 12:12</li>
+                                            <li>
+                                                처리상태 :
+                                                <span class="fc_primary"
+                                                    >접수</span
+                                                >
+                                            </li>
+                                        </ul>
+                                        <div class="btn_right_wrap">
+                                            <button
+                                                class="btn btn_border_secondary btn_del"
+                                            >
+                                                삭제
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="answer_body">
+                                        <div class="question">
+                                            안녕하세요.<br />
+                                            반품신청을 하고 싶습니다.<br />
+                                            어떤절차로 해야 할까요?<br />
+                                            <br />
+                                            빠른답변 부탁드립니다.<br />
+                                            감사합니다.
+                                        </div>
+                                        <div class="answer">
+                                            <div class="answer_title">
+                                                <h5>관리자 답변</h5>
+                                                <p>2023.12.12 12:12</p>
+                                            </div>
+                                            <div class="inner">
+                                                반품신청은 배송받은 후 7일이내에
+                                                주문/배송조회 > 배송완료
+                                                페이지에서 가능합니다.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail_footer">
+                                        <button
+                                            class="btn btn_border_secondary btn_list h50"
+                                        >
+                                            목록으로
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+        <script>
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
+            });
+        </script>
+    </body>
+</html>

@@ -13,8 +13,9 @@ body {
     font-size: 1.6rem;
     font-weight: 400;
     width: 100%;
+    // width: 1920px;
     max-width: 1920px;
-    min-width: 1800px;
+    min-width: 1900px;
     margin: 0 auto;
     color: $text-body;
     background: $color-g1;
@@ -23,6 +24,9 @@ body {
     }
     &.sign_body {
         min-width: 969px;
+    }
+    &.error_page_body {
+        max-width: initial;
     }
 }
 // common
@@ -193,7 +197,7 @@ input[type="text"].date_picker {
     }
 }
 .valid_red {
-    border-color: $color-s2;
+    border-color: $color-s2 !important;
 }
 .valid_txt {
     font-size: 1.4rem;
@@ -311,8 +315,19 @@ input[type="text"].date_picker {
         gap: 4rem;
     }
 }
+.radio_multi_wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $space-lg;
+    padding: $space-s 0;
+    .radiobox {
+        width: calc(20% - 20px);
+    }
+}
 .radiobox {
     label {
+        min-width: 1.6rem;
+        min-height: 2.4rem;
         padding-left: 2.4rem;
         line-height: 2.4rem;
         display: block;
@@ -415,13 +430,11 @@ button.btn {
             min-width: 11.2rem;
             padding-left: 5.9rem;
             padding-right: 2.7rem;
-            background: $color-primary url(../images/plus.svg) no-repeat left
+            background: $color-primary url(../images/plus_24.svg) no-repeat left
                 2.7rem center;
-            background-size: 2.4rem;
             &:hover {
-                background: $color-primary url(../images/plus.svg) no-repeat
+                background: $color-primary url(../images/plus_24.svg) no-repeat
                     left 2.7rem center;
-                background-size: 2.4rem;
             }
         }
     }
@@ -457,6 +470,14 @@ button.btn {
         background: $color-s2;
         &:hover {
             background: $color-s2-dark;
+        }
+    }
+    &.btn_border_primary {
+        border: 1px solid $color-primary;
+        color: $color-primary;
+        &:hover {
+            background: $color-primary;
+            color: #fff;
         }
     }
     &.btn_border_secondary {
@@ -506,7 +527,7 @@ button.btn {
     }
     &.h50 {
         padding: 0 1.6rem;
-        border-radius: 0.8rem;
+        border-radius: 0.4rem;
         height: 5rem;
         line-height: 5rem;
         font-size: 2rem;
@@ -550,6 +571,16 @@ button.btn {
                 1.2rem center;
             background-size: 1.6rem 1.6rem;
         }
+        &.wide {
+            width: 12.7rem;
+            background-position: left 3.85rem center;
+        }
+    }
+    &.btn_refresh {
+        padding-left: 3.4rem;
+        border: 1px solid $color-s1;
+        background: url(../images/arrow-refresh.svg) no-repeat left 1.2rem top
+            8px;
     }
     &.btn_check {
         color: #fff;
@@ -755,7 +786,7 @@ button.btn {
         flex: 1;
     }
     .btn {
-        width: 12rem !important;
+        min-width: 12rem !important;
         border-radius: 0 0.4rem 0.4rem 0;
     }
 }
@@ -894,7 +925,7 @@ button.btn {
                 tbody {
                     td {
                         font-size: 1.6rem;
-                        text-align: right;
+                        text-align: center;
                         &:nth-child(1) {
                             text-align: center;
                             font-size: 1.4rem;
@@ -951,10 +982,63 @@ button.btn {
                     }
                 }
             }
+        }
+        &.sales_manage_table2 {
+            tr {
+                th,
+                td {
+                    &:nth-child(5),
+                    &:nth-child(6),
+                    &:nth-child(7),
+                    &:nth-child(10) {
+                        text-align: right;
+                    }
+                }
+            }
             .original_price {
                 font-size: 1.4rem;
                 color: $text-placeholder;
                 text-decoration: line-through;
+            }
+        }
+        &.sales_accounts_table {
+            tr {
+                th,
+                td {
+                    &:nth-child(4),
+                    &:nth-child(5),
+                    &:nth-child(6) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        &.sales_accounts_table2 {
+            tr {
+                th,
+                td {
+                    &:nth-child(6),
+                    &:nth-child(7) {
+                        text-align: right;
+                    }
+                }
+            }
+        }
+        &.delivery_address_table {
+            tr {
+                td {
+                    .radiobox {
+                        width: 1.6rem;
+                        margin: 0 auto;
+                        text-align: center;
+                        label {
+                            width: 1.6rem;
+                        }
+                    }
+                    &:nth-child(8) {
+                        padding-right: 3.7rem;
+                    }
+                }
             }
         }
     }
@@ -1181,6 +1265,19 @@ button.btn {
                     line-height: 2.6rem;
                     margin-bottom: $space-m;
                 }
+                h5 {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    margin-bottom: $space-s;
+                    line-height: 2.4rem;
+                }
+                .title_checkbox {
+                    padding-bottom: $space-m;
+                    border-bottom: 1px solid $border-base-light;
+                }
+                .contents_box {
+                    padding-top: 0;
+                }
                 .content_list {
                     h4 {
                         font-size: 1.6rem;
@@ -1194,6 +1291,9 @@ button.btn {
                     line-height: 2.4rem;
                     text-align: center;
                     margin-top: $space-m;
+                }
+                .special_discount_box {
+                    margin-top: $space-lg;
                 }
                 &.only_sub_txt {
                     display: flex;
@@ -1249,6 +1349,7 @@ button.btn {
     transform: translateX(-50%);
     width: 40rem;
     height: 5.6rem;
+    z-index: 30;
     .toast {
         width: 100%;
         height: 100%;
@@ -1262,6 +1363,10 @@ button.btn {
         &.danger {
             background: $color-s2 url(../images/icon_toast_danger.svg) no-repeat
                 left 1.6rem center;
+        }
+        &.primary {
+            background: $color-primary url(../images/icon_toast_danger.svg)
+                no-repeat left 1.6rem center;
         }
         p {
             line-height: 2.4rem;

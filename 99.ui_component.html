@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>barter place admin</title>
+        <title>barter place</title>
         <!-- jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -41,8 +41,14 @@
     </head>
     <body>
         <div>
-            <!-- admin_container -->
-            <div style="width: 140rem; margin: 0 auto">
+            <div
+                style="
+                    width: 1920px;
+                    margin: 0 auto;
+                    background: #fff;
+                    padding: 2.4rem;
+                "
+            >
                 <h2>title</h2>
                 <style>
                     .flex_row {
@@ -86,7 +92,7 @@
                         </button>
                         <button
                             class="btn btn_danger"
-                            onclick="toastOpen('#toast_01')"
+                            onclick="toastOpen('#toast01')"
                         >
                             toast
                         </button>
@@ -352,11 +358,6 @@
                         <div id="summernote"></div>
                     </div>
                 </main>
-                <footer>
-                    <p class="footer_copy">
-                        COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT RESERVED.
-                    </p>
-                </footer>
             </div>
             <!-- //admin_container -->
             <!-- modal01 -->
@@ -866,14 +867,14 @@
                 </div>
             </div>
             <!-- //alert01 -->
-            <!-- toast_01 -->
-            <div class="toast_wrap" id="toast_01">
+            <!-- toast01 -->
+            <div class="toast_wrap" id="toast01">
                 <div class="toast danger">
                     <p>삭제되었습니다.</p>
                     <span class="toast_close" onclick="toastClose()">x</span>
                 </div>
             </div>
-            <!-- //toast_01 -->
+            <!-- //toast01 -->
         </div>
     </body>
 </html>

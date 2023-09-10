@@ -172,7 +172,7 @@ body {
   font-weight: 400;
   width: 100%;
   max-width: 1920px;
-  min-width: 1800px;
+  min-width: 1900px;
   margin: 0 auto;
   color: #343a40;
   background: #f8f9fa;
@@ -182,6 +182,9 @@ body.modal-open {
 }
 body.sign_body {
   min-width: 969px;
+}
+body.error_page_body {
+  max-width: initial;
 }
 
 /* 스크롤바 설정*/
@@ -366,7 +369,7 @@ input[type=text].date_picker:disabled {
 }
 
 .valid_red {
-  border-color: #dc3545;
+  border-color: #dc3545 !important;
 }
 
 .valid_txt {
@@ -478,7 +481,19 @@ input[type=text].date_picker:disabled {
   gap: 4rem;
 }
 
+.radio_multi_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.4rem;
+  padding: 8px 0;
+}
+.radio_multi_wrap .radiobox {
+  width: calc(20% - 20px);
+}
+
 .radiobox label {
+  min-width: 1.6rem;
+  min-height: 2.4rem;
   padding-left: 2.4rem;
   line-height: 2.4rem;
   display: block;
@@ -575,12 +590,10 @@ button.btn.btn_primary.btn_add {
   min-width: 11.2rem;
   padding-left: 5.9rem;
   padding-right: 2.7rem;
-  background: #0ab968 url(../images/plus.svg) no-repeat left 2.7rem center;
-  background-size: 2.4rem;
+  background: #0ab968 url(../images/plus_24.svg) no-repeat left 2.7rem center;
 }
 button.btn.btn_primary.btn_add:hover {
-  background: #0ab968 url(../images/plus.svg) no-repeat left 2.7rem center;
-  background-size: 2.4rem;
+  background: #0ab968 url(../images/plus_24.svg) no-repeat left 2.7rem center;
 }
 button.btn.btn_secondary {
   color: #fff;
@@ -611,6 +624,14 @@ button.btn.btn_danger {
 }
 button.btn.btn_danger:hover {
   background: #b02a37;
+}
+button.btn.btn_border_primary {
+  border: 1px solid #0ab968;
+  color: #0ab968;
+}
+button.btn.btn_border_primary:hover {
+  background: #0ab968;
+  color: #fff;
 }
 button.btn.btn_border_secondary {
   border: 1px solid #343a40;
@@ -658,7 +679,7 @@ button.btn.sm {
 }
 button.btn.h50 {
   padding: 0 1.6rem;
-  border-radius: 0.8rem;
+  border-radius: 0.4rem;
   height: 5rem;
   line-height: 5rem;
   font-size: 2rem;
@@ -698,6 +719,15 @@ button.btn.btn_search_sm {
 button.btn.btn_search_sm.btn_primary {
   background: #0ab968 url(../images/search.svg) no-repeat left 1.2rem center;
   background-size: 1.6rem 1.6rem;
+}
+button.btn.btn_search_sm.wide {
+  width: 12.7rem;
+  background-position: left 3.85rem center;
+}
+button.btn.btn_refresh {
+  padding-left: 3.4rem;
+  border: 1px solid #343a40;
+  background: url(../images/arrow-refresh.svg) no-repeat left 1.2rem top 8px;
 }
 button.btn.btn_check {
   color: #fff;
@@ -905,7 +935,7 @@ button.btn.btn_download:hover {
   flex: 1;
 }
 .input_btn_wrap .btn {
-  width: 12rem !important;
+  min-width: 12rem !important;
   border-radius: 0 0.4rem 0.4rem 0;
 }
 
@@ -1021,7 +1051,7 @@ button.btn.btn_download:hover {
 }
 .main_table_wrap .table_body.order_tracking_table table tbody td {
   font-size: 1.6rem;
-  text-align: right;
+  text-align: center;
 }
 .main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(1) {
   text-align: center;
@@ -1065,10 +1095,39 @@ button.btn.btn_download:hover {
 .main_table_wrap .table_body.sales_manage_table tr td:nth-child(9) {
   text-align: right;
 }
-.main_table_wrap .table_body.sales_manage_table .original_price {
+.main_table_wrap .table_body.sales_manage_table2 tr th:nth-child(5), .main_table_wrap .table_body.sales_manage_table2 tr th:nth-child(6), .main_table_wrap .table_body.sales_manage_table2 tr th:nth-child(7), .main_table_wrap .table_body.sales_manage_table2 tr th:nth-child(10),
+.main_table_wrap .table_body.sales_manage_table2 tr td:nth-child(5),
+.main_table_wrap .table_body.sales_manage_table2 tr td:nth-child(6),
+.main_table_wrap .table_body.sales_manage_table2 tr td:nth-child(7),
+.main_table_wrap .table_body.sales_manage_table2 tr td:nth-child(10) {
+  text-align: right;
+}
+.main_table_wrap .table_body.sales_manage_table2 .original_price {
   font-size: 1.4rem;
   color: #adb5bd;
   text-decoration: line-through;
+}
+.main_table_wrap .table_body.sales_accounts_table tr th:nth-child(4), .main_table_wrap .table_body.sales_accounts_table tr th:nth-child(5), .main_table_wrap .table_body.sales_accounts_table tr th:nth-child(6),
+.main_table_wrap .table_body.sales_accounts_table tr td:nth-child(4),
+.main_table_wrap .table_body.sales_accounts_table tr td:nth-child(5),
+.main_table_wrap .table_body.sales_accounts_table tr td:nth-child(6) {
+  text-align: right;
+}
+.main_table_wrap .table_body.sales_accounts_table2 tr th:nth-child(6), .main_table_wrap .table_body.sales_accounts_table2 tr th:nth-child(7),
+.main_table_wrap .table_body.sales_accounts_table2 tr td:nth-child(6),
+.main_table_wrap .table_body.sales_accounts_table2 tr td:nth-child(7) {
+  text-align: right;
+}
+.main_table_wrap .table_body.delivery_address_table tr td .radiobox {
+  width: 1.6rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.main_table_wrap .table_body.delivery_address_table tr td .radiobox label {
+  width: 1.6rem;
+}
+.main_table_wrap .table_body.delivery_address_table tr td:nth-child(8) {
+  padding-right: 3.7rem;
 }
 
 .pagination {
@@ -1288,6 +1347,19 @@ button.btn.btn_download:hover {
   line-height: 2.6rem;
   margin-bottom: 1.6rem;
 }
+.modal_wrap.md_st .modal .modal_body h5 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 2.4rem;
+}
+.modal_wrap.md_st .modal .modal_body .title_checkbox {
+  padding-bottom: 1.6rem;
+  border-bottom: 1px solid #e9ecef;
+}
+.modal_wrap.md_st .modal .modal_body .contents_box {
+  padding-top: 0;
+}
 .modal_wrap.md_st .modal .modal_body .content_list h4 {
   font-size: 1.6rem;
   line-height: 3.6rem;
@@ -1299,6 +1371,9 @@ button.btn.btn_download:hover {
   line-height: 2.4rem;
   text-align: center;
   margin-top: 1.6rem;
+}
+.modal_wrap.md_st .modal .modal_body .special_discount_box {
+  margin-top: 2.4rem;
 }
 .modal_wrap.md_st .modal .modal_body.only_sub_txt {
   display: flex;
@@ -1349,6 +1424,7 @@ button.btn.btn_download:hover {
   transform: translateX(-50%);
   width: 40rem;
   height: 5.6rem;
+  z-index: 30;
 }
 .toast_wrap .toast {
   width: 100%;
@@ -1363,6 +1439,9 @@ button.btn.btn_download:hover {
 }
 .toast_wrap .toast.danger {
   background: #dc3545 url(../images/icon_toast_danger.svg) no-repeat left 1.6rem center;
+}
+.toast_wrap .toast.primary {
+  background: #0ab968 url(../images/icon_toast_danger.svg) no-repeat left 1.6rem center;
 }
 .toast_wrap .toast p {
   line-height: 2.4rem;
@@ -1790,7 +1869,7 @@ button.btn.btn_download:hover {
 }
 .body_wrapper main {
   padding-top: 10rem;
-  min-height: calc(100vh - 5.2rem);
+  min-height: 100vh;
 }
 .body_wrapper main footer {
   padding-left: 36rem;
@@ -1833,10 +1912,8 @@ button.btn.btn_download:hover {
 }
 .main_container .snb_wrap {
   padding: 4rem;
-  border-right: 1px solid #e9ecef;
   width: 36rem;
   position: absolute;
-  min-height: calc(100vh - 10rem);
   transition: all 0.2s;
   z-index: 9;
   background: #fff;
@@ -1926,10 +2003,11 @@ button.btn.btn_download:hover {
   background: #343a40;
 }
 .main_container .main_right_contents {
+  border-left: 1px solid #e9ecef;
   padding: 4rem;
-  width: 156rem;
-  margin-left: 35rem;
-  min-height: 110rem;
+  width: 155rem;
+  margin-left: 36rem;
+  min-height: calc(100vh - 191px);
 }
 .main_container .product_detail_wrap {
   width: 144rem;
@@ -2477,9 +2555,9 @@ button.btn.btn_download:hover {
   margin-top: 4rem;
 }
 .shopping_basket_wrap .shopping_price_wrap .payment_agree .info_txt {
+  font-size: 1.4rem;
   margin-top: 0.8rem;
   padding-left: 2.4rem;
-  font-size: 1.4rem;
   line-height: 2.1rem;
 }
 .shopping_basket_wrap .shopping_price_wrap .btn_wrap .btn {
@@ -2509,7 +2587,7 @@ button.btn.btn_download:hover {
   gap: 2.4rem;
 }
 .product_display_wrap .product_card {
-  width: 33.2rem;
+  width: calc(25% - 18px);
   border-radius: 3rem;
   border: 1px solid #e9ecef;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
@@ -3218,7 +3296,7 @@ button.btn.btn_download:hover {
   right: 0;
 }
 .contents_detail_wrap .detail_header .btn_del {
-  width: 12rem !important;
+  width: 7.6rem !important;
   background: url(../images/trash.svg) no-repeat left 3rem center !important;
 }
 .contents_detail_wrap .detail_title {
@@ -3228,6 +3306,7 @@ button.btn.btn_download:hover {
   background: #f8f9fa;
   color: #6c757d;
   font-size: 1.4rem;
+  position: relative;
 }
 .contents_detail_wrap .detail_title h3 {
   margin: 8px 0 1.6rem;
@@ -3255,21 +3334,32 @@ button.btn.btn_download:hover {
 .contents_detail_wrap .detail_title .title_info li:last-child::after {
   display: none;
 }
+.contents_detail_wrap .detail_title .btn_del {
+  position: absolute;
+  bottom: 2.4rem;
+  right: 4rem;
+  width: 7.6rem !important;
+  background: #fff url(../images/trash.svg) no-repeat left 1.2rem center !important;
+}
 .contents_detail_wrap .detail_body {
   padding: 4rem;
   border-top: 0;
   border: 1px solid #e9ecef;
-  height: 59rem;
+  min-height: 22rem;
   overflow-y: auto;
+  margin-bottom: 4rem;
+}
+.contents_detail_wrap .answer_body {
   margin-bottom: 4rem;
 }
 .contents_detail_wrap .answer_body .question {
   padding: 4rem;
   border-top: 0;
   border: 1px solid #e9ecef;
-  height: 52.4rem;
+  min-height: 22rem;
+  max-height: 55rem;
   overflow-y: auto;
-  margin-bottom: 2.4rem;
+  line-height: 2.4rem;
 }
 .contents_detail_wrap .answer_body .textarea_wrap {
   margin-bottom: 4rem;
@@ -3277,6 +3367,32 @@ button.btn.btn_download:hover {
 .contents_detail_wrap .answer_body .textarea_wrap textarea {
   border: 1px solid #e9ecef;
   min-height: 12.2rem;
+}
+.contents_detail_wrap .answer_body .answer {
+  padding: 4rem;
+  border: 1px solid #e9ecef;
+  border-top: 0;
+}
+.contents_detail_wrap .answer_body .answer .answer_title {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  font-size: 1.4rem;
+  color: #6c757d;
+  align-items: center;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  background: url(../images/arrow-return-primary.svg) no-repeat left center;
+}
+.contents_detail_wrap .answer_body .answer .answer_title h5 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  color: #0ab968;
+}
+.contents_detail_wrap .answer_body .answer .inner {
+  padding-left: 2.5rem;
+  line-height: 2.4rem;
 }
 .contents_detail_wrap .detail_footer {
   width: 100%;
@@ -3348,7 +3464,7 @@ button.btn.btn_download:hover {
 .detail_footer .btn_add {
   padding-left: 3.2rem;
   width: 20rem !important;
-  background: #0ab968 url(../images/btn_check.svg) no-repeat left 6rem center !important;
+  background: #0ab968 url(../images/check_24.svg) no-repeat left 6.6rem center !important;
 }
 
 .delivery_search_box {
@@ -3501,12 +3617,19 @@ button.btn.btn_download:hover {
   display: flex;
   gap: 8px;
   align-items: center;
+  /* .date_range_picker_wrap {
+      width: 35rem;
+  } */
 }
 .search_bar_wrap h5 {
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   font-weight: 700;
   line-height: 2.4rem;
   width: 8rem;
+}
+.search_bar_wrap .selectbox {
+  min-width: initial;
+  width: 10.6rem;
 }
 
 .order_tracking_table td span {
@@ -3621,6 +3744,20 @@ button.btn.btn_download:hover {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+.notice_wrap .notice_title .desc {
+  width: 100%;
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  color: #6c757d;
+}
+.notice_wrap .notice_title .info_txt {
+  width: 100%;
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-top: 1.6rem;
 }
 
 .qr_box_wrap {
@@ -3667,4 +3804,253 @@ button.btn.btn_download:hover {
 }
 .allergic_check_box .row:nth-child(2) .checkbox_wrap {
   width: calc(25% - 1.8rem);
+}
+
+.special_discount_box {
+  padding: 4rem;
+  background: #f8f9fa;
+  border-radius: 2.4rem;
+}
+.special_discount_box .list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: #6c757d;
+}
+.special_discount_box .list h6 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.special_discount_box .list span {
+  padding-right: 0.4rem;
+}
+.special_discount_box .list:first-child {
+  margin-top: 0;
+}
+.special_discount_box .list.special_price {
+  color: #0ab968;
+}
+.special_discount_box .list.special_price h6 {
+  font-weight: 700;
+}
+.special_discount_box .list.special_price p {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 3.1rem;
+}
+.special_discount_box .list.first_price p {
+  font-size: 2rem;
+}
+.special_discount_box .list.first_price p span {
+  text-decoration: line-through;
+  line-height: 2.6rem;
+}
+
+.sales_account_bar {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+.sales_account_bar .list {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  flex: 1;
+  padding: 1.6rem 4rem;
+  border-left: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sales_account_bar .list:first-child {
+  border-left: 0;
+}
+.sales_account_bar .list h5 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+.sales_account_bar .list p {
+  color: #0ab968;
+}
+.sales_account_bar .list p i {
+  font-weight: 400;
+  color: #6c757d;
+  padding-left: 0.5rem;
+}
+
+.my_info_wrap {
+  display: flex;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+.my_info_wrap .password_check {
+  padding: 4rem 0;
+  width: 52rem;
+}
+.my_info_wrap .password_check .label_vertical {
+  width: 100%;
+  margin-bottom: 3.2rem;
+}
+.my_info_wrap .password_check .label_vertical label {
+  height: 3.4rem;
+  line-height: 3.4rem;
+}
+.my_info_wrap .password_check .label_vertical input {
+  width: 100%;
+}
+.my_info_wrap .password_check .btn {
+  width: 100%;
+  margin-top: 0.8rem;
+}
+.my_info_wrap .contents_box {
+  flex: 1;
+  position: relative;
+  height: 65.4rem;
+}
+.my_info_wrap .contents_box > .btn {
+  display: block;
+  width: 21.8rem;
+  position: absolute;
+  bottom: 4rem;
+  right: 4rem;
+}
+
+.info_txt_wrap {
+  width: 100%;
+  position: relative;
+  margin-top: 1.6rem;
+}
+.info_txt_wrap p {
+  color: #6c757d;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+.info_txt_wrap p:first-child {
+  margin-bottom: 2.4rem;
+}
+.info_txt_wrap p b {
+  font-weight: 600;
+}
+.info_txt_wrap .btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.register_address_box .content_list {
+  margin-top: 2.4rem;
+  padding-left: 9.2rem;
+}
+.register_address_box .content_list h4 {
+  width: 8rem;
+}
+.register_address_box .content_list .checkbox_wrap {
+  line-height: 3.6rem;
+  margin-top: 1.6rem;
+}
+
+.cancel_my_account_wrap .info_txt {
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-bottom: 4rem;
+}
+.cancel_my_account_wrap .contents_box {
+  border-radius: 2.4rem;
+  margin: 4rem 0;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+.cancel_my_account_wrap .contents_box h4 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 3.1rem;
+}
+.cancel_my_account_wrap .check_tab_menu {
+  padding-bottom: 0;
+}
+.cancel_my_account_wrap .btn {
+  width: 28rem;
+  display: block;
+  margin-left: auto;
+}
+
+.loading_wrap {
+  position: absolute;
+  width: 100%;
+  max-width: 1920px;
+  height: 100vh;
+  background: #fff;
+  z-index: 1000;
+}
+.loading_wrap .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading_wrap .inner img {
+  width: 32rem;
+  height: 32rem;
+  margin: 0 auto;
+}
+.loading_wrap .inner p {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #adb5bd;
+  text-align: center;
+  line-height: 3.1rem;
+}
+
+.error_page_wrap {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/404_bg.jpg) no-repeat center;
+  background-size: cover;
+}
+.error_page_wrap .inner {
+  width: 50rem;
+  padding: 2.4rem 0;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.error_page_wrap .inner .logo {
+  width: 7.2rem;
+  height: 7.2rem;
+  background: url(../images/404_logo.svg) no-repeat center;
+}
+.error_page_wrap .inner h2 {
+  color: #adb5bd;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+}
+.error_page_wrap .inner h3 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 3.1rem;
+}
+.error_page_wrap .inner div {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.auth_timer {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+  color: #0ab968;
+  margin-top: 0.4rem;
 }

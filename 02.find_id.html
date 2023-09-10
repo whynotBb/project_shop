@@ -54,6 +54,24 @@
                                 </div>
                             </div>
                             <div class="label_vertical">
+                                <label for="userId">휴대폰 번호</label>
+                                <div class="input_btn_wrap">
+                                    <input
+                                        class="flex_1"
+                                        type="number"
+                                        id="userId"
+                                        placeholder="휴대폰 번호 “-” 없이 입력해 주세요."
+                                    />
+                                    <button
+                                        class="btn btn_secondary"
+                                        onclick="modalOpen('#alert_01')"
+                                    >
+                                        인증번호 재발송
+                                    </button>
+                                </div>
+                                <p class="auth_timer">2 : 59</p>
+                            </div>
+                            <div class="label_vertical">
                                 <label for="authNum">인증번호</label>
                                 <input
                                     type="number"

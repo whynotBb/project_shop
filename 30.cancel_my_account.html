@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Barter Place</title>
+        <!-- jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- ui common css -->
+        <link rel="stylesheet" href="./resource/css/style.css" />
+    </head>
+    <body>
+        <div class="body_wrapper mypage_wrapper">
+            <header>
+                <div class="header_wrap">
+                    <h1>barter place</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="javascript:void(0);">로그인</a></li>
+                            <li><a href="javascript:void(0);">회원가입</a></li>
+                            <li><a href="javascript:void(0);">고객센터</a></li>
+                            <li><a href="javascript:void(0);">장바구니</a></li>
+                        </ul>
+                    </nav>
+                    <div class="input_search_wrap">
+                        <input
+                            type="text"
+                            class="flex_1"
+                            placeholder="검색어를 입력해보세요."
+                        />
+                        <button class="btn btn_primary btn_search_sm">
+                            검색
+                        </button>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="main_wrap">
+                    <div class="mypage_header_wrap">
+                        <div class="main_title">
+                            <h2>마이페이지</h2>
+                        </div>
+                    </div>
+                    <div class="main_container">
+                        <div class="snb_wrap">
+                            <nav>
+                                <ul class="depth_1">
+                                    <li>
+                                        <p>구매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">주문/배송 조회</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">취소/반품</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>판매관리</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">대시보드</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">접수관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">판매관리</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">정산내역</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 활동</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">1:1 문의</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <p>My 정보</p>
+                                        <ul class="depth_2">
+                                            <li>
+                                                <a href="#">회원 정보 수정</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">배송지 관리</a>
+                                            </li>
+                                            <li class="on">
+                                                <a href="#">회원탈퇴</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="main_right_contents">
+                            <div class="notice_wrap">
+                                <div class="notice_title">
+                                    <h2>회원탈퇴</h2>
+                                </div>
+                                <div class="cancel_my_account_wrap">
+                                    <p class="info_txt">
+                                        회원탈퇴(이용약관 동의 철회)시 아래
+                                        내용을 확인해주세요.
+                                    </p>
+                                    <div class="gray_info_wrap">
+                                        <ul>
+                                            <li>
+                                                회원탈퇴 시 30일 이내 재가입이
+                                                불가합니다.
+                                            </li>
+                                            <li>
+                                                탈퇴 후 주문/배송조회는
+                                                고객센터만 가능합니다.
+                                            </li>
+                                            <li>
+                                                반품이 완료된 후 탈퇴신청이
+                                                가능합니다.
+                                            </li>
+                                            <li>
+                                                진행중인 전자상거래
+                                                이용내역(배송/교환/반품 중인
+                                                상태)이 있거나 이용하신 서비스가
+                                                완료되지 않은 경우 탈퇴할 수
+                                                없습니다.
+                                            </li>
+                                            <li>
+                                                기타 탈퇴와 관련된 모든 정책은
+                                                회원가입 시, 동의하신 회원 약관
+                                                및 개인정보 제공, 활용 동의
+                                                내용에 따릅니다.
+                                            </li>
+                                            <li>
+                                                탈퇴 후 30일간 재가입 방지를
+                                                위해 회원님의 아이디(이메일)를
+                                                포함한 회원 정보가 보존됩니다.
+                                                <br />
+                                                (회원가입 시 동의하신 개인정보
+                                                취급방침에 명기한 파기절차와
+                                                방법에 따라 30일 이후 회원보를
+                                                파기합니다.)
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="contents_box shadow_st">
+                                        <h4>탈퇴 사유를 선택해주세요.</h4>
+                                        <ul class="check_tab_menu">
+                                            <li>배송 서비스에 대한 불만</li>
+                                            <li>사이트 이용에 대한 불만</li>
+                                            <li>제품 품질에 대한 불만</li>
+                                            <li>스탭의 대응에 불만</li>
+                                            <li>기타</li>
+                                        </ul>
+                                    </div>
+                                    <button
+                                        class="btn btn_secondary h50"
+                                        onclick="modalOpen('#alert01')"
+                                    >
+                                        회원 탈퇴하기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footer_wrap">
+                        <p class="copyright">
+                            COPYRIGHT © (주)BARTERPLACE Co.,Ltd All RIGHT
+                            RESERVED.
+                        </p>
+                    </div>
+                </footer>
+            </main>
+        </div>
+
+        <!-- alert01 -->
+        <div class="modal_wrap alert_st" id="alert01">
+            <div class="modal">
+                <div class="modal_body">
+                    <div class="alert_msg">탈퇴 완료되었습니다.</div>
+                </div>
+                <div class="modal_footer">
+                    <div class="btn_wrap">
+                        <button
+                            class="btn btn_primary"
+                            onclick="modalClose('#alert01');"
+                        >
+                            확인
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //alert01 -->
+        <script>
+            //modal
+            function modalOpen(el) {
+                $(el).fadeIn();
+                $("body").addClass("modal-open");
+            }
+            function modalClose(el) {
+                $(el).fadeOut();
+                $("body").removeClass("modal-open");
+            }
+            //- tab menu
+            $(".check_tab_menu li").on("click", function () {
+                $(".check_tab_menu li").removeClass("on");
+                $(this).addClass("on");
+            });
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 312) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
+            });
+        </script>
+    </body>
+</html>
