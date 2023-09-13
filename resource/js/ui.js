@@ -52,6 +52,7 @@ $(document).ready(function () {
     $(".selectbox").on("mouseleave", function () {
         $(this).children(".option_group").removeClass("active");
     });
+
     // 항목 선택
     $(".inner ul li").click(function () {
         if (!$(this).hasClass("disabled")) {

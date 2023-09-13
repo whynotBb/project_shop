@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Barter Place</title>
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <!-- ui common css -->
         <link rel="stylesheet" href="./resource/css/style.css" />
     </head>
@@ -11,7 +12,15 @@
         <!-- ↑ 다른 화면 위에 띄울때 body 에 class modal-open 추가 -->
         <div class="loading_wrap">
             <div class="inner">
-                <img src="./resource/images/loading.gif" alt="로딩 중입니다." />
+                <lottie-player
+                    src="./resource/js/loading.json"
+                    background="transparent"
+                    style="width: 320px; height: 320px"
+                    speed="1"
+                    loop
+                    autoplay
+                >
+                </lottie-player>
                 <p>잠시만 기다려주세요.</p>
             </div>
         </div>

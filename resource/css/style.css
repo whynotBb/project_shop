@@ -208,12 +208,12 @@ h1,
 h2,
 h3 {
   color: #212529;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 h2 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 input[type=text],
@@ -417,7 +417,7 @@ input[type=text].date_picker:disabled {
 
 .label_vertical label {
   display: block;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
@@ -683,7 +683,7 @@ button.btn.h50 {
   height: 5rem;
   line-height: 5rem;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 button.btn.lg {
   font-size: 2rem;
@@ -691,12 +691,12 @@ button.btn.lg {
   border-radius: 0.8rem;
   height: 5.2rem;
   line-height: 5.2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 button.btn.btn_search {
   background: #0ab968;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #fff;
   width: 23rem;
   height: 5rem;
@@ -971,7 +971,7 @@ button.btn.btn_download:hover {
 }
 .main_table_wrap .table_header .counter b {
   color: #0ab968;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0 1rem;
 }
 .main_table_wrap .table_header .btn_wrap {
@@ -998,7 +998,7 @@ button.btn.btn_download:hover {
   background: #f8f9fa;
   border-bottom: 1px solid #495057;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.4rem;
   height: 6rem;
   padding: 0.8rem;
@@ -1058,7 +1058,7 @@ button.btn.btn_download:hover {
   font-size: 1.4rem;
 }
 .main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(1) span {
-  font-weight: 700;
+  font-weight: 600;
 }
 .main_table_wrap .table_body.order_tracking_table table tbody td:nth-child(1)[rowspan] {
   border-right: 1px solid #e9ecef;
@@ -1342,14 +1342,14 @@ button.btn.btn_download:hover {
 }
 .modal_wrap.md_st .modal .modal_body h4 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   line-height: 2.6rem;
   margin-bottom: 1.6rem;
 }
 .modal_wrap.md_st .modal .modal_body h5 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 8px;
   line-height: 2.4rem;
 }
@@ -1476,12 +1476,12 @@ button.btn.btn_download:hover {
 
 .terms_wrap h3 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 2rem;
 }
 .terms_wrap h4 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 1.6rem;
 }
 .terms_wrap p {
@@ -1556,7 +1556,7 @@ button.btn.btn_download:hover {
   height: 5.3rem;
   line-height: 5.3rem;
   padding: 0 4rem;
-  background: #f8f9fa;
+  background: #fff;
 }
 .sign_wrapper .sign_footer .copyright {
   text-align: center;
@@ -1914,7 +1914,6 @@ button.btn.btn_download:hover {
   padding: 4rem;
   width: 36rem;
   position: absolute;
-  transition: all 0.2s;
   z-index: 9;
   background: #fff;
 }
@@ -1923,7 +1922,7 @@ button.btn.btn_download:hover {
 }
 .main_container .snb_wrap nav .depth_1 > li p {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   height: 4.2rem;
   line-height: 4.2rem;
   display: flex;
@@ -1942,7 +1941,7 @@ button.btn.btn_download:hover {
   position: relative;
 }
 .main_container .snb_wrap nav .depth_2 li a {
-  font-weight: 700;
+  font-weight: 600;
   height: 4rem;
   line-height: 4rem;
   display: block;
@@ -2028,7 +2027,7 @@ button.btn.btn_download:hover {
 }
 .main_search_result h3 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 5.2rem;
   text-align: center;
 }
@@ -2039,7 +2038,7 @@ button.btn.btn_download:hover {
   text-align: center;
 }
 .main_search_result .result_txt b {
-  font-weight: 700;
+  font-weight: 600;
   color: #0ab968;
 }
 .main_search_result .result_txt span {
@@ -2087,7 +2086,7 @@ button.btn.btn_download:hover {
   padding: 16.4rem 4rem 4rem 4rem;
   color: #fff;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   -o-object-fit: 5.2rem;
      object-fit: 5.2rem;
   display: flex;
@@ -2133,7 +2132,7 @@ button.btn.btn_download:hover {
 }
 .product_detail_wrap .product_information .information_box .title h3 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 4.16rem;
   margin-bottom: 1.6rem;
 }
@@ -2143,7 +2142,7 @@ button.btn.btn_download:hover {
 }
 .product_detail_wrap .product_information .information_box .title .price .sale {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 1.6rem;
   color: #0ab968;
 }
@@ -2160,7 +2159,7 @@ button.btn.btn_download:hover {
 }
 .product_detail_wrap .product_information .information_box .description {
   margin-bottom: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.1rem;
   padding: 1rem 0;
 }
@@ -2186,7 +2185,7 @@ button.btn.btn_download:hover {
 }
 .product_detail_wrap .product_information .information_box .delivery_info h6 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 1.6rem;
   line-height: 2.4rem;
 }
@@ -2248,7 +2247,7 @@ button.btn.btn_download:hover {
   gap: 1.6rem;
 }
 .product_detail_wrap .product_information .information_box .option_wrap .total p {
-  font-weight: 700;
+  font-weight: 600;
   flex: 1;
 }
 .product_detail_wrap .product_information .information_box .option_wrap .total .num {
@@ -2258,7 +2257,7 @@ button.btn.btn_download:hover {
   position: relative;
 }
 .product_detail_wrap .product_information .information_box .option_wrap .total .num b {
-  font-weight: 700;
+  font-weight: 600;
   padding: 0 1rem;
 }
 .product_detail_wrap .product_information .information_box .option_wrap .total .num::after {
@@ -2279,7 +2278,7 @@ button.btn.btn_download:hover {
 .product_detail_wrap .product_detail_contents h3 {
   font-size: 4rem;
   line-height: 5.2rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 8rem;
   text-align: center;
 }
@@ -2298,7 +2297,7 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap h2 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 5.2rem;
   margin-bottom: 2.4rem;
 }
@@ -2330,7 +2329,7 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .shopping_list_wrap .list .thumbnail p {
   font-size: 0.8889rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1556rem;
   color: #fff;
   width: 100%;
@@ -2371,7 +2370,7 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .shopping_list_wrap .list .list_detail h3 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
 }
@@ -2382,12 +2381,12 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .shopping_list_wrap .list .list_detail .price .sale {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0ab968;
   line-height: 2.6rem;
 }
 .shopping_basket_wrap .shopping_list_wrap .list .list_detail .price b {
-  font-weight: 700;
+  font-weight: 600;
 }
 .shopping_basket_wrap .shopping_list_wrap .list .list_detail .price .first_price {
   color: #adb5bd;
@@ -2485,7 +2484,7 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .enter_information .payment_select_step2 .selectbox_wrap h4 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   width: 8rem;
 }
 .shopping_basket_wrap .enter_information .payment_select_step2 .selectbox_wrap .selectbox {
@@ -2519,7 +2518,7 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .shopping_price_wrap .list p b {
   padding-right: 8px;
-  font-weight: 700;
+  font-weight: 600;
 }
 .shopping_basket_wrap .shopping_price_wrap .list.sale_price p b {
   color: #dc3545;
@@ -2531,7 +2530,7 @@ button.btn.btn_download:hover {
 }
 .shopping_basket_wrap .shopping_price_wrap .list.total_price span {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .shopping_basket_wrap .shopping_price_wrap .list.total_price p {
   font-weight: 600;
@@ -2599,7 +2598,7 @@ button.btn.btn_download:hover {
   padding: 6.4rem 2.4rem 2.4rem;
   font-size: 3.2rem;
   color: #fff;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 4.1rem;
   background: url(../images/product_bg1.png) no-repeat;
   background-size: cover;
@@ -2643,7 +2642,7 @@ button.btn.btn_download:hover {
 }
 .product_display_wrap .product_card .detail .price_box .price {
   margin-left: auto;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 2.4rem;
 }
 .product_display_wrap .product_card .detail .price_box .price b {
@@ -2661,7 +2660,7 @@ button.btn.btn_download:hover {
   line-height: 3.4rem;
   border-radius: 0 2.4rem 2.4rem 0;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   background: #dc3545;
   color: #fff;
   padding: 0 1.2rem;
@@ -2697,7 +2696,7 @@ button.btn.btn_download:hover {
   margin-bottom: 3.7rem;
   text-align: center;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .cs_header_wrap .cs_lnb_wrap {
   display: flex;
@@ -2713,7 +2712,7 @@ button.btn.btn_download:hover {
   line-height: 4.4rem;
   padding: 0 1.6rem;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   border-bottom: 3px solid transparent;
 }
 .cs_header_wrap .cs_lnb_wrap li.on a {
@@ -2759,12 +2758,12 @@ button.btn.btn_download:hover {
 }
 .cs_contact_box h3 {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 .cs_contact_box h4 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .cs_contact_box .gray_info_wrap {
   margin-top: 3.2rem;
@@ -2811,7 +2810,7 @@ button.btn.btn_download:hover {
 }
 .cs_container_2 h3 {
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 4rem;
 }
 
@@ -2823,7 +2822,7 @@ button.btn.btn_download:hover {
 }
 .gray_info_wrap .info {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   padding-left: 2.4rem;
   text-align: left;
   background: url(../images/exclamation-octagon-fill.svg) no-repeat left center;
@@ -3105,7 +3104,7 @@ button.btn.btn_download:hover {
 }
 .contents_box .state_list h4 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 1.6rem;
 }
 .contents_box .state_list .detail {
@@ -3127,7 +3126,7 @@ button.btn.btn_download:hover {
 }
 .contents_box .state_list .detail .box p {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 .contents_box .state_list .detail .box span {
   font-size: 1.6rem;
@@ -3311,7 +3310,7 @@ button.btn.btn_download:hover {
 .contents_detail_wrap .detail_title h3 {
   margin: 8px 0 1.6rem;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #212529;
 }
 .contents_detail_wrap .detail_title .title_info {
@@ -3386,7 +3385,7 @@ button.btn.btn_download:hover {
 }
 .contents_detail_wrap .answer_body .answer .answer_title h5 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.6rem;
   color: #0ab968;
 }
@@ -3479,7 +3478,7 @@ button.btn.btn_download:hover {
 .settlement_table table td {
   text-align: center;
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   height: 7.4rem;
   line-height: 7.4rem;
   padding: 0 0.8rem;
@@ -3500,7 +3499,7 @@ button.btn.btn_download:hover {
 }
 .table_tab_menu li {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   height: 4.4rem;
   line-height: 4.4rem;
@@ -3553,7 +3552,7 @@ button.btn.btn_download:hover {
   margin-bottom: 3.7rem;
   text-align: center;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .order_tracking_wrap h2 {
@@ -3582,10 +3581,12 @@ button.btn.btn_download:hover {
   align-items: center;
   justify-content: center;
   background: #f8f9fa;
+  cursor: pointer;
+  position: relative;
 }
 .order_tracking_wrap .order_tracking_box ul li b {
   font-size: 3.2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 4.2rem;
 }
 .order_tracking_wrap .order_tracking_box ul li span {
@@ -3596,6 +3597,27 @@ button.btn.btn_download:hover {
 .order_tracking_wrap .order_tracking_box ul li.on {
   background: #0ab968;
   color: #fff;
+}
+.order_tracking_wrap .order_tracking_box ul li.on:hover {
+  background: #0ab968;
+  color: #fff;
+}
+.order_tracking_wrap .order_tracking_box ul li:hover {
+  background: #ddfff1;
+}
+.order_tracking_wrap .order_tracking_box ul li::after {
+  content: "";
+  display: block;
+  width: 8rem;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -8rem;
+  border-top: 1px dashed #e9ecef;
+}
+.order_tracking_wrap .order_tracking_box ul li:last-child::after {
+  display: none;
 }
 .order_tracking_wrap .order_tracking_table {
   margin-bottom: 4rem;
@@ -3623,7 +3645,7 @@ button.btn.btn_download:hover {
 }
 .search_bar_wrap h5 {
   font-size: 1.9rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.4rem;
   width: 8rem;
 }
@@ -3656,7 +3678,7 @@ button.btn.btn_download:hover {
 }
 .order_tracking_table .list .thumbnail p {
   font-size: 0.8889rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1556rem;
   color: #fff;
   width: 100%;
@@ -3697,7 +3719,7 @@ button.btn.btn_download:hover {
 }
 .order_tracking_table .list .list_detail h3 {
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.4rem;
   margin-bottom: 0.8rem;
 }
@@ -3708,12 +3730,12 @@ button.btn.btn_download:hover {
 }
 .order_tracking_table .list .list_detail .price .sale {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0ab968;
   line-height: 2.6rem;
 }
 .order_tracking_table .list .list_detail .price b {
-  font-weight: 700;
+  font-weight: 600;
 }
 .order_tracking_table .list .list_detail .price .first_price {
   color: #adb5bd;
@@ -3834,7 +3856,7 @@ button.btn.btn_download:hover {
   color: #0ab968;
 }
 .special_discount_box .list.special_price h6 {
-  font-weight: 700;
+  font-weight: 600;
 }
 .special_discount_box .list.special_price p {
   font-size: 2.4rem;
@@ -3857,7 +3879,7 @@ button.btn.btn_download:hover {
 }
 .sales_account_bar .list {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.6rem;
   flex: 1;
   padding: 1.6rem 4rem;
@@ -3871,7 +3893,7 @@ button.btn.btn_download:hover {
 }
 .sales_account_bar .list h5 {
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.6rem;
 }
 .sales_account_bar .list p {
@@ -4034,7 +4056,7 @@ button.btn.btn_download:hover {
 .error_page_wrap .inner h2 {
   color: #adb5bd;
   font-size: 2rem;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 2.6rem;
 }
 .error_page_wrap .inner h3 {

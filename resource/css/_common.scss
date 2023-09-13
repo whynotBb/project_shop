@@ -51,11 +51,11 @@ h1,
 h2,
 h3 {
     color: $text-title;
-    font-weight: 700;
+    font-weight: 600;
 }
 h2 {
     font-size: 4rem;
-    font-weight: 700;
+    font-weight: 600;
 }
 input[type="text"],
 input[type="password"],
@@ -245,7 +245,7 @@ input[type="text"].date_picker {
 .label_vertical {
     label {
         display: block;
-        font-weight: 700;
+        font-weight: 600;
         margin-bottom: 0.4rem;
     }
 }
@@ -531,7 +531,7 @@ button.btn {
         height: 5rem;
         line-height: 5rem;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 600;
     }
     &.lg {
         font-size: 2rem;
@@ -539,12 +539,12 @@ button.btn {
         border-radius: 0.8rem;
         height: 5.2rem;
         line-height: 5.2rem;
-        font-weight: 700;
+        font-weight: 600;
     }
     &.btn_search {
         background: $color-primary;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 600;
         color: #fff;
         width: 23rem;
         height: 5rem;
@@ -822,7 +822,7 @@ button.btn {
             margin-left: auto;
             b {
                 color: $color-primary;
-                font-weight: 700;
+                font-weight: 600;
                 padding: 0 1rem;
             }
         }
@@ -853,7 +853,7 @@ button.btn {
                     background: $color-g1;
                     border-bottom: 1px solid $border-base-dark;
                     font-size: 1.6rem;
-                    font-weight: 700;
+                    font-weight: 600;
                     line-height: 2.4rem;
                     height: 6rem;
                     padding: 0.8rem;
@@ -930,7 +930,7 @@ button.btn {
                             text-align: center;
                             font-size: 1.4rem;
                             span {
-                                font-weight: 700;
+                                font-weight: 600;
                             }
                             &[rowspan] {
                                 border-right: 1px solid $border-base-light;
@@ -1260,14 +1260,14 @@ button.btn {
                 padding: $space-xl $space-lg;
                 h4 {
                     font-size: 2rem;
-                    font-weight: 700;
+                    font-weight: 600;
                     text-align: center;
                     line-height: 2.6rem;
                     margin-bottom: $space-m;
                 }
                 h5 {
                     font-size: 1.6rem;
-                    font-weight: 700;
+                    font-weight: 600;
                     margin-bottom: $space-s;
                     line-height: 2.4rem;
                 }
@@ -1407,12 +1407,12 @@ button.btn {
 .terms_wrap {
     h3 {
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: 600;
         margin-top: 2rem;
     }
     h4 {
         font-size: 1.6rem;
-        font-weight: 700;
+        font-weight: 600;
         margin-top: 1.6rem;
     }
     p {

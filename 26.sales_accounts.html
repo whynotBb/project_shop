@@ -851,6 +851,11 @@
                 }
             });
             $(document).ready(function () {
+                // 정산관리 - tab_menu
+                $(".table_tab_menu li").on("click", function () {
+                    $(".table_tab_menu li").removeClass("on");
+                    $(this).addClass("on");
+                });
                 // date range picker
                 const datepickerOption = {
                     format: "YYYY-MM-DD",
