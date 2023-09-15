@@ -1812,6 +1812,7 @@ button.btn.btn_download:hover {
   top: 0;
   background: #fff;
   z-index: 10;
+  transition: background 0.5s linear;
 }
 .body_wrapper header .header_wrap {
   display: flex;
@@ -1885,6 +1886,7 @@ button.btn.btn_download:hover {
 .body_wrapper.main_page_wrapper header {
   background: transparent;
   border-bottom: none;
+  transition: background 0.5s linear;
 }
 .body_wrapper.main_page_wrapper main {
   padding-top: 0;
