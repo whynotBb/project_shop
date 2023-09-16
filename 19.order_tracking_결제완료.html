@@ -222,19 +222,21 @@
                                         <table>
                                             <colgroup>
                                                 <col style="width: 128px" />
-                                                <col style="width: 888px" />
+                                                <col style="width: 728px" />
                                                 <col style="width: 80px" />
                                                 <col style="width: 80px" />
                                                 <col style="width: 144px" />
                                                 <col style="width: 160px" />
+                                                <col style="width: 160px" />
                                             </colgroup>
                                             <thead class="align_center">
                                                 <tr>
-                                                    <th>주문일자</th>
-                                                    <th>원료</th>
+                                                    <th>주문일시</th>
+                                                    <th>상품</th>
                                                     <th>용량</th>
                                                     <th>수량</th>
                                                     <th>주문금액</th>
+                                                    <th></th>
                                                     <th></th>
                                                 </tr>
                                             </thead>
@@ -288,18 +290,20 @@
                                                     <td>100g</td>
                                                     <td><b>10</b>개</td>
                                                     <td><b>100.000</b>원</td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn_border_secondary sm"
+                                                            onclick="modalOpen('#modal01')"
+                                                        >
+                                                            증빙자료 다운로드
+                                                        </button>
+                                                    </td>
                                                     <td rowspan="2">
                                                         <span>결제완료</span>
                                                         <button
                                                             class="btn btn_border_secondary sm"
                                                         >
                                                             주문취소
-                                                        </button>
-                                                        <button
-                                                            class="btn btn_border_secondary sm"
-                                                            onclick="modalOpen('#modal01')"
-                                                        >
-                                                            증빙자료 다운로드
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -349,6 +353,14 @@
                                                         <b class="fc_primary"
                                                             >100.000</b
                                                         >원
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn_border_secondary sm"
+                                                            onclick="modalOpen('#modal01')"
+                                                        >
+                                                            증빙자료 다운로드
+                                                        </button>
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -400,17 +412,20 @@
                                                     <td>100g</td>
                                                     <td><b>10</b>개</td>
                                                     <td><b>100.000</b>원</td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn_border_secondary sm"
+                                                            onclick="modalOpen('#modal01')"
+                                                        >
+                                                            증빙자료 다운로드
+                                                        </button>
+                                                    </td>
                                                     <td rowspan="2">
                                                         <span>결제완료</span>
                                                         <button
                                                             class="btn btn_border_secondary sm"
                                                         >
                                                             주문취소
-                                                        </button>
-                                                        <button
-                                                            class="btn btn_border_secondary sm"
-                                                        >
-                                                            증빙자료 다운로드
                                                         </button>
                                                     </td>
                                                 </tr>
@@ -460,6 +475,14 @@
                                                         <b class="fc_primary"
                                                             >100.000</b
                                                         >원
+                                                    </td>
+                                                    <td>
+                                                        <button
+                                                            class="btn btn_border_secondary sm"
+                                                            onclick="modalOpen('#modal01')"
+                                                        >
+                                                            증빙자료 다운로드
+                                                        </button>
                                                     </td>
                                                 </tr>
                                             </tbody>

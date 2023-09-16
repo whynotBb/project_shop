@@ -28,11 +28,26 @@ function contentsView(el) {
     $(".tab_con").hide();
     $(el).show();
 }
-// 파일박스
+// 파일박스 : 싱글
 function handleFileChange(inputId) {
     $(inputId).on("change", function () {
         var fileName = $(this).val();
-        $(".upload-name").val(fileName);
+        $(this).siblings(".upload-name").val(fileName);
+    });
+}
+//파일박스 : 멀티 // input 에 multiple 추가
+function handleFileMultiChange(inputId) {
+    $(inputId).on("change", function () {
+        var files = $(this)[0].files;
+        var fileNames = [];
+
+        for (var i = 0; i < files.length; i++) {
+            fileNames.push(files[i].name);
+        }
+
+        var formattedFileNames = fileNames.join(", ");
+
+        $(this).siblings(".upload-name").val(formattedFileNames);
     });
 }
 $(document).ready(function () {

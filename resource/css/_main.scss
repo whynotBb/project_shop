@@ -432,6 +432,13 @@
                     p {
                         flex: 1;
                     }
+                    .remain {
+                        font-size: 1.6rem;
+                        padding-left: 1rem;
+                        i {
+                            color: $color-primary;
+                        }
+                    }
                     .counter_box {
                         width: 15.2rem;
                         height: 3.6rem;
