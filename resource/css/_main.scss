@@ -11,7 +11,7 @@
         top: 0;
         background: #fff;
         z-index: 10;
-        transition: background 0.5s linear;
+        transition: background 0.5s linear, box-shadow 0.5s linear;
         .header_wrap {
             display: flex;
             padding: 1.6rem 0;
@@ -94,19 +94,19 @@
             padding-top: 0;
             .main_header_wrap {
                 height: 45.7rem;
-                padding: 18.4rem 28.22rem 0;
+                padding: 19.5rem 28.22rem 0;
                 background: url(../images/main_bg.png) no-repeat;
                 color: #333;
                 p {
-                    font-size: 6rem;
+                    font-size: 4.8rem;
                     font-weight: 600;
-                    margin-bottom: 2.3rem;
-                    line-height: 7.8rem;
+                    margin-bottom: 2rem;
+                    line-height: 6.2rem;
                 }
                 h3 {
-                    font-size: 8rem;
+                    font-size: 6.4rem;
                     font-weight: 800;
-                    line-height: 10.4rem;
+                    line-height: 8.3rem;
                 }
             }
         }
@@ -120,7 +120,7 @@
         // border-right: 1px solid $color-g2;
         width: 36rem;
         position: absolute;
-        // min-height: calc(100vh - 10rem);
+        min-height: calc(100vh - 10rem);
         // transition: all 0.2s;
         z-index: 9;
         background: #fff;
@@ -227,7 +227,7 @@
         }
     }
     .main_right_contents {
-        border-left: 1px solid $color-g2;
+        // border-left: 1px solid $color-g2;
         padding: $space-xl;
         width: 155rem;
         margin-left: 36rem;
@@ -835,11 +835,11 @@
         .title {
             width: 100%;
             height: 18.1rem;
-            padding: 6.4rem $space-lg $space-lg;
-            font-size: 3.2rem;
+            padding: 8.2rem $space-lg $space-lg;
+            font-size: 2.8rem;
             color: #fff;
             font-weight: 600;
-            line-height: 4.1rem;
+            line-height: 3.6rem;
             background: url(../images/product_bg1.png) no-repeat;
             background-size: cover;
             display: flex;
@@ -924,11 +924,11 @@
 }
 .cs_header_wrap {
     width: 100%;
-    height: 21.2rem;
+    height: 20rem;
     position: relative;
     background: url(../images/cs_bg.png) no-repeat;
     h2 {
-        padding-top: 8rem;
+        padding-top: 6.7rem;
         margin-bottom: 3.7rem;
         text-align: center;
         font-size: 4rem;
@@ -1796,14 +1796,15 @@
         }
     }
 }
-.mypage_wrapper {
+.mypage_wrapper,
+.cs_wrapper {
     header {
         border-bottom: none;
     }
 }
 .mypage_header_wrap {
     width: 100%;
-    height: 21.2rem;
+    height: 20rem;
     position: relative;
     background: url(../images/mypage_bg.png) no-repeat;
     h2 {
@@ -2027,6 +2028,10 @@
         justify-content: space-between;
         margin-bottom: $space-xl;
         flex-wrap: wrap;
+        h2 {
+            font-size: 3.2rem;
+            line-height: 4.2rem;
+        }
         .desc {
             width: 100%;
             margin-top: $space-m;

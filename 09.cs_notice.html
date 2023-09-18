@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="./resource/css/style.css" />
     </head>
     <body>
-        <div class="body_wrapper">
+        <div class="body_wrapper cs_wrapper">
             <header>
                 <div class="header_wrap">
                     <h1>barter place</h1>
@@ -159,6 +159,18 @@
             //아코디언 효과
             $(".accordion_header").on("click", function () {
                 $(this).parent(".accordion_item").toggleClass("active");
+            });
+            //스크롤에 따라 헤더 배경 색 변경
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
+                    $(".snb_wrap").css("position", "fixed").css("top", "10rem");
+                    $(".main_right_contents").css("padding-top", "14rem");
+                } else {
+                    $("header").css("box-shadow", "none");
+                    $(".snb_wrap").css("position", "absolute").css("top", "0");
+                    $(".main_right_contents").css("padding-top", "4rem");
+                }
             });
         </script>
     </body>

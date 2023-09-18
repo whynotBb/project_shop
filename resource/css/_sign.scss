@@ -47,6 +47,7 @@
     main {
         min-height: calc(100vh - 15.7rem);
         background: #fff;
+        padding: $space-xxl $space-xl;
         h2 {
             text-align: center;
             color: $text-title;
@@ -80,10 +81,11 @@
 }
 .login_container {
     width: 52rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 0 auto;
+    // position: absolute;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     h1 {
         color: #333;
         font-size: 4.4116rem;

@@ -1540,6 +1540,7 @@ button.btn.btn_download:hover {
 .sign_wrapper main {
   min-height: calc(100vh - 15.7rem);
   background: #fff;
+  padding: 8rem 4rem;
 }
 .sign_wrapper main h2 {
   text-align: center;
@@ -1570,10 +1571,7 @@ button.btn.btn_download:hover {
 
 .login_container {
   width: 52rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 auto;
 }
 .login_container h1 {
   color: #333;
@@ -1817,7 +1815,7 @@ button.btn.btn_download:hover {
   top: 0;
   background: #fff;
   z-index: 10;
-  transition: background 0.5s linear;
+  transition: background 0.5s linear, box-shadow 0.5s linear;
 }
 .body_wrapper header .header_wrap {
   display: flex;
@@ -1898,20 +1896,20 @@ button.btn.btn_download:hover {
 }
 .body_wrapper.main_page_wrapper main .main_header_wrap {
   height: 45.7rem;
-  padding: 18.4rem 28.22rem 0;
+  padding: 19.5rem 28.22rem 0;
   background: url(../images/main_bg.png) no-repeat;
   color: #333;
 }
 .body_wrapper.main_page_wrapper main .main_header_wrap p {
-  font-size: 6rem;
+  font-size: 4.8rem;
   font-weight: 600;
-  margin-bottom: 2.3rem;
-  line-height: 7.8rem;
+  margin-bottom: 2rem;
+  line-height: 6.2rem;
 }
 .body_wrapper.main_page_wrapper main .main_header_wrap h3 {
-  font-size: 8rem;
+  font-size: 6.4rem;
   font-weight: 800;
-  line-height: 10.4rem;
+  line-height: 8.3rem;
 }
 
 .main_container {
@@ -1921,6 +1919,7 @@ button.btn.btn_download:hover {
   padding: 4rem;
   width: 36rem;
   position: absolute;
+  min-height: calc(100vh - 10rem);
   z-index: 9;
   background: #fff;
 }
@@ -2009,7 +2008,6 @@ button.btn.btn_download:hover {
   background: #343a40;
 }
 .main_container .main_right_contents {
-  border-left: 1px solid #e9ecef;
   padding: 4rem;
   width: 155rem;
   margin-left: 36rem;
@@ -2609,11 +2607,11 @@ button.btn.btn_download:hover {
 .product_display_wrap .product_card .title {
   width: 100%;
   height: 18.1rem;
-  padding: 6.4rem 2.4rem 2.4rem;
-  font-size: 3.2rem;
+  padding: 8.2rem 2.4rem 2.4rem;
+  font-size: 2.8rem;
   color: #fff;
   font-weight: 600;
-  line-height: 4.1rem;
+  line-height: 3.6rem;
   background: url(../images/product_bg1.png) no-repeat;
   background-size: cover;
   display: flex;
@@ -2701,12 +2699,12 @@ button.btn.btn_download:hover {
 
 .cs_header_wrap {
   width: 100%;
-  height: 21.2rem;
+  height: 20rem;
   position: relative;
   background: url(../images/cs_bg.png) no-repeat;
 }
 .cs_header_wrap h2 {
-  padding-top: 8rem;
+  padding-top: 6.7rem;
   margin-bottom: 3.7rem;
   text-align: center;
   font-size: 4rem;
@@ -3551,13 +3549,14 @@ button.btn.btn_download:hover {
   padding-left: 4.8rem;
 }
 
-.mypage_wrapper header {
+.mypage_wrapper header,
+.cs_wrapper header {
   border-bottom: none;
 }
 
 .mypage_header_wrap {
   width: 100%;
-  height: 21.2rem;
+  height: 20rem;
   position: relative;
   background: url(../images/mypage_bg.png) no-repeat;
 }
@@ -3781,6 +3780,10 @@ button.btn.btn_download:hover {
   justify-content: space-between;
   margin-bottom: 4rem;
   flex-wrap: wrap;
+}
+.notice_wrap .notice_title h2 {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
 }
 .notice_wrap .notice_title .desc {
   width: 100%;

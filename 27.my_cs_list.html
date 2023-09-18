@@ -201,7 +201,10 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        <div class="pagination_wrap">
+                                        <div
+                                            class="pagination_wrap"
+                                            style="height: 1000px"
+                                        >
                                             <ul class="pagination">
                                                 <a
                                                     href="javascript:void(0);"
@@ -295,7 +298,8 @@
         <script>
             //스크롤에 따라 헤더 배경 색 변경
             $(window).scroll(function () {
-                if ($(this).scrollTop() > 312) {
+                // console.log($(this).scrollTop());
+                if ($(this).scrollTop() > 200) {
                     $("header").css("box-shadow", "0px 2px 4px 0px #00000013");
                     $(".snb_wrap").css("position", "fixed").css("top", "10rem");
                     $(".main_right_contents").css("padding-top", "14rem");
