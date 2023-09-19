@@ -15,18 +15,22 @@ body {
     width: 100%;
     // width: 1920px;
     max-width: 1920px;
-    min-width: 1900px;
+    // min-width: 1900px;
+    min-width: 1080px;
     margin: 0 auto;
     color: $text-body;
-    background: $color-g1;
+    background: #fff;
     &.modal-open {
         overflow: hidden;
     }
-    &.sign_body {
-        min-width: 969px;
-    }
+    // &.sign_body {
+    //     min-width: 969px;
+    // }
     &.error_page_body {
         max-width: initial;
+    }
+    @media (min-width: 1981px) {
+        background: $color-g1;
     }
 }
 // common

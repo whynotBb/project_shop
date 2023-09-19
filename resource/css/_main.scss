@@ -93,9 +93,10 @@
         main {
             padding-top: 0;
             .main_header_wrap {
-                height: 45.7rem;
-                padding: 19.5rem 28.22rem 0;
+                height: 40.1rem;
+                padding: 16rem 28.22rem 0;
                 background: url(../images/main_bg.png) no-repeat;
+                background-position: bottom;
                 color: #333;
                 p {
                     font-size: 4.8rem;
@@ -530,9 +531,9 @@
     padding: $space-xxl;
     margin: 0 auto;
     h2 {
-        font-size: 4rem;
+        font-size: 3.2rem;
         font-weight: 600;
-        line-height: 5.2rem;
+        line-height: 4.2rem;
         margin-bottom: $space-lg;
     }
     .flex_row {
@@ -1046,7 +1047,8 @@
     margin: 0 auto;
     padding: $space-xxl $space-xxl;
     h3 {
-        font-size: 4rem;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
         font-weight: 600;
         margin-bottom: $space-xl;
     }
@@ -1818,6 +1820,8 @@
 .order_tracking_wrap {
     h2 {
         margin-bottom: $space-m;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
     }
     .info_txt {
         color: $text-body-sub;
@@ -2007,6 +2011,8 @@
 .dash_board_wrap {
     h2 {
         margin-bottom: $space-xl;
+        font-size: 3.2rem;
+        line-height: 4.2rem;
     }
     .contents_box_flex_row {
         gap: $space-lg;

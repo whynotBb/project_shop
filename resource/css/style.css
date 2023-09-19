@@ -172,19 +172,21 @@ body {
   font-weight: 400;
   width: 100%;
   max-width: 1920px;
-  min-width: 1900px;
+  min-width: 1080px;
   margin: 0 auto;
   color: #343a40;
-  background: #f8f9fa;
+  background: #fff;
 }
 body.modal-open {
   overflow: hidden;
 }
-body.sign_body {
-  min-width: 969px;
-}
 body.error_page_body {
   max-width: initial;
+}
+@media (min-width: 1981px) {
+  body {
+    background: #f8f9fa;
+  }
 }
 
 /* 스크롤바 설정*/
@@ -1895,9 +1897,10 @@ button.btn.btn_download:hover {
   padding-top: 0;
 }
 .body_wrapper.main_page_wrapper main .main_header_wrap {
-  height: 45.7rem;
-  padding: 19.5rem 28.22rem 0;
+  height: 40.1rem;
+  padding: 16rem 28.22rem 0;
   background: url(../images/main_bg.png) no-repeat;
+  background-position: bottom;
   color: #333;
 }
 .body_wrapper.main_page_wrapper main .main_header_wrap p {
@@ -2308,9 +2311,9 @@ button.btn.btn_download:hover {
   margin: 0 auto;
 }
 .shopping_basket_wrap h2 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 600;
-  line-height: 5.2rem;
+  line-height: 4.2rem;
   margin-bottom: 2.4rem;
 }
 .shopping_basket_wrap .flex_row {
@@ -2821,7 +2824,8 @@ button.btn.btn_download:hover {
   padding: 8rem 8rem;
 }
 .cs_container_2 h3 {
-  font-size: 4rem;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
   font-weight: 600;
   margin-bottom: 4rem;
 }
@@ -3570,6 +3574,8 @@ button.btn.btn_download:hover {
 
 .order_tracking_wrap h2 {
   margin-bottom: 1.6rem;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
 }
 .order_tracking_wrap .info_txt {
   color: #6c757d;
@@ -3759,6 +3765,8 @@ button.btn.btn_download:hover {
 
 .dash_board_wrap h2 {
   margin-bottom: 4rem;
+  font-size: 3.2rem;
+  line-height: 4.2rem;
 }
 .dash_board_wrap .contents_box_flex_row {
   gap: 2.4rem;
